@@ -1,0 +1,54 @@
+@import "../../../sass/variables";
+@import "../../../sass/mixins";
+
+.realisations__item {
+    position: relative;
+    overflow: hidden;
+    margin: .3rem;
+
+    max-width: 32rem;
+    flex: 1 1 auto;
+
+    transition: all .5s ease-out;
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    
+        transition: all .5s ease-out;
+        filter: brightness(90%);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        letter-spacing: .3rem;
+        color: $color-white;
+        backface-visibility: hidden;
+        
+        padding-top: 2rem;
+        width: 100%;
+        height: 30%;
+        background-color: rgba($color-background, .6);
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        text-align: center;
+        transition: all .5s ease;
+    }
+
+    &:hover &__image {
+        transform: scale(1.1);
+        filter: brightness(110%);
+    }
+
+    &:hover &__text {
+        bottom: 0;
+        height: 20%;
+        transform: translate(-50%, 0);
+        padding-top: 1rem;
+        background-color: rgba($color-background, 1);
+    }
+
+}

@@ -42,3 +42,8 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+::selection {
+    background-color: rgba($color-black, .8);
+    color: $color-white;
+}

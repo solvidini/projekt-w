@@ -1,59 +1,24 @@
-.Realisations {
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.section-realisations {
+    &__title {
+        text-align: center;
+        font-size: 3rem;
+        letter-spacing: .6rem;
+        font-weight: 300;
+        color: $color-white;
+        margin: 4rem;
+        text-transform: uppercase;
+    }
+}
+
+.realisations {
     width: 90%;
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 4rem auto;
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     overflow: hidden;
-    /* align-content: flex-start;
-    align-items: flex-start; */
-}
-
-.ImageContainer {
-    position: relative;
-    overflow: hidden;
-    margin: .5rem;
-    background-color: rgb(26, 26, 26);
-    max-width: 30rem;
-    max-height: 20rem;
-    flex: 1 1 22rem;
-
-    transition: all .5s ease-out;
-}
-
-.Image {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-
-    transition: all .5s ease-out;
-    filter: brightness(90%);
-}
-
-.ImageText {
-    padding-top: .6rem;
-    width: 100%;
-    height: 20%;
-    color: white;
-    background-color: rgba(0, 0, 0, .6);
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translate(-50%, 0);
-    text-align: center;
-    transition: all .5s ease-in-out;
-}
-
-.ImageContainer:hover .Image {
-    transform: scale(1.1);
-    filter: brightness(100%);
-}
-
-.ImageContainer:hover .ImageText {
-    transform: translate(-50%, ) scale(1.5);
-    padding-top: 6rem;
-    font-size: 2rem;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .4);
+    align-content: center;
 }

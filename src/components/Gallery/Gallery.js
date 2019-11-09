@@ -35,8 +35,8 @@ const Gallery = props => {
   const images = props.images;
 
   return (
-    <section className="section-project">
-      <h1 className="section-project__title">{props.name}</h1>
+    <article className="project">
+      <h1 className="project__title">{props.name}</h1>
       <div className="gallery">{thumbnails}</div>
       {toggler && (
         <Lightbox
@@ -53,7 +53,7 @@ const Gallery = props => {
           reactModalStyle={customStyles}
         />
       )}
-    </section>
+    </article>
   );
 };
 
