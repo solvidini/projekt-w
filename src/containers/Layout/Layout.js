@@ -9,8 +9,7 @@ const Layout = props => {
 
   return (
     <React.Fragment>
-      TOOLBAR
-      SideDrawer
+      <div className="lol">TOOLBAR</div>
       {props.children}
     </React.Fragment>
   );

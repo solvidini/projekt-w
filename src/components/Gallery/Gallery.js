@@ -16,6 +16,7 @@ const Gallery = props => {
   const thumbnails = props.images.map((image, index) => {
     return (
       <div
+        key={index}
         className="gallery__thumbnail"
         onClick={() => {
           setPhotoIndex(index);

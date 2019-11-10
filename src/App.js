@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Spinner from "./components/UI/Spinner/Spinner";
 import Layout from "./containers/Layout/Layout";
 import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home";
 
 import project_1 from "./assets/images/kompaktowy_apartament_w_katowicach/index";
 import project_2 from "./assets/images/dom_w_rzeszowie/index";
@@ -54,7 +55,7 @@ function App() {
             exact
             render={props => <Realisations {...props} />}
           />
-          <Redirect from="/" to="/realisations" />
+          <Route path="/" exact component={Home} />
         </Switch>
       </Suspense>
     </Layout>
