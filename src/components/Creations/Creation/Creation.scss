@@ -1,7 +1,7 @@
 @import "../../../sass/variables";
 @import "../../../sass/mixins";
 
-.realisations__item {
+.creations__item {
     position: relative;
     overflow: hidden;
     margin: .3rem;
@@ -12,8 +12,6 @@
             max-width: 100%;
         }
     }
-
-
 
     flex: 1 1 auto;
 
@@ -54,6 +52,7 @@
     &:hover &__text {
         bottom: 0;
         height: 20%;
+        width: 110%;
         transform: translate(-50%, 0);
         padding-top: 1rem;
         background-color: rgba($color-background, 1);

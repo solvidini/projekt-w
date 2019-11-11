@@ -1,11 +1,18 @@
 @import '../../sass/mixins';
+@import '../../sass/variables';
 
-.lol {
-    position: fixed;
+.toolbar-height {
+    height: 14rem;
     width: 100%;
-    overflow: hidden;
-    height: 10rem;
-    background-color: yellow;
-    top: 0;
-    z-index: 1000;
+    // background-color: rgba($color-black, .8);
+
+    position: relative;
+
+    &--small {
+        height: 5rem;
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
 }

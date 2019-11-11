@@ -3,11 +3,10 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import Spinner from "./components/UI/Spinner/Spinner";
 import Layout from "./containers/Layout/Layout";
-import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 
-import project_1 from "./assets/images/kompaktowy_apartament_w_katowicach/index";
-import project_2 from "./assets/images/dom_w_rzeszowie/index";
+import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
+import project_2 from "./assets/images/projects/dom_w_rzeszowie/index";
 
 import "./App.scss";
 
@@ -16,8 +15,46 @@ const Gallery = lazy(() => {
 });
 
 const Realisations = lazy(() => {
-  return import("./components/Realisations/Realisations");
+  return import("./components/Creations/Realisations");
 });
+
+const RealisationsPremium = lazy(() => {
+  return import("./components/Creations/RealisationsPremium");
+});
+
+const Projects = lazy(() => {
+  return import("./components/Creations/Projects");
+});
+
+const ProjectsPremium = lazy(() => {
+  return import("./components/Creations/ProjectsPremium");
+});
+
+const RealisationsComponent = props => (
+  <React.Fragment>
+    <Route
+      path="/realisations"
+      exact
+      render={props => <Realisations {...props} />}
+    />
+    <Route
+      path="realisations/1"
+      render={props => (
+        <Gallery
+          {...props}
+          images={project_1}
+          name="Kompaktowy Apartament w&nbsp;Katowicach"
+        />
+      )}
+    />
+    {/* <Route
+      path={`${props.match.url}/2`}
+      render={props => (
+        <Gallery {...props} images={project_2} name="Dom w&nbsp;Rzeszowie" />
+      )}
+    /> */}
+  </React.Fragment>
+);
 
 function App() {
   return (
@@ -25,37 +62,33 @@ function App() {
       <Suspense fallback={<Spinner />}>
         <Switch>
           <Route
-            path="/realisations/1"
+            path="/realisations/:id"
             render={props => (
-              <React.Fragment>
-                <Gallery
-                  {...props}
-                  images={project_1}
-                  name="Kompaktowy Apartament w&nbsp;Katowicach"
-                />
-                <Footer />
-              </React.Fragment>
+              <Gallery
+                {...props}
+                images={project_1}
+                name="Kompaktowy Apartament w&nbsp;Katowicach"
+              />
             )}
           />
           <Route
-            path="/realisations/2"
-            render={props => (
-              <React.Fragment>
-                <Gallery
-                  {...props}
-                  images={project_2}
-                  name="Dom w&nbsp;Rzeszowie"
-                />
-                <Footer />
-              </React.Fragment>
-            )}
-          />
-          <Route
-            path="/realisations"
             exact
+            path="/realisations"
             render={props => <Realisations {...props} />}
+            // component={RealisationsComponent}
           />
-          <Route path="/" exact component={Home} />
+          <Route
+            exact
+            path="/realisations-premium"
+            render={props => <RealisationsPremium {...props} />}
+          />
+          <Route exact path="/projects" component={Projects} />
+          <Route
+            exact
+            path="projects-premium"
+            render={props => <ProjectsPremium {...props} />}
+          />
+          <Route exact path="/" component={Home} />
         </Switch>
       </Suspense>
     </Layout>

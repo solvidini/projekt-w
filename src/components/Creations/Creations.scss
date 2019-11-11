@@ -1,19 +1,22 @@
 @import "../../sass/variables";
 @import "../../sass/mixins";
 
-.section-realisations {
+.section-creations {
     &__title {
         text-align: center;
         font-size: 3rem;
         letter-spacing: .6rem;
         font-weight: 300;
+        width: 100%;
+        background-color: $color-dark;
         color: $color-white;
-        margin: 4rem;
+        margin: 1rem 0;
+        padding: 2rem;
         text-transform: uppercase;
     }
 }
 
-.realisations {
+.creations {
     width: 90%;
     max-width: 120rem;
     margin: 4rem auto;

@@ -1,0 +1,83 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+
+.drawer-toggle__button {
+    display: none;
+    position: relative;
+    height: 100%;
+    z-index: 900;
+    cursor: pointer;
+
+    @include respond(phone) {
+        display: block;
+    }
+}
+
+.drawer-toggle__icon {
+    position: relative;
+    margin-top: 2.4rem;
+    z-index: 900;
+
+    @include respond(phone) {
+        margin-top: 3.3rem;
+    }
+
+    &,
+    &::before,
+    &::after {
+        width: 4rem;
+        height: .2rem;
+        background-color: $color-white;
+        display: block;
+
+        @include respond(phone) {
+            width: 6rem;
+            height: .3rem;
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        transition: all .2s;
+    }
+
+    &::before {
+        top: -1rem;
+        @include respond(phone) {
+            top: -1.25rem;
+        }
+    }
+
+    &::after {
+        top: 1rem;
+        @include respond(phone) {
+            top: 1.25rem;
+        }
+    }
+
+    &--active {
+        position: fixed; 
+        display: block;
+        z-index: 1000;
+        top: 1.5rem;
+        right: 1.5rem;
+
+        & {
+            background-color: transparent;
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../../../sass/variables';
+@import '../../../../sass/mixins';
+@import '../../../../sass/animations';
+
+.navigation-item {
+    height: 100%;
+    width: 100%;
+    padding: 0 1.5rem;
+    transition: all .5s ease-out;
+    list-style: none;
+
+    white-space: nowrap;
+
+    @include respond(phone) {
+        font-weight: 300;
+        padding: 1rem 0;
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        height: 100%;
+        width: 100%;
+        color: $color-white;
+        text-decoration: none;
+        transition: all .2s ease;
+
+        display: flex;
+        align-items: center;
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &:hover &__link {
+        cursor: pointer;
+    }
+
+    &--active {
+        font-weight: 700;
+    }
+}

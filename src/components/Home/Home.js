@@ -3,7 +3,7 @@ import React from "react";
 import "./Home.scss";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
-import project_1 from "../../assets/images/kompaktowy_apartament_w_katowicach/index";
+import project_1 from "../../assets/images/projects/kompaktowy_apartament_w_katowicach/index";
 
 const Home = props => {
   const content = [

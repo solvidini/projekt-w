@@ -1,82 +1,68 @@
 import React from "react";
 
 import "./Footer.scss";
+import Logo from "../Logo/Logo";
+import NavigationItem from "../Navigation/NavigationItems/NavigationItem/NavigationItem";
 
 const Footer = () => {
   const currentDate = new Date().getFullYear();
 
   return (
     <footer className="footer" name="section-contact">
-      <div className="footer__top">
-        <div className="footer__top__logo">&nbsp;</div>
-        <div className="footer__top__item">
-          <h4>
-            Kontakt <i className="far fa-envelope"></i>
-          </h4>
-          <span>
-            contact@samuelk.pl<a href="mailto:contact@samuelk.pl"> &rarr;</a>
-          </span>
-          <span>
-            samukedo@gmail.com<a href="mailto:samukedo@gmail.com"> &rarr;</a>
-          </span>
+      <div className="footer__info">
+        <div className="footer__info__item">
+          <h4>Pracownia</h4>
+          <span>Żniwna 1</span>
+          <span>43-100 Tychy (Poland)</span>
         </div>
-        <div className="footer__top__item">
-          <h4>
-            CV <i className="far fa-address-card"></i>
-          </h4>
-          <a
-            href="https://docs.google.com/document/d/1KyYiSiBsq8Lc8nhOA8K3UFCMr0r5hVnkSdl9uidR8Lc/edit?usp=sharing"
-            title="Curriculum vitae PL"
-          >
-            Curriculum vitae PL
+        <div className="footer__info__item">
+          <h4>Kontakt</h4>
+          <span>
+            <a href="mailto:biuro@projektw.pl">biuro@projektw.pl &rarr;</a>
+          </span>
+          <span>+48 608 466 901</span>
+          <span>+48 602 194 398</span>
+        </div>
+        {/* <div className="footer__info__item">
+          <div className="footer__info__logo">
+            <Logo small />
+          </div>
+        </div> */}
+        <div className="footer__info__item">
+          <h4>Nawigacja</h4>
+          <nav className="footer__nav">
+            <ul className="footer__nav__item">
+              <NavigationItem exact link="/">
+                Home
+              </NavigationItem>
+              <NavigationItem link="lab">Pracownia</NavigationItem>
+              <NavigationItem link="projects">Projekty</NavigationItem>
+              <NavigationItem link="realisations">Realizacje</NavigationItem>
+            </ul>
+            <ul className="footer__nav__item">
+              <NavigationItem link="offer">Oferta</NavigationItem>
+              <NavigationItem link="partners">Partnerzy</NavigationItem>
+              <NavigationItem link="contact">Kontakt</NavigationItem>
+            </ul>
+          </nav>
+        </div>
+        <div className="footer__info__item">
+          <h4>Obserwuj nas</h4>
+          <a href="https://www.facebook.com/ProjektWPAW/">
+            <i className="fab fa-facebook footer__icon"></i>
           </a>
-          <a
-            href="https://docs.google.com/document/d/1lmQmuafOFvkSBoKYF8b_ny6XoHf_qqf0jZlUhjwYnss/edit?usp=sharing"
-            title="Curriculum vitae ENG"
-          >
-            Curriculum vitae ENG
-          </a>
         </div>
-        <div className="footer__top__item">
-          Offer icons made by{" "}
-          <span>
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-              Freepik
-            </a>
-            ,
-          </span>
-          <span>
-            <a
-              href="https://www.flaticon.com/authors/elias-bikbulatov"
-              title="Elias Bikbulatov"
-            >
-              Elias Bikbulatov
-            </a>
-          </span>
-          <span>
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
-          </span>
-        </div>
-      </div>
-      <div className="footer__social">
-        <a
-          className="footer__social__link"
-          href="https://www.linkedin.com/in/samuel-k%C4%99dziora-b45b86159/"
-        >
-          <i className="fab fa-linkedin-in"></i>
-        </a>
-        <a className="footer__social__link" href="https://github.com/ssazero">
-          <i className="fab fa-github"></i>
-        </a>
       </div>
       <div className="footer__copyright">
-        <span className="no-wrap">
-          Projekt W &nbsp;&copy; <b>{currentDate}</b>
-        </span>
-        <span className="no-wrap">Wszelkie prawa zastrzeżone.</span>
+        <div className="footer__copyright__item">
+          <span className="no-wrap">
+            Projekt W &nbsp;&copy; <b>{currentDate}</b>
+          </span>{" "}
+          <span className="no-wrap">Wszelkie&nbsp;prawa&nbsp;zastrzeżone.</span>
+        </div>
+        <div className="footer__copyright__item creator no-wrap">
+          Site made by <a href="http://samuelk.pl">Samuel Kędziora</a>
+        </div>
       </div>
     </footer>
   );
