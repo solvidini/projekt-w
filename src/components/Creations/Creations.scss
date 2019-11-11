@@ -24,4 +24,12 @@
     flex-flow: row wrap;
     overflow: hidden;
     align-content: center;
+    justify-content: center;
+}
+
+.no-creations {
+    color: rgb(170, 170, 170);
+    margin: 6rem 0;
+    text-align: center;
+    font-size: 3rem;
 }
