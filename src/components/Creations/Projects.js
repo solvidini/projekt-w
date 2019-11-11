@@ -18,6 +18,11 @@ const Projects = props => {
           name={project_1.name}
           source={project_1.images[0].tn}
         />
+      <Project
+          to={props.match.url + "/1"}
+          name={project_2.name}
+          source={project_2.images[0].tn}
+        />
       </div>
     </section>
   );

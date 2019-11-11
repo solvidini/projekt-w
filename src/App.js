@@ -62,7 +62,9 @@ function App() {
           <Route
             exact
             path="/realisations"
-            render={props => <Realisations {...props} />}
+            render={props => (
+              <Realisations {...props} realisationsArray={projectsArray} />
+            )}
           />
           <Route path="/realisations/:id" component={RealisationsPaths} />
           <Route
@@ -73,7 +75,9 @@ function App() {
           <Route
             exact
             path="/projects"
-            render={props => <Projects {...props} />}
+            render={props => (
+              <Projects {...props} projectsArray={projectsArray} />
+            )}
           />
           <Route
             exact

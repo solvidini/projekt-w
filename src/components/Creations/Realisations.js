@@ -3,26 +3,19 @@ import React from "react";
 import Realisation from "./Creation/Creation";
 import "./Creations.scss";
 
-import project_1 from "../../assets/images/projects/kompaktowy_apartament_w_katowicach/index";
-import project_2 from "../../assets/images/projects/dom_w_rzeszowie/index";
-
 const Realisations = props => {
   return (
     <section className="section-creations">
-      <h1 className="section-creations__title">
-        Realizacje
-      </h1>
+      <h1 className="section-creations__title">Realizacje</h1>
       <div className="creations">
-        <Realisation
-          to={props.match.url + "/1"}
-          name={project_1.name}
-          source={project_1.images[0].tn}
-        />
-        <Realisation
-          to={props.match.url + "/2"}
-          name={project_2.name}
-          source={project_2.images[0].tn}
-        />
+        {props.realisationsArray.map((realisation, index) => (
+          <Realisation
+            key={realisation.name + index}
+            to={props.match.url + "/" + (index + 1)}
+            name={realisation.name}
+            source={realisation.images[0].tn}
+          />
+        ))}
       </div>
     </section>
   );
