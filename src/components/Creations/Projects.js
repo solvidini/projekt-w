@@ -13,15 +13,10 @@ const Projects = props => {
         Projekty
       </h1>
       <div className="creations">
-        <Project
+      <Project
           to={props.match.url + "/1"}
-          name="Kompaktowy Apartament w&nbsp;Katowicach"
-          source={project_1[0].tn}
-        />
-        <Project
-          to={props.match.url + "/2"}
-          name="Dom w&nbsp;Rzeszowie"
-          source={project_2[0].tn}
+          name={project_1.name}
+          source={project_1.images[0].tn}
         />
       </div>
     </section>

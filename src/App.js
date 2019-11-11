@@ -4,11 +4,10 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Spinner from "./components/UI/Spinner/Spinner";
 import Layout from "./containers/Layout/Layout";
 import Home from "./components/Home/Home";
+import "./App.scss";
 
 import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
 import project_2 from "./assets/images/projects/dom_w_rzeszowie/index";
-
-import "./App.scss";
 
 const Gallery = lazy(() => {
   return import("./components/Gallery/Gallery");
@@ -30,31 +29,30 @@ const ProjectsPremium = lazy(() => {
   return import("./components/Creations/ProjectsPremium");
 });
 
-const RealisationsComponent = props => (
-  <React.Fragment>
-    <Route
-      path="/realisations"
-      exact
-      render={props => <Realisations {...props} />}
-    />
-    <Route
-      path="realisations/1"
-      render={props => (
-        <Gallery
-          {...props}
-          images={project_1}
-          name="Kompaktowy Apartament w&nbsp;Katowicach"
-        />
-      )}
-    />
-    {/* <Route
-      path={`${props.match.url}/2`}
-      render={props => (
-        <Gallery {...props} images={project_2} name="Dom w&nbsp;Rzeszowie" />
-      )}
-    /> */}
-  </React.Fragment>
-);
+const projectsArray = [project_1, project_2];
+const projectsPremiumArray = [];
+const realisationsArray = [];
+const realisationsPremiumArray = [];
+
+const RealisationsPaths = props => {
+  const id = props.match.params.id - 1;
+  const url = props.match.url;
+  if (!projectsArray[id]) return <Redirect to="/" />;
+  return (
+    <React.Fragment>
+      <Route
+        path={url}
+        render={props => (
+          <Gallery
+            {...props}
+            images={projectsArray[id].images}
+            name={projectsArray[id].name}
+          />
+        )}
+      />
+    </React.Fragment>
+  );
+};
 
 function App() {
   return (
@@ -62,33 +60,28 @@ function App() {
       <Suspense fallback={<Spinner />}>
         <Switch>
           <Route
-            path="/realisations/:id"
-            render={props => (
-              <Gallery
-                {...props}
-                images={project_1}
-                name="Kompaktowy Apartament w&nbsp;Katowicach"
-              />
-            )}
-          />
-          <Route
             exact
             path="/realisations"
             render={props => <Realisations {...props} />}
-            // component={RealisationsComponent}
           />
+          <Route path="/realisations/:id" component={RealisationsPaths} />
           <Route
             exact
             path="/realisations-premium"
             render={props => <RealisationsPremium {...props} />}
           />
-          <Route exact path="/projects" component={Projects} />
           <Route
             exact
-            path="projects-premium"
+            path="/projects"
+            render={props => <Projects {...props} />}
+          />
+          <Route
+            exact
+            path="/projects-premium"
             render={props => <ProjectsPremium {...props} />}
           />
           <Route exact path="/" component={Home} />
+          <Route component={Home} />
         </Switch>
       </Suspense>
     </Layout>

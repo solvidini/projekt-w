@@ -35,14 +35,14 @@ const Footer = () => {
               <NavigationItem exact link="/">
                 Home
               </NavigationItem>
-              <NavigationItem link="lab">Pracownia</NavigationItem>
-              <NavigationItem link="projects">Projekty</NavigationItem>
-              <NavigationItem link="realisations">Realizacje</NavigationItem>
+              <NavigationItem link="/lab">Pracownia</NavigationItem>
+              <NavigationItem link="/projects">Projekty</NavigationItem>
+              <NavigationItem link="/realisations">Realizacje</NavigationItem>
             </ul>
             <ul className="footer__nav__item">
-              <NavigationItem link="offer">Oferta</NavigationItem>
-              <NavigationItem link="partners">Partnerzy</NavigationItem>
-              <NavigationItem link="contact">Kontakt</NavigationItem>
+              <NavigationItem link="/offer">Oferta</NavigationItem>
+              <NavigationItem link="/partners">Partnerzy</NavigationItem>
+              <NavigationItem link="/contact">Kontakt</NavigationItem>
             </ul>
           </nav>
         </div>

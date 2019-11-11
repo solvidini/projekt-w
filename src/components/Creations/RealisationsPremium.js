@@ -13,10 +13,10 @@ const RealisationsPremium = props => {
         Realizacje Premium
       </h1>
       <div className="creations">
-        <Realisation
-          to="/premium-realisations/1"
-          name="Kompaktowy Apartament w&nbsp;Katowicach"
-          source={project_1[0].tn}
+      <Realisation
+          to={props.match.url + "/1"}
+          name={project_1.name}
+          source={project_1.images[0].tn}
         />
       </div>
     </section>

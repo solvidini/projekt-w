@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from "react-router-dom";
 import Lightbox from "react-image-lightbox";
 import "./Gallery.scss";
 import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
@@ -12,6 +13,8 @@ const customStyles = {
 const Gallery = props => {
   const [toggler, setToggler] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
+
+  if (!props.images) return <Redirect to="/" />; 
 
   const thumbnails = props.images.map((image, index) => {
     return (

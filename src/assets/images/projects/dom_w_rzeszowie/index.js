@@ -41,89 +41,92 @@ import p20_tn from "./p20_tn.jpg";
 import p21 from "./p21.jpg";
 import p21_tn from "./p21_tn.jpg";
 
-export default [
-  {
-    src: p1,
-    tn: p1_tn
-  },
-  {
-    src: p2,
-    tn: p2_tn
-  },
-  {
-    src: p3,
-    tn: p3_tn
-  },
-  {
-    src: p4,
-    tn: p4_tn
-  },
-  {
-    src: p5,
-    tn: p5_tn
-  },
-  {
-    src: p6,
-    tn: p6_tn
-  },
-  {
-    src: p7,
-    tn: p7_tn
-  },
-  {
-    src: p8,
-    tn: p8_tn
-  },
-  {
-    src: p9,
-    tn: p9_tn
-  },
-  {
-    src: p10,
-    tn: p10_tn
-  },
-  {
-    src: p11,
-    tn: p11_tn
-  },
-  {
-    src: p12,
-    tn: p12_tn
-  },
-  {
-    src: p13,
-    tn: p13_tn
-  },
-  {
-    src: p14,
-    tn: p14_tn
-  },
-  {
-    src: p15,
-    tn: p15_tn
-  },
-  {
-    src: p16,
-    tn: p16_tn
-  },
-  {
-    src: p17,
-    tn: p17_tn
-  },
-  {
-    src: p18,
-    tn: p18_tn
-  },
-  {
-    src: p19,
-    tn: p19_tn
-  },
-  {
-    src: p20,
-    tn: p20_tn
-  },
-  {
-    src: p21,
-    tn: p21_tn
-  }
-];
+export default {
+  name: "Dom w\xa0Rzeszowie",
+  images: [
+    {
+      src: p1,
+      tn: p1_tn
+    },
+    {
+      src: p2,
+      tn: p2_tn
+    },
+    {
+      src: p3,
+      tn: p3_tn
+    },
+    {
+      src: p4,
+      tn: p4_tn
+    },
+    {
+      src: p5,
+      tn: p5_tn
+    },
+    {
+      src: p6,
+      tn: p6_tn
+    },
+    {
+      src: p7,
+      tn: p7_tn
+    },
+    {
+      src: p8,
+      tn: p8_tn
+    },
+    {
+      src: p9,
+      tn: p9_tn
+    },
+    {
+      src: p10,
+      tn: p10_tn
+    },
+    {
+      src: p11,
+      tn: p11_tn
+    },
+    {
+      src: p12,
+      tn: p12_tn
+    },
+    {
+      src: p13,
+      tn: p13_tn
+    },
+    {
+      src: p14,
+      tn: p14_tn
+    },
+    {
+      src: p15,
+      tn: p15_tn
+    },
+    {
+      src: p16,
+      tn: p16_tn
+    },
+    {
+      src: p17,
+      tn: p17_tn
+    },
+    {
+      src: p18,
+      tn: p18_tn
+    },
+    {
+      src: p19,
+      tn: p19_tn
+    },
+    {
+      src: p20,
+      tn: p20_tn
+    },
+    {
+      src: p21,
+      tn: p21_tn
+    }
+  ]
+};

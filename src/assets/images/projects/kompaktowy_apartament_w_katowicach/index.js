@@ -29,65 +29,68 @@ import p14_tn from "./p14_tn.jpg";
 import p15 from "./p15.jpg";
 import p15_tn from "./p15_tn.jpg";
 
-export default [
-  {
-    src: p1,
-    tn: p1_tn
-  },
-  {
-    src: p2,
-    tn: p2_tn
-  },
-  {
-    src: p3,
-    tn: p3_tn
-  },
-  {
-    src: p4,
-    tn: p4_tn
-  },
-  {
-    src: p5,
-    tn: p5_tn
-  },
-  {
-    src: p6,
-    tn: p6_tn
-  },
-  {
-    src: p7,
-    tn: p7_tn
-  },
-  {
-    src: p8,
-    tn: p8_tn
-  },
-  {
-    src: p9,
-    tn: p9_tn
-  },
-  {
-    src: p10,
-    tn: p10_tn
-  },
-  {
-    src: p11,
-    tn: p11_tn
-  },
-  {
-    src: p12,
-    tn: p12_tn
-  },
-  {
-    src: p13,
-    tn: p13_tn
-  },
-  {
-    src: p14,
-    tn: p14_tn
-  },
-  {
-    src: p15,
-    tn: p15_tn
-  }
-];
+export default {
+  name: "Kompaktowy Apartament w\xa0Katowicach",
+  images: [
+    {
+      src: p1,
+      tn: p1_tn
+    },
+    {
+      src: p2,
+      tn: p2_tn
+    },
+    {
+      src: p3,
+      tn: p3_tn
+    },
+    {
+      src: p4,
+      tn: p4_tn
+    },
+    {
+      src: p5,
+      tn: p5_tn
+    },
+    {
+      src: p6,
+      tn: p6_tn
+    },
+    {
+      src: p7,
+      tn: p7_tn
+    },
+    {
+      src: p8,
+      tn: p8_tn
+    },
+    {
+      src: p9,
+      tn: p9_tn
+    },
+    {
+      src: p10,
+      tn: p10_tn
+    },
+    {
+      src: p11,
+      tn: p11_tn
+    },
+    {
+      src: p12,
+      tn: p12_tn
+    },
+    {
+      src: p13,
+      tn: p13_tn
+    },
+    {
+      src: p14,
+      tn: p14_tn
+    },
+    {
+      src: p15,
+      tn: p15_tn
+    }
+  ]
+};

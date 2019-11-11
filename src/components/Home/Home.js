@@ -35,7 +35,7 @@ const Home = props => {
           key={index}
           className="slider-content"
           style={{
-            background: `url(${project_1[index].src}) no-repeat center center`
+            background: `url(${project_1.images[index].src}) no-repeat center center`
           }}
         >
           <div className="slider-content__text">

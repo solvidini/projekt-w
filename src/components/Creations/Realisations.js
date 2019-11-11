@@ -14,29 +14,14 @@ const Realisations = props => {
       </h1>
       <div className="creations">
         <Realisation
-          to="/realisations/1"
-          name="Kompaktowy Apartament w&nbsp;Katowicach"
-          source={project_1[0].tn}
+          to={props.match.url + "/1"}
+          name={project_1.name}
+          source={project_1.images[0].tn}
         />
         <Realisation
           to={props.match.url + "/2"}
-          name="Dom w&nbsp;Rzeszowie"
-          source={project_2[0].tn}
-        />
-        <Realisation
-          to="/realisations/1"
-          name="Kompaktowy Apartament w&nbsp;Katowicach"
-          source={project_1[0].tn}
-        />
-        <Realisation
-          to="/realisations/2"
-          name="Dom w&nbsp;Rzeszowie"
-          source={project_2[0].tn}
-        />
-        <Realisation
-          to="/realisations/1"
-          name="Kompaktowy Apartament w&nbsp;Katowicach"
-          source={project_1[0].tn}
+          name={project_2.name}
+          source={project_2.images[0].tn}
         />
       </div>
     </section>
