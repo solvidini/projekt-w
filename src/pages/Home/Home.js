@@ -3,46 +3,38 @@ import React from "react";
 import "./Home.scss";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
-import project_1 from "../../assets/images/projects/kompaktowy_apartament_w_katowicach/index";
+import realisation_1 from "../../assets/images/realisations-premium/pentahouse_w_katowicach/index";
+import realisation_2 from "../../assets/images/realisations-premium/dom_w_tychach/index";
+import project_1 from '../../assets/images/projects/kompaktowy_apartament_w_katowicach/index';
 
 const Home = props => {
   const content = [
     {
-      title: "Slajd 1",
-      description:
-        "Laboris elit do culpa incididunt amet dolor do veniam. Labore commodo qui ut deserunt cillum proident consequat pariatur deserunt. Elit "
+      title: realisation_1.name,
+      background: realisation_1.images[38].src
     },
     {
-      title: "Slajd 2",
-      description:
-        "Laboris elit do culpa incididunt amet dolor do veniam. Labore commodo qui ut deserunt cillum proident consequat pariatur deserunt. Elit commodo amet consequat cupidatat consequat veniam proident ipsum cillum magna. Dolor est ullamco "
+      title: realisation_2.name,
+      background: realisation_2.images[7].src
     },
     {
-      title: "Slajd 3",
-      description:
-        "Laboris elit do culpa incididunt amet dolor do veniam. Labore commodo qui ut deserunt cillum proident consequat pariatur deserunt. Elit commodo amet consequat cupidatat consequat veniam proident ipsum cillum magna. "
-    },
-    {
-      title: "Slajd 4",
-      description:
-        "Laboris elit do culpa incididunt amet dolor do veniam. Labore commodo qui ut deserunt cillum proident consequat pariatur deserunt. "
+      title: project_1.name,
+      background: project_1.images[14].src
     }
   ];
   return (
-    <Slider className="slider-wraper" autoplay={3000}>
+    <Slider className="slider-wraper" autoplay={3000} infinite={true}>
       {content.map((item, index) => (
         <div
           key={index}
           className="slider-content"
+          
           style={{
-            background: `url(${project_1.images[index].src}) no-repeat center center`
+            background: `url(${item.background}) no-repeat center center`
           }}
         >
           <div className="slider-content__text">
             <h2 className="slider-content__text__title">{item.title}</h2>
-            <p className="slider-content__text__description">
-              {item.description}
-            </p>
           </div>
         </div>
       ))}

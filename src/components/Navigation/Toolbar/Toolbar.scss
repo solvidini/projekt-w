@@ -38,6 +38,12 @@
   &__nav {
     height: 100%;
   }
+
+  &__link-home {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .desktop-only {

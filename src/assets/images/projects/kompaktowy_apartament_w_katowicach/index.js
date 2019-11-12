@@ -31,6 +31,7 @@ import p15_tn from "./p15_tn.jpg";
 
 export default {
   name: "Kompaktowy Apartament w\xa0Katowicach",
+  exhibit: p1_tn,
   images: [
     {
       src: p1,

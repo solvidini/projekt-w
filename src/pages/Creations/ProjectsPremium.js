@@ -14,7 +14,7 @@ const ProjectsPremium = props => {
             key={project.name + index}
             to={props.match.url + "/" + (index + 1)}
             name={project.name}
-            source={project.images[0].src}
+            source={project.exhibit}
           />
         ))
         : <div className="no-creations">Brak projektów</div>}

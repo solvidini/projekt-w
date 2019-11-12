@@ -27,6 +27,7 @@ import p13_tn from "./p13_tn.jpg";
 
 export default {
   name: "Dom w\xa0Ogrodzieńcu",
+  exhibit: p2_tn,
   images: [
     {
       src: p1,

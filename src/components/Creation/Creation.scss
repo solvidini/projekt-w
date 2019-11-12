@@ -5,12 +5,25 @@
     position: relative;
     overflow: hidden;
     margin: .3rem;
-    max-height: 40rem;
+    height: 40rem;
+    background-color: $color-dark;
 
-    flex: 1 1 30%;
+    max-width: 49%;
+    flex: 1 1 auto;
+
+    @include respond(tab-port) {
+        max-width: 100%;
+        flex: 1 1 49%;
+        &:last-child {
+            max-width: 49%;
+        }
+    }
 
     @include respond(phone) {
         flex: 1 1 100%;
+        &:last-child {
+            max-width: none;
+        }
     }
 
     transition: all .5s ease-out;
@@ -19,7 +32,7 @@
         object-fit: cover;
         width: 100%;
         height: 100%;
-    
+
         transition: all .5s ease-out;
         filter: brightness(90%);
         background-color: $color-dark;
@@ -30,7 +43,7 @@
         letter-spacing: .3rem;
         color: $color-white;
         backface-visibility: hidden;
-        
+
         padding-top: 2rem;
         width: 100%;
         height: 30%;

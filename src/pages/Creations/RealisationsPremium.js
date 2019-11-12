@@ -14,7 +14,7 @@ const RealisationsPremium = props => {
             key={realisation.name + index}
             to={props.match.url + "/" + (index + 1)}
             name={realisation.name}
-            source={realisation.images[0].src}
+            source={realisation.exhibit}
           />
         ))
         : <div className="no-creations">Brak realizacji</div>}
