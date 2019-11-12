@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import "./Layout.scss";
-import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
-import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
-import Footer from '../../components/Footer/Footer';
+import Toolbar from "../components/Navigation/Toolbar/Toolbar";
+import SideDrawer from "../components/Navigation/SideDrawer/SideDrawer";
+import Footer from '../components/Footer/Footer';
 
 const Layout = props => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);

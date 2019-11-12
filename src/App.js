@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import Spinner from "./components/UI/Spinner/Spinner";
-import Layout from "./containers/Layout/Layout";
+import Layout from "./Layout/Layout";
 import Home from "./pages/Home/Home";
 import ScrollToTop from "./hoc/ScrollToTop";
 import "./App.scss";
