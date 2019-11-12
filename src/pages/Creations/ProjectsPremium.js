@@ -1,6 +1,6 @@
 import React from "react";
 
-import Project from "./Creation/Creation";
+import Project from "../../components/Creation/Creation";
 import "./Creations.scss";
 
 const ProjectsPremium = props => {

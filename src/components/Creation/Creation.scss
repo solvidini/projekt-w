@@ -1,5 +1,5 @@
-@import "../../../sass/variables";
-@import "../../../sass/mixins";
+@import "../../sass/variables";
+@import "../../sass/mixins";
 
 .creations__item {
     position: relative;
@@ -7,14 +7,11 @@
     margin: .3rem;
     max-height: 40rem;
 
-    // &:last-child {
-    //     max-width: 50%;
-    //     @include respond(tab-port) {
-    //         max-width: 100%;
-    //     }
-    // }
-
     flex: 1 1 30%;
+
+    @include respond(phone) {
+        flex: 1 1 100%;
+    }
 
     transition: all .5s ease-out;
 

@@ -10,7 +10,7 @@
     font-size: 1.6rem;
     text-transform: uppercase;
 
-    @include respond(phone) {
+    @include respond(tab-land) {
         font-size: 3.2rem;
         margin-left: 1rem;
         flex-flow: column;
@@ -30,13 +30,8 @@
 
     cursor: pointer;
 
-    @include respond(phone) {
-        font-weight: 300;
-        padding: 1rem 0;
-    }
-
-    @include respond(phone) {
-        width: 100%;
+    @include respond(tab-land) {
+        display: none;
     }
 
     &:hover &__content {
@@ -44,12 +39,32 @@
     }
 
     &__content {
+        padding: 0 1rem;
         display: none;
         background-color: rgba($color-black, .8);
         position: absolute;
         line-height: 2;
         bottom: -6.4rem;
-        left: 0;
+        left: .5rem;
         z-index: 1;
+        border-radius: .3rem;
+    }
+}
+
+.navigation-icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 3rem;
+    color: $color-white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.mobile-only {
+    display: none;
+    
+    @include respond(tab-land) {
+        display: block;
     }
 }

@@ -2,14 +2,14 @@
 @import '../../../sass/animations';
 
 .side-drawer {
+    overflow: hidden;
     display: none;
     position: fixed;
     width: 28rem;
-    max-width: 60%;
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 300;
+    z-index: 1500;
     box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
     background-color: rgba(0, 0, 0, .8);
     @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
@@ -28,9 +28,19 @@
         transform: translateX(-101%);
     }
 
-    @include respond(phone) {
+    @include respond(tab-land) {
+        width: 40%;
         display: block;
     }
+
+    @include respond(tab-port) {
+        width: 50%;
+    }
+
+    @include respond(phone) {
+        width: 70%
+    }
+
 
     &__nav {
         height: 100%;

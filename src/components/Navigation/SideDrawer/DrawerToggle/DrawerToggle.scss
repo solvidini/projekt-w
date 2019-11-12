@@ -4,36 +4,39 @@
 .drawer-toggle__button {
     display: none;
     position: relative;
-    height: 100%;
     z-index: 900;
+    height: 100%;
+    width: 8rem;
+    margin-right: 3rem;
+
     cursor: pointer;
 
+    @include respond(tab-land) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     @include respond(phone) {
-        display: block;
+        margin-right: 2rem;
     }
 }
 
 .drawer-toggle__icon {
     position: relative;
-    margin-top: 2.4rem;
     z-index: 900;
 
-    @include respond(phone) {
-        margin-top: 3.3rem;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &,
     &::before,
     &::after {
-        width: 4rem;
-        height: .2rem;
+        width: 7rem;
+        height: .3rem;
         background-color: $color-white;
         display: block;
-
-        @include respond(phone) {
-            width: 6rem;
-            height: .3rem;
-        }
     }
 
     &::before,
@@ -45,38 +48,29 @@
     }
 
     &::before {
-        top: -1rem;
-        @include respond(phone) {
-            top: -1.25rem;
-        }
+        top: -1.5rem;
     }
 
     &::after {
-        top: 1rem;
-        @include respond(phone) {
-            top: 1.25rem;
-        }
+        top: 1.5rem;
     }
 
     &--active {
-        position: fixed; 
+        position: fixed;
+        right: 1rem;
+        top: 4rem;
         display: block;
         z-index: 1000;
-        top: 1.5rem;
-        right: 1.5rem;
-
-        & {
-            background-color: transparent;
-        }
+        background-color: transparent;
 
         &::before {
             top: 0;
-            transform: rotate(135deg);
+            transform: rotate(225deg);
         }
 
         &::after {
             top: 0;
-            transform: rotate(-135deg);
+            transform: rotate(-225deg);
         }
 
     }

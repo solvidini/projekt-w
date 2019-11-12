@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./Footer.scss";
-import Logo from "../Logo/Logo";
 import NavigationItem from "../Navigation/NavigationItems/NavigationItem/NavigationItem";
 
 const Footer = () => {
@@ -17,33 +16,32 @@ const Footer = () => {
         </div>
         <div className="footer__info__item">
           <h4>Kontakt</h4>
-          <span>
-            <a href="mailto:biuro@projektw.pl">biuro@projektw.pl &rarr;</a>
-          </span>
+          <a href="mailto:biuro@projektw.pl">biuro@projektw.pl <i className="far fa-envelope"></i></a>
           <span>+48 608 466 901</span>
           <span>+48 602 194 398</span>
         </div>
-        {/* <div className="footer__info__item">
-          <div className="footer__info__logo">
-            <Logo small />
-          </div>
-        </div> */}
         <div className="footer__info__item">
           <h4>Nawigacja</h4>
           <nav className="footer__nav">
-            <ul className="footer__nav__item">
+            <div className="footer__nav__item">
               <NavigationItem exact link="/">
                 Home
               </NavigationItem>
               <NavigationItem link="/lab">Pracownia</NavigationItem>
-              <NavigationItem link="/projects">Projekty</NavigationItem>
-              <NavigationItem link="/realisations">Realizacje</NavigationItem>
-            </ul>
-            <ul className="footer__nav__item">
               <NavigationItem link="/offer">Oferta</NavigationItem>
               <NavigationItem link="/partners">Partnerzy</NavigationItem>
               <NavigationItem link="/contact">Kontakt</NavigationItem>
-            </ul>
+            </div>
+            <div className="footer__nav__item">
+              <NavigationItem link="/projects">Projekty</NavigationItem>
+              <NavigationItem link="/projects-premium">
+                &nbsp;&rarr;&nbsp;Premium
+              </NavigationItem>
+              <NavigationItem link="/realisations">Realizacje</NavigationItem>
+              <NavigationItem link="/realisations-premium">
+                &nbsp;&rarr;&nbsp;Premium
+              </NavigationItem>
+            </div>
           </nav>
         </div>
         <div className="footer__info__item">

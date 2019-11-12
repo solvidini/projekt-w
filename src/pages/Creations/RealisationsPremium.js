@@ -1,15 +1,15 @@
 import React from "react";
 
-import Realisation from "./Creation/Creation";
+import Realisation from "../../components/Creation/Creation";
 import "./Creations.scss";
 
-const Realisations = props => {
+const RealisationsPremium = props => {
   return (
     <section className="section-creations">
-      <h1 className="section-creations__title">Realizacje</h1>
+      <h1 className="section-creations__title">Realizacje Premium</h1>
       <div className="creations">
-      {props.realisationsArray.length ?
-        props.realisationsArray.map((realisation, index) => (
+      {props.realisationsPremiumArray.length ?
+        props.realisationsPremiumArray.map((realisation, index) => (
           <Realisation
             key={realisation.name + index}
             to={props.match.url + "/" + (index + 1)}
@@ -23,4 +23,4 @@ const Realisations = props => {
   );
 };
 
-export default Realisations;
+export default RealisationsPremium;

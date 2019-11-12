@@ -3,37 +3,39 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import Spinner from "./components/UI/Spinner/Spinner";
 import Layout from "./containers/Layout/Layout";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home/Home";
+import ScrollToTop from "./hoc/ScrollToTop";
 import "./App.scss";
+
 //PROJECTS IMPORT
 import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
 import project_2 from "./assets/images/projects/dom_w_rzeszowie/index";
 //PREMIUM PROJECTS IMPORT
-import projectPremium_1 from './assets/images/projects-premium/dom_w_ogrodziencu/index';
+import projectPremium_1 from "./assets/images/projects-premium/dom_w_ogrodziencu/index";
 //REALISATIONS IMPORT
 
 //PREMIUM REALISATIONS IMPORT
-import realisationPremium_1 from './assets/images/realisations-premium/pentahouse_w_katowicach/index';
-import realisationPremium_2 from './assets/images/realisations-premium/dom_w_tychach/index';
+import realisationPremium_1 from "./assets/images/realisations-premium/pentahouse_w_katowicach/index";
+import realisationPremium_2 from "./assets/images/realisations-premium/dom_w_tychach/index";
 
 const Gallery = lazy(() => {
   return import("./components/Gallery/Gallery");
 });
 
 const Realisations = lazy(() => {
-  return import("./components/Creations/Realisations");
+  return import("./pages/Creations/Realisations");
 });
 
 const RealisationsPremium = lazy(() => {
-  return import("./components/Creations/RealisationsPremium");
+  return import("./pages/Creations/RealisationsPremium");
 });
 
 const Projects = lazy(() => {
-  return import("./components/Creations/Projects");
+  return import("./pages/Creations/Projects");
 });
 
 const ProjectsPremium = lazy(() => {
-  return import("./components/Creations/ProjectsPremium");
+  return import("./pages/Creations/ProjectsPremium");
 });
 
 const realisationsArray = [];
@@ -123,58 +125,63 @@ const ProjectsPremiumPaths = props => {
 
 function App() {
   return (
-    <Layout>
-      <Suspense fallback={<Spinner />}>
-        <Switch>
-          <Route
-            exact
-            path="/realisations"
-            render={props => (
-              <Realisations {...props} realisationsArray={realisationsArray} />
-            )}
-          />
-          <Route path="/realisations/:id" component={RealisationsPaths} />
-          <Route
-            exact
-            path="/realisations-premium"
-            render={props => (
-              <RealisationsPremium
-                {...props}
-                realisationsPremiumArray={realisationsPremiumArray}
-              />
-            )}
-          />
-          <Route
-            path="/realisations-premium/:id"
-            component={RealisationsPremiumPaths}
-          />
-          <Route
-            exact
-            path="/projects"
-            render={props => (
-              <Projects {...props} projectsArray={projectsArray} />
-            )}
-          />
-          <Route path="/projects/:id" component={ProjectsPaths} />
-          <Route
-            exact
-            path="/projects-premium"
-            render={props => (
-              <ProjectsPremium
-                {...props}
-                projectsPremiumArray={projectsPremiumArray}
-              />
-            )}
-          />
-          <Route
-            path="/projects-premium/:id"
-            component={ProjectsPremiumPaths}
-          />
-          <Route exact path="/" component={Home} />
-          <Route component={Home} />
-        </Switch>
-      </Suspense>
-    </Layout>
+    <ScrollToTop>
+      <Layout>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route
+              exact
+              path="/realisations"
+              render={props => (
+                <Realisations
+                  {...props}
+                  realisationsArray={realisationsArray}
+                />
+              )}
+            />
+            <Route path="/realisations/:id" component={RealisationsPaths} />
+            <Route
+              exact
+              path="/realisations-premium"
+              render={props => (
+                <RealisationsPremium
+                  {...props}
+                  realisationsPremiumArray={realisationsPremiumArray}
+                />
+              )}
+            />
+            <Route
+              path="/realisations-premium/:id"
+              component={RealisationsPremiumPaths}
+            />
+            <Route
+              exact
+              path="/projects"
+              render={props => (
+                <Projects {...props} projectsArray={projectsArray} />
+              )}
+            />
+            <Route path="/projects/:id" component={ProjectsPaths} />
+            <Route
+              exact
+              path="/projects-premium"
+              render={props => (
+                <ProjectsPremium
+                  {...props}
+                  projectsPremiumArray={projectsPremiumArray}
+                />
+              )}
+            />
+            <Route
+              path="/projects-premium/:id"
+              component={ProjectsPremiumPaths}
+            />
+            <Route exact path="/" component={Home} />
+            {/* <Route component={Home} /> */}
+          </Switch>
+        </Suspense>
+      </Layout>
+    </ScrollToTop>
   );
 }
 

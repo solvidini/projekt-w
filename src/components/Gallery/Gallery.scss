@@ -36,7 +36,11 @@
         transition: all 1s;
 
         &:last-child {
-            flex: 0 1 auto;
+            flex: 0 1 50%;
+            
+            @include respond(phone) {
+                flex: 1 1 100%;
+            }
         }
 
         &__curtain {
