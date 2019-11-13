@@ -40,14 +40,15 @@
                 font-weight: 300;
                 letter-spacing: .5rem;
                 color: $color-white;
-                font-size: 4rem;
+                font-size: $title-font-size;
+                text-transform: uppercase;
                 background-color: rgba($color-black, .5);
                 border-radius: 1rem;
 
                 @include respond (tab-port) {
                     border-radius: 0;
+                    font-size: 2rem;
                     background-color: rgba($color-dark, .7);
-                    font-size: 3rem;
                 }
             }
         }
@@ -95,7 +96,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(transparent, rgba(rgb(16, 16, 16), 1));
+    background: linear-gradient(transparent 0%, transparent 60%, rgba(rgb(16, 16, 16), 1) 95%);
     bottom: 0;
     left: 0;
 }

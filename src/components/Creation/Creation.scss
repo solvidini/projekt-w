@@ -39,12 +39,12 @@
     }
 
     &__text {
-        font-size: 1.7rem;
+        font-size: $default-font-size;
+        text-transform: uppercase;
         letter-spacing: .3rem;
         color: $color-white;
         backface-visibility: hidden;
 
-        padding-top: 2rem;
         width: 100%;
         height: 30%;
         background-color: rgba($color-background, .4);
@@ -52,7 +52,9 @@
         left: 50%;
         bottom: 50%;
         transform: translate(-50%, 50%);
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         transition: all .5s ease;
     }
 
@@ -66,7 +68,6 @@
         height: 20%;
         width: 110%;
         transform: translate(-50%, 0);
-        padding-top: 1rem;
         background-color: rgba($color-background, 1);
     }
 

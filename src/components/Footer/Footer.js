@@ -59,7 +59,7 @@ const Footer = () => {
           <span className="no-wrap">Wszelkie&nbsp;prawa&nbsp;zastrzeżone.</span>
         </div>
         <div className="footer__copyright__item creator no-wrap">
-          Site made by <a href="http://samuelk.pl">Samuel Kędziora</a>
+          Site made by <a href="http://samuelk.pl">&ndash;Samuel Kędziora&ndash;</a>
         </div>
       </div>
     </footer>

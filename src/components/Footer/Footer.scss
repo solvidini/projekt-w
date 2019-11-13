@@ -6,7 +6,7 @@
 
   &__icon {
     margin-top: 1rem;
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   &__info {
@@ -17,13 +17,13 @@
     align-items: flex-start;
     position: relative;
 
-    font-size: 1.5rem;
+    font-size: $small-font-size;
 
     @include respond(tab-port) {
       flex-flow: row wrap;
       justify-content: space-evenly;
       align-items: flex-start;
-      font-size: 2rem;
+      font-size: $default-font-size;
     }
 
     @include respond(phone) {
@@ -86,7 +86,7 @@
     margin: 0 auto;
     list-style-type: none;
 
-    font-size: 1.6rem;
+    font-size: $small-font-size;
 
     @include respond(tab-port) {
       align-self: center;
@@ -106,7 +106,7 @@
       }
 
       @include respond(tab-port) {
-        font-size: 2rem;
+        font-size: $default-font-size;
       }
 
       @include respond(phone) {
@@ -129,26 +129,26 @@
   }
 
   &__copyright {
-    padding: 2rem;
+    padding: 1.6rem;
     background: $color-dark;
     color: rgb(127, 127, 131);
     text-transform: uppercase;
     letter-spacing: .2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
+      font-size: 1.1rem;
       flex-direction: column;
-      letter-spacing: .1rem;
-      font-size: 1.3rem;
+      letter-spacing: .15rem;
     }
 
     &__item {
-      @include respond(phone) {
+      @include respond(tab-port) {
         &:last-child {
           margin-top: 1rem;
         }
@@ -159,7 +159,6 @@
 
 .creator {
   color: rgb(100, 100, 100);
-
   a,
   a:link,
   a:visited {

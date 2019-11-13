@@ -7,11 +7,11 @@
 
     height: 100%;
     font-weight: 300;
-    font-size: 1.6rem;
+    font-size: $small-font-size;
     text-transform: uppercase;
 
-    @include respond(tab-land) {
-        font-size: 3.2rem;
+    @include respond(tab-port) {
+        font-size: 2rem;
         margin-left: 1rem;
         flex-flow: column;
         height: auto;
@@ -22,15 +22,17 @@
 .navigation-dropdown {
     position: relative;
     color: $color-white;
-    padding: 0 1.5rem;
-    height: 5rem;
+    font-size: $small-font-size;
+    list-style: none;
+    padding: 0 1rem;
     margin: auto 0;
+    height: 5rem;
     display: flex;
     align-items: center;
 
     cursor: pointer;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         display: none;
     }
 
@@ -41,13 +43,17 @@
     &__content {
         padding: 0 1rem;
         display: none;
-        background-color: rgba($color-black, .8);
+        background-color: rgba($color-black, 1);
         position: absolute;
-        line-height: 2;
-        bottom: -6.4rem;
-        left: .5rem;
+        line-height: 1.8;
+        left: 0;
+        bottom: -4rem;
         z-index: 1;
         border-radius: .3rem;
+
+        @include respond(tab-land) {
+            bottom: -5rem
+        }
     }
 }
 
@@ -55,16 +61,20 @@
     height: 100%;
     display: flex;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: $color-white;
     text-decoration: none;
     margin-right: 1rem;
+
+    &__text {
+        font-size: 1.8rem;
+    }
 }
 
 .mobile-only {
     display: none;
     
-    @include respond(tab-land) {
+    @include respond(tab-port) {
         display: block;
     }
 }

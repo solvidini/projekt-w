@@ -4,7 +4,7 @@
 .section-creations {
     &__title {
         text-align: center;
-        font-size: 3rem;
+        font-size: $title-font-size;
         letter-spacing: .6rem;
         font-weight: 300;
         width: 100%;
@@ -34,5 +34,5 @@
     color: rgb(170, 170, 170);
     margin: 6rem 0;
     text-align: center;
-    font-size: 3rem;
+    font-size: $title-font-size;
 }

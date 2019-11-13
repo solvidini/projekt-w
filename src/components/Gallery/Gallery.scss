@@ -4,20 +4,19 @@
 .project {
     &__title {
         text-align: center;
-        font-size: 3rem;
+        font-size: $title-font-size;
         letter-spacing: .6rem;
-        font-weight: 400;
-        color: $color-dark;
+        font-weight: 300;
+        color: $color-white;
         width: 100%;
-        background-color: $color-white;
+        background-color: $color-dark;
         padding: 1rem 0;
-        margin: 2rem 0 .3rem;
+        margin: .3rem 0;
         text-transform: uppercase;
     }
 }
 
 .gallery {
-    width: 90%;
     max-width: 120rem;
     margin: 0 auto;
     display: flex;
@@ -36,7 +35,7 @@
         transition: all 1s;
 
         &:last-child {
-            flex: 0 1 50%;
+            flex: 0 1 49%;
             
             @include respond(phone) {
                 flex: 1 1 100%;
@@ -56,7 +55,7 @@
             &::before {
                 content: "";
                 color: white;
-                font-size: 2rem;
+                font-size: $default-font-size;
                 font-weight: 300;
                 letter-spacing: .5rem;
                 position: absolute;
@@ -77,7 +76,7 @@
         }
 
         &__image {
-            object-fit: cover;
+            object-fit: cover; //cover / fill
             width: 100%;
             height: 100%;
             filter: brightness(100%);

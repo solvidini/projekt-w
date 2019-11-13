@@ -43,7 +43,7 @@ import p21_tn from "./p21_tn.jpg";
 
 export default {
   name: "Dom w\xa0Rzeszowie",
-  exhibit: p10_tn,
+  exhibit: p10,
   images: [
     {
       src: p1,

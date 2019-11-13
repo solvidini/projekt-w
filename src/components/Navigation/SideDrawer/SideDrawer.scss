@@ -28,19 +28,18 @@
         transform: translateX(-101%);
     }
 
-    @include respond(tab-land) {
-        width: 40%;
-        display: block;
-    }
-
+    // @include respond(tab-land) {
+    //     width: 30%;
+    // }
+    
     @include respond(tab-port) {
-        width: 50%;
+        display: block;
+        width: 30%;
     }
 
     @include respond(phone) {
-        width: 70%
+        width: 50%
     }
-
 
     &__nav {
         height: 100%;
