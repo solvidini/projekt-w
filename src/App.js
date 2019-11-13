@@ -15,7 +15,7 @@ import projectPremium_1 from "./assets/images/projects-premium/dom_w_ogrodziencu
 //REALISATIONS IMPORT
 
 //PREMIUM REALISATIONS IMPORT
-import realisationPremium_1 from "./assets/images/realisations-premium/pentahouse_w_katowicach/index";
+import realisationPremium_1 from "./assets/images/realisations-premium/penthouse_w_katowicach/index";
 import realisationPremium_2 from "./assets/images/realisations-premium/dom_w_tychach/index";
 
 const Gallery = lazy(() => {

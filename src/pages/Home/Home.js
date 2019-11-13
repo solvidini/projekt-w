@@ -3,7 +3,7 @@ import React from "react";
 import "./Home.scss";
 import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
-import realisation_1 from "../../assets/images/realisations-premium/pentahouse_w_katowicach/index";
+import realisation_1 from "../../assets/images/realisations-premium/penthouse_w_katowicach/index";
 import realisation_2 from "../../assets/images/realisations-premium/dom_w_tychach/index";
 import project_1 from '../../assets/images/projects/kompaktowy_apartament_w_katowicach/index';
 

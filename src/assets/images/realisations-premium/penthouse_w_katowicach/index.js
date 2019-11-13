@@ -78,7 +78,7 @@ import p39 from "./p39.jpg";
 import p39_tn from "./p39_tn.jpg";
 
 export default {
-  name: "Pentahouse w\xa0Katowicach",
+  name: "Penthouse w\xa0Katowicach",
   exhibit: p39_tn,
   images: [
     {
