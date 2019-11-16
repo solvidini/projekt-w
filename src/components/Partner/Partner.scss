@@ -1,0 +1,21 @@
+@import "../../sass/variables";
+
+.partner {
+    display: inline-block;
+    height: 12rem;
+    padding: .5rem;
+    margin: .3rem;
+    overflow: hidden;
+    transition: transform .2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__image {
+        height: 100%;
+        width: auto;
+        max-width: 24rem;
+        border-radius: .5rem;
+    }
+}

@@ -23,10 +23,10 @@ const Home = props => {
     }
   ];
   return (
-    <Slider className="slider-wraper" autoplay={3000} infinite={true} duration={2000}>
+    <Slider className="slider-wraper" autoplay={4000} infinite={true}>
       {content.map((item, index) => (
         <div
-          key={index}
+          key={item.title+index}
           className="slider-content"
           
           style={{

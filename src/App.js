@@ -1,11 +1,16 @@
 import React, { lazy, Suspense } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import Spinner from "./components/UI/Spinner/Spinner";
-import Layout from "./Layout/Layout";
-import Home from "./pages/Home/Home";
-import ScrollToTop from "./hoc/ScrollToTop";
 import "./App.scss";
+import Spinner from "./components/UI/Spinner/Spinner";
+import ScrollToTop from "./hoc/ScrollToTop";
+import Layout from "./Layout/Layout";
+
+//PAGES NOT LAZY LOADED
+import Home from "./pages/Home/Home";
+import Contact from './pages/Contact/Contact';
+import Lab from './pages/Lab/Lab';
+import Offer from './pages/Offer/Offer';
 
 //PROJECTS IMPORT
 import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
@@ -18,8 +23,13 @@ import projectPremium_1 from "./assets/images/projects-premium/dom_w_ogrodziencu
 import realisationPremium_1 from "./assets/images/realisations-premium/penthouse_w_katowicach/index";
 import realisationPremium_2 from "./assets/images/realisations-premium/dom_w_tychach/index";
 
+//PAGES AND COMPONENTS LAZY LOADED
 const Gallery = lazy(() => {
   return import("./components/Gallery/Gallery");
+});
+
+const Partners = lazy(() => {
+  return import("./pages/Partners/Partners");
 });
 
 const Realisations = lazy(() => {
@@ -129,6 +139,18 @@ function App() {
       <Layout>
         <Suspense fallback={<Spinner />}>
           <Switch>
+          <Route exact path="/lab" component={Lab} />
+          <Route exact path="/offer" component={Offer} />
+          <Route exact path="/contact" component={Contact} />
+          <Route
+              exact
+              path="/partners"
+              render={props => (
+                <Partners
+                  {...props}
+                />
+              )}
+            />
             <Route
               exact
               path="/realisations"

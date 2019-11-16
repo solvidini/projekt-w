@@ -60,10 +60,18 @@ const NavigationItems = props => (
     </li>
     <li className="navigation-item">
       <a
+        target="_blank"
+        rel="noopener noreferrer"
         className="navigation-icon"
         href="https://www.facebook.com/ProjektWPAW/"
       >
-        <i className="fab fa-facebook-f"></i><span className="mobile-only navigation-icon__text" style={{textTransform: "lowercase"}}>acebook</span>
+        <i className="fab fa-facebook-f"></i>
+        <span
+          className="mobile-only navigation-icon__text"
+          style={{ textTransform: "lowercase" }}
+        >
+          acebook
+        </span>
       </a>
     </li>
   </ul>

@@ -3,28 +3,42 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Layout.scss";
 import Toolbar from "../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../components/Navigation/SideDrawer/SideDrawer";
-import Footer from '../components/Footer/Footer';
+import Footer from "../components/Footer/Footer";
 
 const Layout = props => {
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [resizeX, setResizeX] = useState(0);
   const [stickyToolbar, setStickyToolbar] = useState(false);
+  const [minHeight, setMinHeight] = useState({});
   const toolbarRef = useRef(null);
   const toolbarSmallRef = useRef(null);
+  const footerRef = useRef(null);
 
   const yOffset = () => {
     setScrollY(window.pageYOffset);
+  };
+
+  const xOffset = () => {
+    setResizeX(window.pageXOffset);
   };
 
   useEffect(() => {
     const watchScroll = () => {
       window.addEventListener("scroll", yOffset);
     };
+    const watchResize = () => {
+      window.addEventListener("resize", xOffset);
+    }
+
+    watchResize();
     watchScroll();
+
     return () => {
       window.removeEventListener("scroll", yOffset);
+      window.removeEventListener("resize", xOffset);
     };
-  });
+  }, []);
 
   useEffect(() => {
     const toolbarHeight = toolbarRef.current
@@ -36,7 +50,17 @@ const Layout = props => {
     } else {
       setStickyToolbar(false);
     }
-  }, [setStickyToolbar, scrollY]);
+  }, [scrollY]);
+
+  useEffect(() => {
+    const footerHeight = footerRef.current
+      ? footerRef.current.offsetHeight
+      : 200;
+      const toolbarHeight = toolbarRef.current
+      ? toolbarRef.current.offsetHeight
+      : 90; 
+    setMinHeight({ minHeight: "calc(100vh - " + (footerHeight+toolbarHeight) + "px)" });
+  }, [resizeX]);
 
   const sideDrawerToggleHandler = () => {
     setSideDrawerIsVisible(!sideDrawerIsVisible);
@@ -60,8 +84,10 @@ const Layout = props => {
         opened={sideDrawerIsVisible}
         closed={sideDrawerClosedHandler}
       />
+      <div style={minHeight}>
       {props.children}
-      <Footer />
+      </div>
+      <Footer footerRef={footerRef} />
     </React.Fragment>
   );
 };

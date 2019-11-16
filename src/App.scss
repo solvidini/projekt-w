@@ -47,3 +47,21 @@ code {
     background-color: rgba($color-black, .8);
     color: $color-white;
 }
+
+.section-title {
+    text-align: center;
+    font-size: $title-font-size;
+    letter-spacing: .6rem;
+    font-weight: 300;
+    width: 100%;
+    background-color: $color-dark;
+    color: $color-white;
+    margin: 1rem 0;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+.content {
+    max-width: 120rem;
+    margin: 0 auto;
+}

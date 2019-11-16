@@ -3,11 +3,11 @@ import React from "react";
 import "./Footer.scss";
 import NavigationItem from "../Navigation/NavigationItems/NavigationItem/NavigationItem";
 
-const Footer = () => {
+const Footer = (props) => {
   const currentDate = new Date().getFullYear();
 
   return (
-    <footer className="footer" name="section-contact">
+    <footer className="footer" name="section-contact" ref={props.footerRef}>
       <div className="footer__info">
         <div className="footer__info__item">
           <h4>Pracownia</h4>
@@ -17,8 +17,8 @@ const Footer = () => {
         <div className="footer__info__item">
           <h4>Kontakt</h4>
           <a href="mailto:biuro@projektw.pl">biuro@projektw.pl <i className="far fa-envelope"></i></a>
-          <span>+48 608 466 901</span>
-          <span>+48 602 194 398</span>
+          <a href="tel:+48608466901">+48 608 466 901</a>
+          <a href="tel:+48602194398">+48 602 194 398</a>
         </div>
         <div className="footer__info__item">
           <h4>Nawigacja</h4>
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
         <div className="footer__info__item">
           <h4>Obserwuj nas</h4>
-          <a href="https://www.facebook.com/ProjektWPAW/">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ProjektWPAW/">
             <i className="fab fa-facebook footer__icon"></i>
           </a>
         </div>
@@ -59,7 +59,7 @@ const Footer = () => {
           <span className="no-wrap">Wszelkie&nbsp;prawa&nbsp;zastrzeżone.</span>
         </div>
         <div className="footer__copyright__item creator no-wrap">
-          Site made by <a href="http://samuelk.pl">&ndash;Samuel Kędziora&ndash;</a>
+          Site made by <a target="_blank" rel="noopener noreferrer" href="http://samuelk.pl">&ndash;Samuel Kędziora&ndash;</a>
         </div>
       </div>
     </footer>
