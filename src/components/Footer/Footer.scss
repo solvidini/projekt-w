@@ -3,7 +3,6 @@
 
 .footer {
   width: 100%;
-  flex-shrink: 0;
 
   &__icon {
     margin-top: 1rem;
@@ -163,7 +162,7 @@
   a,
   a:link,
   a:visited {
-    color: rgb(127, 127, 131);
+    color: rgb(155, 155, 156);
     text-decoration: none;
     transition: color .2s ease;
     &:hover {
