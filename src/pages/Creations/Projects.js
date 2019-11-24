@@ -6,7 +6,7 @@ import "./Creations.scss";
 const Projects = props => {
   return (
     <section className="section-creations">
-      <h1 className="section-creations__title">Projekty</h1>
+      <h1 className="section-title">Projekty</h1>
       <div className="creations">
         {props.projectsArray.length ?
         props.projectsArray.map((project, index) => (

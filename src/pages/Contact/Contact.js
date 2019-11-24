@@ -4,7 +4,7 @@ import GoogleMap from "../../components/GoogleMap/GoogleMap";
 
 const Contact = () => {
   return (
-    <div className="section-contact">
+    <section className="section-contact">
       <h1 className="section-title">Kontakt</h1>
       <div className="section-contact__content">
         <div className="contact-details">
@@ -26,7 +26,7 @@ const Contact = () => {
           <GoogleMap />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

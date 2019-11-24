@@ -1,0 +1,88 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.offer__item {
+    position: relative;
+    overflow: hidden;
+    margin: .3rem;
+    height: 40rem;
+    background-color: $color-dark;
+
+    flex: 1 1 30%;
+
+    @include respond(tab-port) {
+        flex: 1 1 100%;
+    }
+
+    transition: all .5s ease-out;
+
+    &__example {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        padding: 1rem;
+        margin: 1rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        text-align: center;
+        font-size: $default-font-size;
+        background-color: $color-dark;
+        color: $color-white;
+        z-index: 5;
+
+        transition: all .5s ease;
+
+        &:hover {
+            // width: 20rem;
+            // border-radius: 1rem;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        transition: all .5s ease-out;
+        filter: brightness(90%);
+        background-color: $color-dark;
+    }
+
+    &__text {
+        font-size: $default-font-size;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        color: $color-white;
+        backface-visibility: hidden;
+        text-align: center;
+
+        width: 100%;
+        height: 30%;
+        background-color: rgba($color-background, .4);
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s ease;
+    }
+
+    &:hover &__image {
+        transform: scale(1.1);
+        filter: brightness(110%);
+    }
+
+    &:hover &__text {
+        bottom: 0;
+        height: 20%;
+        width: 101%;
+        transform: translate(-50%, 0);
+        background-color: rgba($color-background, 1);
+    }
+
+
+}

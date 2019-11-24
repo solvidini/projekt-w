@@ -1,21 +1,6 @@
 @import "../../sass/variables";
 @import "../../sass/mixins";
 
-.section-creations {
-    &__title {
-        text-align: center;
-        font-size: $title-font-size;
-        letter-spacing: .6rem;
-        font-weight: 300;
-        width: 100%;
-        background-color: $color-dark;
-        color: $color-white;
-        margin: 1rem 0;
-        padding: 2rem;
-        text-transform: uppercase;
-    }
-}
-
 .creations {
     max-width: 120rem;
     margin: 4rem auto;
@@ -25,7 +10,7 @@
     align-content: center;
     justify-content: center;
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
         margin: 4rem .3rem;
     }
 }
@@ -35,4 +20,25 @@
     margin: 6rem 0;
     text-align: center;
     font-size: $title-font-size;
+}
+
+.photos-signature {
+    max-width: 120rem;
+    margin: 0 auto 4rem;
+    text-align: end;
+    color: rgb(119, 119, 119);
+    letter-spacing: .1rem;
+    font-size: 1.1rem;
+
+    a,
+    a:link,
+    a:visited {
+        color: rgb(155, 155, 156);
+        text-decoration: none;
+        transition: color .2s ease;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
 }

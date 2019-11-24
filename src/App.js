@@ -8,9 +8,9 @@ import Layout from "./Layout/Layout";
 
 //PAGES NOT LAZY LOADED
 import Home from "./pages/Home/Home";
-import Contact from './pages/Contact/Contact';
-import Lab from './pages/Lab/Lab';
-import Offer from './pages/Offer/Offer';
+import Contact from "./pages/Contact/Contact";
+import Lab from "./pages/Lab/Lab";
+import Offer from "./pages/Offer/Offer";
 
 //PROJECTS IMPORT
 import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
@@ -18,6 +18,8 @@ import project_2 from "./assets/images/projects/dom_w_rzeszowie/index";
 //PREMIUM PROJECTS IMPORT
 import projectPremium_1 from "./assets/images/projects-premium/dom_w_ogrodziencu/index";
 //REALISATIONS IMPORT
+import realisation_1 from "./assets/images/realisations/mieszkanie_pod_wynajem_katowice_nasypowa/index";
+import realisation_2 from "./assets/images/realisations/pokoj_stasia/index";
 
 //PREMIUM REALISATIONS IMPORT
 import realisationPremium_1 from "./assets/images/realisations-premium/penthouse_w_katowicach/index";
@@ -48,7 +50,7 @@ const ProjectsPremium = lazy(() => {
   return import("./pages/Creations/ProjectsPremium");
 });
 
-const realisationsArray = [];
+const realisationsArray = [realisation_1, realisation_2];
 const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
 const projectsArray = [project_1, project_2];
 const projectsPremiumArray = [projectPremium_1];
@@ -139,17 +141,13 @@ function App() {
       <Layout>
         <Suspense fallback={<Spinner />}>
           <Switch>
-          <Route exact path="/lab" component={Lab} />
-          <Route exact path="/offer" component={Offer} />
-          <Route exact path="/contact" component={Contact} />
-          <Route
+            <Route exact path="/lab" component={Lab} />
+            <Route exact path="/offer" component={Offer} />
+            <Route exact path="/contact" component={Contact} />
+            <Route
               exact
               path="/partners"
-              render={props => (
-                <Partners
-                  {...props}
-                />
-              )}
+              render={props => <Partners {...props} />}
             />
             <Route
               exact

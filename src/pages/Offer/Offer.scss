@@ -1,0 +1,16 @@
+@import '../../sass/mixins';
+@import '../../sass/variables';
+
+.offers {
+    max-width: 140rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    overflow: hidden;
+    align-content: center;
+    justify-content: flex-start;
+
+    @include respond(tab-port) {
+        margin: 4rem .3rem;
+    }
+}
