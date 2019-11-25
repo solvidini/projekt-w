@@ -16,7 +16,7 @@ const Footer = (props) => {
         </div>
         <div className="footer__info__item">
           <h4>Kontakt</h4>
-          <a href="mailto:biuro@projektw.pl">biuro@projektw.pl <i className="far fa-envelope"></i></a>
+          <a href="mailto:biuro@projektw.pl">biuro@projektw.pl</a>
           <a href="tel:+48608466901">+48 608 466 901</a>
           <a href="tel:+48602194398">+48 602 194 398</a>
         </div>
@@ -27,7 +27,7 @@ const Footer = (props) => {
               <NavigationItem exact link="/">
                 Home
               </NavigationItem>
-              <NavigationItem link="/lab">Pracownia</NavigationItem>
+              <NavigationItem link="/studio">Pracownia</NavigationItem>
               <NavigationItem link="/offer">Oferta</NavigationItem>
               <NavigationItem link="/partners">Partnerzy</NavigationItem>
               <NavigationItem link="/contact">Kontakt</NavigationItem>

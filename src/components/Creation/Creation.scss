@@ -8,15 +8,14 @@
     height: 40rem;
     background-color: $color-dark;
 
-    max-width: 49%;
-    flex: 1 1 auto;
-
+    flex: 1 1 30%;
+    transition: all .5s ease-out;
+    &:last-child {
+        max-width: 49.5%;
+    }
     @include respond(tab-port) {
         max-width: 100%;
         flex: 1 1 49%;
-        &:last-child {
-            max-width: 49%;
-        }
     }
 
     @include respond(phone) {
@@ -25,8 +24,6 @@
             max-width: none;
         }
     }
-
-    transition: all .5s ease-out;
 
     &__image {
         object-fit: cover;
@@ -47,7 +44,7 @@
         text-align: center;
 
         width: 100%;
-        height: 30%;
+        padding: 4rem 0;
         background-color: rgba($color-background, .4);
         position: absolute;
         left: 50%;
@@ -66,7 +63,7 @@
 
     &:hover &__text {
         bottom: 0;
-        height: 20%;
+        padding: 2rem 0;
         width: 101%;
         transform: translate(-50%, 0);
         background-color: rgba($color-background, 1);

@@ -9,7 +9,7 @@ const NavigationItems = props => (
       <NavigationItem link="/">Home</NavigationItem>
     </li>
     <li className="navigation-item">
-      <NavigationItem link="/lab">Pracownia</NavigationItem>
+      <NavigationItem link="/studio">Pracownia</NavigationItem>
     </li>
     <li className="navigation-item mobile-only">
       <NavigationItem link="/projects">Projekty</NavigationItem>
@@ -30,7 +30,7 @@ const NavigationItems = props => (
       </NavigationItem>
     </li>
     <li className="navigation-dropdown">
-      <span>Projekty</span>
+      <span>Projekty&nbsp;</span><i class="fas fa-caret-down"></i>
       <div className="navigation-dropdown__content">
         <NavigationItem link="/projects">Projekty</NavigationItem>
         <NavigationItem link="/projects-premium">
@@ -39,7 +39,7 @@ const NavigationItems = props => (
       </div>
     </li>
     <li className="navigation-dropdown">
-      <span>Realizacje</span>
+      <span>Realizacje&nbsp;</span><i class="fas fa-caret-down"></i>
       <div className="navigation-dropdown__content">
         <NavigationItem exact link="/realisations">
           Realizacje
