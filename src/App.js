@@ -15,8 +15,13 @@ import Offer from "./pages/Offer/Offer";
 //PROJECTS IMPORT
 import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
 import project_2 from "./assets/images/projects/dom_w_rzeszowie/index";
+import project_3 from "./assets/images/projects/apartament_w_gliwicach/index";
 //PREMIUM PROJECTS IMPORT
 import projectPremium_1 from "./assets/images/projects-premium/dom_w_ogrodziencu/index";
+import projectPremium_2 from "./assets/images/projects-premium/dom_w_katowicach/index";
+import projectPremium_3 from "./assets/images/projects-premium/dom_w_bedzinie/index";
+import projectPremium_4 from "./assets/images/projects-premium/dom_prowansalski_w_tychach/index";
+import projectPremium_5 from "./assets/images/projects-premium/apartament_w_myslowicach/index";
 //REALISATIONS IMPORT
 import realisation_1 from "./assets/images/realisations/mieszkanie_pod_wynajem_katowice_nasypowa_1/index";
 import realisation_2 from "./assets/images/realisations/pokoj_stasia/index";
@@ -59,8 +64,8 @@ const ProjectsPremium = lazy(() => {
 
 const realisationsArray = [realisation_1, realisation_2,realisation_3, realisation_4, realisation_5, realisation_6, realisation_7, realisation_8, realisation_9, realisation_10];
 const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
-const projectsArray = [project_1, project_2];
-const projectsPremiumArray = [projectPremium_1];
+const projectsArray = [project_1, project_2, project_3];
+const projectsPremiumArray = [projectPremium_1, projectPremium_2, projectPremium_3, projectPremium_4, projectPremium_5];
 
 const RealisationsPaths = props => {
   const id = props.match.params.id - 1;

@@ -23,7 +23,7 @@ import p11_tn from "./p11_tn.jpg";
 
 export default {
   name: "Mieszkanie\xa0na\xa0poddaszu, Tychy",
-  exhibit: p1,
+  exhibit: p1_tn,
   images: [
     {
       src: p1,

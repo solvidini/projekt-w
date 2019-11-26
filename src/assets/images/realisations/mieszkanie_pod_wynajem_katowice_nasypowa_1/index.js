@@ -56,8 +56,8 @@ import p28 from "./p28.jpg";
 import p28_tn from "./p28_tn.jpg";
 
 export default {
-  name: "Mieszkanie\xa0pod\xa0wynajem,\xa0Katowice\xa0Nasypowa - 1",
-  exhibit: p24,
+  name: "Mieszkanie\xa0pod\xa0wynajem, Katowice\xa0Nasypowa",
+  exhibit: p24_tn,
   images: [
     {
       src: p1,

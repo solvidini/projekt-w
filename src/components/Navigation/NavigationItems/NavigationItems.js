@@ -30,7 +30,7 @@ const NavigationItems = props => (
       </NavigationItem>
     </li>
     <li className="navigation-dropdown">
-      <span>Projekty&nbsp;</span><i class="fas fa-caret-down"></i>
+      <span>Projekty&nbsp;</span><i className="fas fa-caret-down"></i>
       <div className="navigation-dropdown__content">
         <NavigationItem link="/projects">Projekty</NavigationItem>
         <NavigationItem link="/projects-premium">
@@ -39,7 +39,7 @@ const NavigationItems = props => (
       </div>
     </li>
     <li className="navigation-dropdown">
-      <span>Realizacje&nbsp;</span><i class="fas fa-caret-down"></i>
+      <span>Realizacje&nbsp;</span><i className="fas fa-caret-down"></i>
       <div className="navigation-dropdown__content">
         <NavigationItem exact link="/realisations">
           Realizacje

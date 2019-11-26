@@ -22,8 +22,8 @@ import p11 from "./p11.jpg";
 import p11_tn from "./p11_tn.jpg";
 
 export default {
-  name: "Mieszkanie\xa0pod\xa0wynajem, ATAL\xa0Park\xa0Katowice\xa0-\xa02",
-  exhibit: p8,
+  name: "Mieszkania\xa0pod\xa0wynajem, ATAL\xa0Park\xa0Katowice",
+  exhibit: p8_tn,
   images: [
     {
       src: p1,

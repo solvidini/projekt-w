@@ -50,8 +50,8 @@ import p25 from "./p25.jpg";
 import p25_tn from "./p25_tn.jpg";
 
 export default {
-  name: "Mieszkanie\xa0pod\xa0wynajem, ATAL\xa0Park\xa0Katowice\xa0-\xa01",
-  exhibit: p8,
+  name: "Mieszkania\xa0pod\xa0wynajem, ATAL\xa0Park\xa0Katowice",
+  exhibit: p8_tn,
   images: [
     {
       src: p1,
