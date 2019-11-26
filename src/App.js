@@ -23,16 +23,13 @@ import projectPremium_3 from "./assets/images/projects-premium/dom_w_bedzinie/in
 import projectPremium_4 from "./assets/images/projects-premium/dom_prowansalski_w_tychach/index";
 import projectPremium_5 from "./assets/images/projects-premium/apartament_w_myslowicach/index";
 //REALISATIONS IMPORT
-import realisation_1 from "./assets/images/realisations/mieszkanie_pod_wynajem_katowice_nasypowa_1/index";
+import realisation_1 from "./assets/images/realisations/mieszkania_pod_wynajem_katowice_nasypowa/index";
 import realisation_2 from "./assets/images/realisations/pokoj_stasia/index";
 import realisation_3 from "./assets/images/realisations/mieszkanie_na_poddaszu_tychy/index";
-import realisation_4 from "./assets/images/realisations/mieszkanie_pod_wynajem_atal_park_katowice_1/index";
-import realisation_5 from "./assets/images/realisations/mieszkanie_pod_wynajem_atal_park_katowice_2/index";
-import realisation_6 from "./assets/images/realisations/dom_w_ledzinach/index";
-import realisation_7 from "./assets/images/realisations/artesmed_katowice/index";
-import realisation_8 from "./assets/images/realisations/mieszkanie_pod_wynajem_katowice_nasypowa_2/index";
-import realisation_9 from "./assets/images/realisations/mieszkanie_pod_wynajem_katowice_mikolowska_1/index";
-import realisation_10 from "./assets/images/realisations/mieszkanie_pod_wynajem_katowice_mikolowska_2/index";
+import realisation_4 from "./assets/images/realisations/mieszkania_pod_wynajem_atal_park_katowice/index";
+import realisation_5 from "./assets/images/realisations/dom_w_ledzinach/index";
+import realisation_6 from "./assets/images/realisations/artesmed_katowice/index";
+import realisation_7 from "./assets/images/realisations/mieszkania_pod_wynajem_katowice_mikolowska/index";
 //PREMIUM REALISATIONS IMPORT
 import realisationPremium_1 from "./assets/images/realisations-premium/penthouse_w_katowicach/index";
 import realisationPremium_2 from "./assets/images/realisations-premium/dom_w_tychach/index";
@@ -62,7 +59,7 @@ const ProjectsPremium = lazy(() => {
   return import("./pages/Creations/ProjectsPremium");
 });
 
-const realisationsArray = [realisation_1, realisation_2,realisation_3, realisation_4, realisation_5, realisation_6, realisation_7, realisation_8, realisation_9, realisation_10];
+const realisationsArray = [realisation_1, realisation_2,realisation_3, realisation_4, realisation_5, realisation_6, realisation_7];
 const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
 const projectsArray = [project_1, project_2, project_3];
 const projectsPremiumArray = [projectPremium_1, projectPremium_2, projectPremium_3, projectPremium_4, projectPremium_5];

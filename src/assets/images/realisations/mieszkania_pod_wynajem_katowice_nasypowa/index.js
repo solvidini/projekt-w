@@ -48,110 +48,194 @@ import p24 from "./p24.jpg";
 import p24_tn from "./p24_tn.jpg";
 import p25 from "./p25.jpg";
 import p25_tn from "./p25_tn.jpg";
+import p26 from "./p26.jpg";
+import p26_tn from "./p26_tn.jpg";
+import p27 from "./p27.jpg";
+import p27_tn from "./p27_tn.jpg";
+import p28 from "./p28.jpg";
+import p28_tn from "./p28_tn.jpg";
+import p29 from "./p29.jpg";
+import p29_tn from "./p29_tn.jpg";
+import p30 from "./p30.jpg";
+import p30_tn from "./p30_tn.jpg";
+import p31 from "./p31.jpg";
+import p31_tn from "./p31_tn.jpg";
+import p32 from "./p32.jpg";
+import p32_tn from "./p32_tn.jpg";
+import p33 from "./p33.jpg";
+import p33_tn from "./p33_tn.jpg";
+import p34 from "./p34.jpg";
+import p34_tn from "./p34_tn.jpg";
+import p35 from "./p35.jpg";
+import p35_tn from "./p35_tn.jpg";
+import p36 from "./p36.jpg";
+import p36_tn from "./p36_tn.jpg";
+import p37 from "./p37.jpg";
+import p37_tn from "./p37_tn.jpg";
+import p38 from "./p38.jpg";
+import p38_tn from "./p38_tn.jpg";
+import p39 from "./p39.jpg";
+import p39_tn from "./p39_tn.jpg";
 
 export default {
-  name: "Mieszkania\xa0pod\xa0wynajem, ATAL\xa0Park\xa0Katowice",
-  exhibit: p8_tn,
+  name: "Mieszkania\xa0pod\xa0wynajem, Katowice\xa0Nasypowa",
+  exhibit: p15,
   images: [
     {
       src: p1,
       tn: p1_tn
-    },
-    {
+      },
+      {
       src: p2,
       tn: p2_tn
-    },
-    {
+      },
+      {
       src: p3,
       tn: p3_tn
-    },
-    {
+      },
+      {
       src: p4,
       tn: p4_tn
-    },
-    {
+      },
+      {
       src: p5,
       tn: p5_tn
-    },
-    {
+      },
+      {
       src: p6,
       tn: p6_tn
-    },
-    {
+      },
+      {
       src: p7,
       tn: p7_tn
-    },
-    {
+      },
+      {
       src: p8,
       tn: p8_tn
-    },
-    {
+      },
+      {
       src: p9,
       tn: p9_tn
-    },
-    {
+      },
+      {
       src: p10,
       tn: p10_tn
-    },
-    {
+      },
+      {
       src: p11,
       tn: p11_tn
-    },
-    {
+      },
+      {
       src: p12,
       tn: p12_tn
-    },
-    {
+      },
+      {
       src: p13,
       tn: p13_tn
-    },
-    {
+      },
+      {
       src: p14,
       tn: p14_tn
-    },
-    {
+      },
+      {
       src: p15,
       tn: p15_tn
-    },
-    {
+      },
+      {
       src: p16,
       tn: p16_tn
-    },
-    {
+      },
+      {
       src: p17,
       tn: p17_tn
-    },
-    {
+      },
+      {
       src: p18,
       tn: p18_tn
-    },
-    {
+      },
+      {
       src: p19,
       tn: p19_tn
-    },
-    {
+      },
+      {
       src: p20,
       tn: p20_tn
-    },
-    {
+      },
+      {
       src: p21,
       tn: p21_tn
-    },
-    {
+      },
+      {
       src: p22,
       tn: p22_tn
-    },
-    {
+      },
+      {
       src: p23,
       tn: p23_tn
-    },
-    {
+      },
+      {
       src: p24,
       tn: p24_tn
-    },
-    {
+      },
+      {
       src: p25,
       tn: p25_tn
-    }
+      },
+      {
+      src: p26,
+      tn: p26_tn
+      },
+      {
+      src: p27,
+      tn: p27_tn
+      },
+      {
+      src: p28,
+      tn: p28_tn
+      },
+      {
+      src: p29,
+      tn: p29_tn
+      },
+      {
+      src: p30,
+      tn: p30_tn
+      },
+      {
+      src: p31,
+      tn: p31_tn
+      },
+      {
+      src: p32,
+      tn: p32_tn
+      },
+      {
+      src: p33,
+      tn: p33_tn
+      },
+      {
+      src: p34,
+      tn: p34_tn
+      },
+      {
+      src: p35,
+      tn: p35_tn
+      },
+      {
+      src: p36,
+      tn: p36_tn
+      },
+      {
+      src: p37,
+      tn: p37_tn
+      },
+      {
+      src: p38,
+      tn: p38_tn
+      },
+      {
+      src: p39,
+      tn: p39_tn
+      }
   ]
 };

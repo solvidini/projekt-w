@@ -54,10 +54,24 @@ import p27 from "./p27.jpg";
 import p27_tn from "./p27_tn.jpg";
 import p28 from "./p28.jpg";
 import p28_tn from "./p28_tn.jpg";
+import p29 from "./p29.jpg";
+import p29_tn from "./p29_tn.jpg";
+import p30 from "./p30.jpg";
+import p30_tn from "./p30_tn.jpg";
+import p31 from "./p31.jpg";
+import p31_tn from "./p31_tn.jpg";
+import p32 from "./p32.jpg";
+import p32_tn from "./p32_tn.jpg";
+import p33 from "./p33.jpg";
+import p33_tn from "./p33_tn.jpg";
+import p34 from "./p34.jpg";
+import p34_tn from "./p34_tn.jpg";
+import p35 from "./p35.jpg";
+import p35_tn from "./p35_tn.jpg";
 
 export default {
-  name: "Mieszkanie\xa0pod\xa0wynajem, Katowice\xa0Nasypowa",
-  exhibit: p24_tn,
+  name: "Mieszkania\xa0pod\xa0wynajem, Katowice\xa0Mikołowska",
+  exhibit: p2,
   images: [
     {
       src: p1,
@@ -170,6 +184,34 @@ export default {
     {
       src: p28,
       tn: p28_tn
+    },
+    {
+      src: p29,
+      tn: p29_tn
+    },
+    {
+      src: p30,
+      tn: p30_tn
+    },
+    {
+      src: p31,
+      tn: p31_tn
+    },
+    {
+      src: p32,
+      tn: p32_tn
+    },
+    {
+      src: p33,
+      tn: p33_tn
+    },
+    {
+      src: p34,
+      tn: p34_tn
+    },
+    {
+      src: p35,
+      tn: p35_tn
     }
   ]
 };
