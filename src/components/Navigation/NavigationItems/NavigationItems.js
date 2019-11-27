@@ -11,24 +11,6 @@ const NavigationItems = props => (
     <li className="navigation-item">
       <NavigationItem link="/studio">Pracownia</NavigationItem>
     </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem link="/projects">Projekty</NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem link="/projects-premium">
-        Projekty&nbsp;Premium
-      </NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem exact link="/realisations">
-        Realizacje
-      </NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem exact link="/realisations-premium">
-        Realizacje&nbsp;Premium
-      </NavigationItem>
-    </li>
     <li className="navigation-dropdown">
       <span>Projekty&nbsp;</span><i className="fas fa-caret-down"></i>
       <div className="navigation-dropdown__content">
@@ -57,6 +39,24 @@ const NavigationItems = props => (
     </li>
     <li className="navigation-item">
       <NavigationItem link="/contact">Kontakt</NavigationItem>
+    </li>
+    <li className="navigation-item mobile-only">
+      <NavigationItem link="/projects">Projekty</NavigationItem>
+    </li>
+    <li className="navigation-item mobile-only">
+      <NavigationItem link="/projects-premium">
+      &nbsp;&rarr;&nbsp;Premium
+      </NavigationItem>
+    </li>
+    <li className="navigation-item mobile-only">
+      <NavigationItem exact link="/realisations">
+        Realizacje
+      </NavigationItem>
+    </li>
+    <li className="navigation-item mobile-only">
+      <NavigationItem exact link="/realisations-premium">
+      &nbsp;&rarr;&nbsp;Premium
+      </NavigationItem>
     </li>
     <li className="navigation-item">
       <a

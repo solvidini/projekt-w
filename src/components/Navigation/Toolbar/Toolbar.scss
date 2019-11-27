@@ -33,6 +33,9 @@
     background-color: transparent;
     box-shadow: none;
     backdrop-filter: none;
+    position: fixed;
+    right: 0;
+    height: auto;
   }
 
   &__nav {

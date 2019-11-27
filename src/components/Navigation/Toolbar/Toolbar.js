@@ -4,7 +4,7 @@ import "./Toolbar.scss";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle";
 import Logo from "../../Logo/Logo";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 const Toolbar = props => {
   const toolbarClasses = ["toolbar"];
@@ -19,7 +19,11 @@ const Toolbar = props => {
 
   return (
     <div className={toolbarClasses.join(" ")}>
-      <NavLink className="toolbar__link-home" to="/"><Logo small={props.sticky} /></NavLink>
+      {!props.sideDrawerIsVisible && (
+        <NavLink className="toolbar__link-home" to="/">
+          <Logo small={props.sticky} />
+        </NavLink>
+      )}
       <DrawerToggle
         sideDrawerIsVisible={props.sideDrawerIsVisible}
         clicked={props.sideDrawerToggleClicked}
