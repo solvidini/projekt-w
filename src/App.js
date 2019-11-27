@@ -13,9 +13,12 @@ import Studio from "./pages/Studio/Studio";
 import Offer from "./pages/Offer/Offer";
 
 //PROJECTS IMPORT
-import project_1 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
-import project_2 from "./assets/images/projects/dom_w_rzeszowie/index";
-import project_3 from "./assets/images/projects/apartament_w_gliwicach/index";
+import project_1 from "./assets/images/projects/apartament_w_gliwicach/index";
+import project_6 from "./assets/images/projects/kompaktowy_apartament_w_katowicach_park_bazantow/index";
+import project_3 from "./assets/images/projects/apartament_w_warszawie/index";
+import project_4 from "./assets/images/projects/dom_w_rzeszowie/index";
+import project_5 from "./assets/images/projects/kompaktowy_apartament_w_katowicach/index";
+import project_2 from "./assets/images/projects/apartament_w_katowicach_park_bazantow/index";
 //PREMIUM PROJECTS IMPORT
 import projectPremium_1 from "./assets/images/projects-premium/dom_w_ogrodziencu/index";
 import projectPremium_2 from "./assets/images/projects-premium/dom_w_katowicach/index";
@@ -61,10 +64,33 @@ const ProjectsPremium = lazy(() => {
   return import("./pages/Creations/ProjectsPremium");
 });
 
-const realisationsArray = [realisation_1, realisation_2,realisation_3, realisation_4, realisation_5, realisation_6, realisation_7, realisation_8, realisation_9];
+const realisationsArray = [
+  realisation_1,
+  realisation_2,
+  realisation_3,
+  realisation_4,
+  realisation_5,
+  realisation_6,
+  realisation_7,
+  realisation_8,
+  realisation_9
+];
 const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
-const projectsArray = [project_1, project_2, project_3];
-const projectsPremiumArray = [projectPremium_1, projectPremium_2, projectPremium_3, projectPremium_4, projectPremium_5];
+const projectsArray = [
+  project_1,
+  project_2,
+  project_3,
+  project_4,
+  project_5,
+  project_6
+];
+const projectsPremiumArray = [
+  projectPremium_1,
+  projectPremium_2,
+  projectPremium_3,
+  projectPremium_4,
+  projectPremium_5
+];
 
 const RealisationsPaths = props => {
   const id = props.match.params.id - 1;

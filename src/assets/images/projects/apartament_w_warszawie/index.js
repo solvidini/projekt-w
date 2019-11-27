@@ -28,14 +28,34 @@ import p14 from "./p14.jpg";
 import p14_tn from "./p14_tn.jpg";
 import p15 from "./p15.jpg";
 import p15_tn from "./p15_tn.jpg";
+import p16 from "./p16.jpg";
+import p16_tn from "./p16_tn.jpg";
+import p17 from "./p17.jpg";
+import p17_tn from "./p17_tn.jpg";
+import p18 from "./p18.jpg";
+import p18_tn from "./p18_tn.jpg";
+import p19 from "./p19.jpg";
+import p19_tn from "./p19_tn.jpg";
+import p20 from "./p20.jpg";
+import p20_tn from "./p20_tn.jpg";
+import p21 from "./p21.jpg";
+import p21_tn from "./p21_tn.jpg";
 
 export default {
-  name: "Kompaktowy Apartament w\xa0Katowicach",
-  exhibit: p15,
+  name: "Apartament w\xa0Warszawie",
+  exhibit: p4,
   images: [
     {
       src: p1,
       tn: p1_tn
+    },
+    {
+      src: p2,
+      tn: p2_tn
+    },
+    {
+      src: p3,
+      tn: p3_tn
     },
     {
       src: p4,
@@ -86,12 +106,28 @@ export default {
       tn: p15_tn
     },
     {
-      src: p2,
-      tn: p2_tn
+      src: p16,
+      tn: p16_tn
     },
     {
-      src: p3,
-      tn: p3_tn
+      src: p17,
+      tn: p17_tn
+    },
+    {
+      src: p18,
+      tn: p18_tn
+    },
+    {
+      src: p19,
+      tn: p19_tn
+    },
+    {
+      src: p20,
+      tn: p20_tn
+    },
+    {
+      src: p21,
+      tn: p21_tn
     }
   ]
 };

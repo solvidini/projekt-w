@@ -24,18 +24,22 @@ import p12 from "./p12.jpg";
 import p12_tn from "./p12_tn.jpg";
 import p13 from "./p13.jpg";
 import p13_tn from "./p13_tn.jpg";
-import p14 from "./p14.jpg";
-import p14_tn from "./p14_tn.jpg";
-import p15 from "./p15.jpg";
-import p15_tn from "./p15_tn.jpg";
 
 export default {
-  name: "Kompaktowy Apartament w\xa0Katowicach",
-  exhibit: p15,
+  name: "Kompaktowy apartament w\xa0Katowicach - Park\xa0Bażantów",
+  exhibit: p10,
   images: [
     {
       src: p1,
       tn: p1_tn
+    },
+    {
+      src: p2,
+      tn: p2_tn
+    },
+    {
+      src: p3,
+      tn: p3_tn
     },
     {
       src: p4,
@@ -76,22 +80,6 @@ export default {
     {
       src: p13,
       tn: p13_tn
-    },
-    {
-      src: p14,
-      tn: p14_tn
-    },
-    {
-      src: p15,
-      tn: p15_tn
-    },
-    {
-      src: p2,
-      tn: p2_tn
-    },
-    {
-      src: p3,
-      tn: p3_tn
     }
   ]
 };
