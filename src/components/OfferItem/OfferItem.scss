@@ -7,6 +7,8 @@
     margin: .3rem;
     height: 40rem;
     background-color: $color-dark;
+    cursor: pointer;
+    backface-visibility: hidden;
 
     flex: 1 1 30%;
 
@@ -15,27 +17,6 @@
     }
 
     transition: all .5s ease-out;
-
-    &__example {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 1rem;
-        overflow: hidden;
-
-        text-align: center;
-        font-size: $default-font-size;
-        background-color: $color-dark;
-        color: $color-white;
-        z-index: 5;
-
-        @include respond(tab-port) {
-            font-size: 1.8rem;
-        }
-    }
 
     &__image {
         object-fit: cover;
@@ -74,10 +55,8 @@
     }
 
     &:hover &__text {
-        bottom: 0;
-        padding: 2rem 0;
+        padding: 1rem 0;
         width: 101%;
-        transform: translate(-50%, 0);
         background-color: rgba($color-background, 1);
     }
 }
