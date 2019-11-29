@@ -4,9 +4,9 @@ import "./Offer.scss";
 
 import OfferItem from "../../components/OfferItem/OfferItem";
 
-import picture1 from "../../assets/images/projects/apartament_w_gliwicach/p1.jpg";
-import picture2 from "../../assets/images/projects/apartament_w_warszawie/p1.jpg";
-import picture3 from "../../assets/images/offer_key.jpg";
+import picture1 from "../../assets/images/offer_minimum.jpg";
+import picture2 from "../../assets/images/offer_medium.jpg";
+import picture3 from "../../assets/images/offer_full.jpg";
 
 const customStyles = {
   content: {
@@ -22,26 +22,29 @@ const Offer = props => {
   const images = [
     {
       src: picture1,
-      title: "Projekt\xa0funkcjonalny (układ\xa0na\xa0rzucie\xa02D)"
+      title: "OFERTA MINIMALNA",
+      caption: "Projekt\xa0funkcjonalny (układ\xa0na\xa0rzucie\xa02D)"
     },
     {
       src: picture2,
-      title: "Projekt\xa0koncepcyjno-wykonawczy z\xa0wizualizacjami\xa03D"
+      title: "OFERTA ŚREDNIA",
+      caption: "Projekt\xa0koncepcyjno-wykonawczy z\xa0wizualizacjami\xa03D"
     },
     {
       src: picture3,
-      title: "Projekt\xa0kompleksowy (realizacja\xa0pod\xa0klucz)"
+      title: "OFERTA PEŁNA",
+      caption: "Projekt\xa0kompleksowy (realizacja\xa0pod\xa0klucz)"
     }
   ];
   return (
     <section className="section-offer">
       <h1 className="section-title">Oferta</h1>
-      <p className="soon">W trakcie...</p>
       <div className="offers">
         <OfferItem
           source={images[0].src}
           alt="Projekt funkcjonalny (układ na rzucie 2D)"
-          name={images[0].title}
+          name={images[0].caption}
+          title={images[0].title}
           clicked={() => {
             setToggler(true);
             setPhotoIndex(0);
@@ -50,7 +53,8 @@ const Offer = props => {
         <OfferItem
           source={images[1].src}
           alt="Projekt koncepcyjno-wykonawczy z wizualizacjami 3D"
-          name={images[1].title}
+          name={images[1].caption}
+          title={images[1].title}
           clicked={() => {
             setToggler(true);
             setPhotoIndex(1);
@@ -59,7 +63,8 @@ const Offer = props => {
         <OfferItem
           source={images[2].src}
           alt="Projekt kompleksowy (realizacja pod klucz)"
-          name={images[2].title}
+          name={images[2].caption}
+          title={images[2].title}
           clicked={() => {
             setToggler(true);
             setPhotoIndex(2);
@@ -82,7 +87,7 @@ const Offer = props => {
             reactModalStyle={customStyles}
             imageTitle={images[photoIndex].title}
             imageCaption={
-              "Oferta " + (photoIndex + 1) + " - " + images[photoIndex].title
+              images[photoIndex].caption
             }
           />
         )}
