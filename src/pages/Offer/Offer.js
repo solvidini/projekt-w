@@ -22,17 +22,17 @@ const Offer = props => {
   const images = [
     {
       src: picture1,
-      title: "OFERTA MINIMALNA",
+      title: "OFERTA",
       caption: "Projekt\xa0funkcjonalny (układ\xa0na\xa0rzucie\xa02D)"
     },
     {
       src: picture2,
-      title: "OFERTA ŚREDNIA",
+      title: "OFERTA",
       caption: "Projekt\xa0koncepcyjno-wykonawczy z\xa0wizualizacjami\xa03D"
     },
     {
       src: picture3,
-      title: "OFERTA PEŁNA",
+      title: "OFERTA",
       caption: "Projekt\xa0kompleksowy (realizacja\xa0pod\xa0klucz)"
     }
   ];
@@ -44,7 +44,6 @@ const Offer = props => {
           source={images[0].src}
           alt="Projekt funkcjonalny (układ na rzucie 2D)"
           name={images[0].caption}
-          title={images[0].title}
           clicked={() => {
             setToggler(true);
             setPhotoIndex(0);
@@ -54,7 +53,6 @@ const Offer = props => {
           source={images[1].src}
           alt="Projekt koncepcyjno-wykonawczy z wizualizacjami 3D"
           name={images[1].caption}
-          title={images[1].title}
           clicked={() => {
             setToggler(true);
             setPhotoIndex(1);
@@ -64,7 +62,6 @@ const Offer = props => {
           source={images[2].src}
           alt="Projekt kompleksowy (realizacja pod klucz)"
           name={images[2].caption}
-          title={images[2].title}
           clicked={() => {
             setToggler(true);
             setPhotoIndex(2);
@@ -78,6 +75,7 @@ const Offer = props => {
               images[(photoIndex + images.length - 1) % images.length].src
             }
             onCloseRequest={() => setToggler(false)}
+            enableZoom={false}
             onMovePrevRequest={() =>
               setPhotoIndex((photoIndex + images.length - 1) % images.length)
             }
