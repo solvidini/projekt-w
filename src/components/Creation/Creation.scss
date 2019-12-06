@@ -42,7 +42,7 @@
         transform: translateX(83%);
 
         @include respond(phone) {
-            background-color: rgba($color-dark, .4);
+            background-color: rgba($color-dark, .3);
             transform: translateX(0);
             color: rgba($color-white, .9);
         }
