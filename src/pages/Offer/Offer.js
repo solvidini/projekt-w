@@ -22,18 +22,18 @@ const Offer = props => {
 	const images = [
 		{
 			src: picture1,
-			title: 'OFERTA 1',
-			caption: 'Projekt\xa0funkcjonalny (układ\xa0na\xa0rzucie\xa02D)',
+			caption: 'OFERTA 1',
+			title: 'Projekt\xa0funkcjonalny (układ\xa0na\xa0rzucie\xa02D)',
 		},
 		{
 			src: picture2,
-			title: 'OFERTA 2',
-			caption: 'Projekt\xa0koncepcyjno-wykonawczy z\xa0wizualizacjami\xa03D',
+			caption: 'OFERTA 2',
+			title: 'Projekt\xa0koncepcyjno-wykonawczy z\xa0wizualizacjami\xa03D',
 		},
 		{
 			src: picture3,
-			title: 'OFERTA 3',
-			caption: 'Projekt\xa0kompleksowy (realizacja\xa0pod\xa0klucz)',
+			caption: 'OFERTA 3',
+			title: 'Projekt\xa0kompleksowy (realizacja\xa0pod\xa0klucz)',
 		},
 	];
 	return (
@@ -43,7 +43,7 @@ const Offer = props => {
 				<OfferItem
 					source={images[0].src}
 					alt="Projekt funkcjonalny (układ na rzucie 2D)"
-					name={images[0].caption}
+					name={images[0].title}
 					clicked={() => {
 						setToggler(true);
 						setPhotoIndex(0);
@@ -52,7 +52,7 @@ const Offer = props => {
 				<OfferItem
 					source={images[1].src}
 					alt="Projekt koncepcyjno-wykonawczy z wizualizacjami 3D"
-					name={images[1].caption}
+					name={images[1].title}
 					clicked={() => {
 						setToggler(true);
 						setPhotoIndex(1);
@@ -61,7 +61,7 @@ const Offer = props => {
 				<OfferItem
 					source={images[2].src}
 					alt="Projekt kompleksowy (realizacja pod klucz)"
-					name={images[2].caption}
+					name={images[2].title}
 					clicked={() => {
 						setToggler(true);
 						setPhotoIndex(2);

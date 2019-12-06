@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import "react-image-lightbox/style.css"; // This only needs to be imported once in your app
 import App from "./App";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <HashRouter onUpdate={() => window.scrollTo(0,0)}>
+  <BrowserRouter onUpdate={() => window.scrollTo(0,0)}>
     <App />
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
