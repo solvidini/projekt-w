@@ -6,12 +6,6 @@ import Spinner from './components/UI/Spinner/Spinner';
 import ScrollToTop from './hoc/ScrollToTop';
 import Layout from './Layout/Layout';
 
-//PAGES NOT LAZY LOADED
-import Home from './pages/Home/Home';
-import Contact from './pages/Contact/Contact';
-import Studio from './pages/Studio/Studio';
-import Offer from './pages/Offer/Offer';
-
 //PROJECTS IMPORT
 import project_1 from './assets/images/projects/apartament_w_gliwicach/index';
 import project_6 from './assets/images/projects/kompaktowy_apartament_w_katowicach_park_bazantow/index';
@@ -52,6 +46,12 @@ import realisation_11 from './assets/images/realisations/mieszkanie_w_katowicach
 //PREMIUM REALISATIONS IMPORT
 import realisationPremium_1 from './assets/images/realisations-premium/penthouse_w_katowicach/index';
 import realisationPremium_2 from './assets/images/realisations-premium/dom_w_tychach/index';
+
+//PAGES NOT LAZY LOADED
+import Home from './pages/Home/Home';
+import Contact from './pages/Contact/Contact';
+import Studio from './pages/Studio/Studio';
+import Offer from './pages/Offer/Offer';
 
 //PAGES AND COMPONENTS LAZY LOADED
 const Gallery = lazy(() => {
