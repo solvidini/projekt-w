@@ -14,8 +14,6 @@ import p7 from "./p7.jpg";
 import p7_tn from "./p7_tn.jpg";
 import p8 from "./p8.jpg";
 import p8_tn from "./p8_tn.jpg";
-import p9 from "./p9.jpg";
-import p9_tn from "./p9_tn.jpg";
 import p10 from "./p10.jpg";
 import p10_tn from "./p10_tn.jpg";
 import p11 from "./p11.jpg";
@@ -23,7 +21,7 @@ import p11_tn from "./p11_tn.jpg";
 
 export default {
   name: "Mieszkanie\xa0na\xa0poddaszu, Tychy",
-  exhibit: p1_tn,
+  exhibit: p4_tn,
   images: [
     {
       src: p1,
@@ -56,10 +54,6 @@ export default {
     {
       src: p8,
       tn: p8_tn
-    },
-    {
-      src: p9,
-      tn: p9_tn
     },
     {
       src: p10,

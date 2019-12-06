@@ -43,7 +43,7 @@ import p21_tn from "./p21_tn.jpg";
 
 export default {
   name: "Mieszkanie\xa0pod\xa0wynajem, Katowice\xa0Mikołowska",
-  exhibit: p2,
+  exhibit: p4_tn,
   images: [
     {
       src: p1,

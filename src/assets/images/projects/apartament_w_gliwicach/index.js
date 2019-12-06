@@ -40,12 +40,10 @@ import p20 from "./p20.jpg";
 import p20_tn from "./p20_tn.jpg";
 import p21 from "./p21.jpg";
 import p21_tn from "./p21_tn.jpg";
-import p22 from "./p21.jpg";
-import p22_tn from "./p21_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Gliwicach",
-  exhibit: p10,
+  exhibit: p5_tn,
   images: [
     {
       src: p1,
@@ -130,10 +128,6 @@ export default {
     {
       src: p21,
       tn: p21_tn
-    },
-    {
-      src: p22,
-      tn: p22_tn
     }
   ]
 };

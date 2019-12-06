@@ -81,7 +81,7 @@ import p40_tn from "./p40_tn.jpg";
 
 export default {
   name: "Dom w\xa0Tychach",
-  exhibit: p8,
+  exhibit: p5,
   images: [
     {
       src: p1,

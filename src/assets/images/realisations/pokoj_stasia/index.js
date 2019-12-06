@@ -13,7 +13,7 @@ import p6_tn from "./p6_tn.jpg";
 
 export default {
   name: "Pokój\xa0Stasia",
-  exhibit: p2_tn,
+  exhibit: p1_tn,
   images: [
     {
       src: p1,

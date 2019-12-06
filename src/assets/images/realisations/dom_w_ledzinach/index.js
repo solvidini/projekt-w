@@ -27,7 +27,7 @@ import p13_tn from "./p13_tn.jpg";
 
 export default {
   name: "Dom\xa0w\xa0Lędzinach",
-  exhibit: p10,
+  exhibit: p3_tn,
   images: [
     {
       src: p1,

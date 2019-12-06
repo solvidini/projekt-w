@@ -32,20 +32,10 @@ import p16 from "./p16.jpg";
 import p16_tn from "./p16_tn.jpg";
 import p17 from "./p17.jpg";
 import p17_tn from "./p17_tn.jpg";
-import p18 from "./p18.jpg";
-import p18_tn from "./p18_tn.jpg";
-import p19 from "./p19.jpg";
-import p19_tn from "./p19_tn.jpg";
-import p20 from "./p20.jpg";
-import p20_tn from "./p20_tn.jpg";
-import p21 from "./p21.jpg";
-import p21_tn from "./p21_tn.jpg";
-import p22 from "./p22.jpg";
-import p22_tn from "./p22_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Mysłowicach",
-  exhibit: p21,
+  exhibit: p4_tn,
   images: [
     {
       src: p1,
@@ -114,26 +104,6 @@ export default {
       {
       src: p17,
       tn: p17_tn
-      },
-      {
-      src: p18,
-      tn: p18_tn
-      },
-      {
-      src: p19,
-      tn: p19_tn
-      },
-      {
-      src: p20,
-      tn: p20_tn
-      },
-      {
-      src: p21,
-      tn: p21_tn
-      },
-      {
-      src: p22,
-      tn: p22_tn
       }
   ]
 };

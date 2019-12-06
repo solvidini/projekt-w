@@ -29,7 +29,7 @@ import p14_tn from "./p14_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Katowicach - Park\xa0Bażantów",
-  exhibit: p7,
+  exhibit: p10_tn,
   images: [
     {
       src: p1,

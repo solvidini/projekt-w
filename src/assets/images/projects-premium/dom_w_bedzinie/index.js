@@ -72,12 +72,10 @@ import p36 from "./p36.jpg";
 import p36_tn from "./p36_tn.jpg";
 import p37 from "./p37.jpg";
 import p37_tn from "./p37_tn.jpg";
-import p38 from "./p38.jpg";
-import p38_tn from "./p38_tn.jpg";
 
 export default {
   name: "Dom w\xa0Będzinie",
-  exhibit: p2,
+  exhibit: p2_tn,
   images: [
     {
       src: p1,
@@ -226,10 +224,6 @@ export default {
       {
       src: p37,
       tn: p37_tn
-      },
-      {
-      src: p38,
-      tn: p38_tn
       }
   ]
 };
