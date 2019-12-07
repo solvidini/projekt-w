@@ -129,7 +129,12 @@ const RealisationsPaths = props => {
 			<Route
 				path={url}
 				render={props => (
-					<Gallery {...props} images={realisationsArray[id].images} name={realisationsArray[id].name} />
+					<Gallery
+						{...props}
+						yOffset={window.pageYOffset}
+						images={realisationsArray[id].images}
+						name={realisationsArray[id].name}
+					/>
 				)}
 			/>
 		</React.Fragment>
@@ -147,6 +152,7 @@ const RealisationsPremiumPaths = props => {
 				render={props => (
 					<Gallery
 						{...props}
+						yOffset={window.pageYOffset}
 						images={realisationsPremiumArray[id].images}
 						name={realisationsPremiumArray[id].name}
 					/>
@@ -164,7 +170,14 @@ const ProjectsPaths = props => {
 		<React.Fragment>
 			<Route
 				path={url}
-				render={props => <Gallery {...props} images={projectsArray[id].images} name={projectsArray[id].name} />}
+				render={props => (
+					<Gallery
+						{...props}
+						yOffset={window.pageYOffset}
+						images={projectsArray[id].images}
+						name={projectsArray[id].name}
+					/>
+				)}
 			/>
 		</React.Fragment>
 	);
@@ -179,7 +192,12 @@ const ProjectsPremiumPaths = props => {
 			<Route
 				path={url}
 				render={props => (
-					<Gallery {...props} images={projectsPremiumArray[id].images} name={projectsPremiumArray[id].name} />
+					<Gallery
+						{...props}
+						yOffset={window.pageYOffset}
+						images={projectsPremiumArray[id].images}
+						name={projectsPremiumArray[id].name}
+					/>
 				)}
 			/>
 		</React.Fragment>

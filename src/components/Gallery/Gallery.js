@@ -13,7 +13,26 @@ const Gallery = props => {
   const [toggler, setToggler] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  if (!props.images) return <Redirect to="/" />; 
+  if (!props.images) return <Redirect to="/" />;
+
+  const getReturnUrl = () => {
+    const currentUrl = props.match.url;
+    let howManyToLeave = 1;
+    for (let i=1; i<currentUrl.length; i++) {
+      if(currentUrl[i] === '/') {
+        break;
+      }
+      howManyToLeave++;
+    }
+    const returnUrl = currentUrl.slice(0,howManyToLeave);
+    return returnUrl;
+  }
+
+  const goBack = () => {
+    const returnUrl = getReturnUrl();
+    props.history.push(returnUrl);
+    window.setTimeout(() => window.scrollTo(0, props.yOffset), 1);
+  }
 
   const thumbnails = props.images.map((image, index) => {
     return (
@@ -56,6 +75,7 @@ const Gallery = props => {
           reactModalStyle={customStyles}
         />
       )}
+      <div title="Powrót" className="return" onClick={() => goBack()}><i className="fas fa-arrow-left"></i></div>
     </article>
   );
 };

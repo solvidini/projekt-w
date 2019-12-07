@@ -39,24 +39,12 @@
         border-bottom-left-radius: .7rem;
         color: $color-white;
         transition: all .5s ease;
-        transform: translateX(83%);
+        transform: translateX(100%);
 
         @include respond(phone) {
             background-color: rgba($color-dark, .3);
             transform: translateX(0);
             color: rgba($color-white, .9);
-        }
-    }
-
-    &__discover:before {
-        content: "...";
-        font-size: .9rem;
-        margin-right: .7rem;
-        transition: all .5s ease;
-
-        @include respond(phone) {
-            content: "";
-            margin: 0;
         }
     }
 
