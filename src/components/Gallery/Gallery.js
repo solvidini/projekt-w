@@ -30,8 +30,7 @@ const Gallery = props => {
 
   const goBack = () => {
     const returnUrl = getReturnUrl();
-    props.history.push(returnUrl);
-    window.setTimeout(() => window.scrollTo(0, props.yOffset), 1);
+    props.history.push(returnUrl, props.yOffset);
   }
 
   const thumbnails = props.images.map((image, index) => {
