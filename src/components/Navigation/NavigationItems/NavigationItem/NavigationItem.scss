@@ -13,8 +13,8 @@
 
     @include respond(tab-port) {
         padding: .5rem 0;
-        max-width: 12rem;
-        flex: 0 0 19%;
+        width: 12rem;
+        height: auto;
     }
 
     &__link,
