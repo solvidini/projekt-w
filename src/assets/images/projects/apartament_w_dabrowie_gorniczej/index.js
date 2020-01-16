@@ -28,7 +28,8 @@ import p14 from "./p14.jpg";
 import p14_tn from "./p14_tn.jpg";
 
 export default {
-  name: "Apartament w\xa0Dąbrowie Górniczej",
+  name: "Apartament w\xa0Dąbrowie\xa0Górniczej",
+	enName: 'Apartment in\xa0Dąbrowa\xa0Górnicza',
   exhibit: p1_tn,
   images: [
     {

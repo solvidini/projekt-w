@@ -30,7 +30,8 @@ import p15 from './p15.jpg';
 import p15_tn from './p15_tn.jpg';
 
 export default {
-	name: 'Kompaktowy Apartament w\xa0Katowicach',
+	name: 'Kompaktowy apartament w\xa0Katowicach',
+	enName: 'Compact\xa0apartment in\xa0Katowice',
 	exhibit: p1_tn,
 	images: [
 		{

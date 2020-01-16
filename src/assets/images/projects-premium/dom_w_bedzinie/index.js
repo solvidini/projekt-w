@@ -75,6 +75,7 @@ import p37_tn from "./p37_tn.jpg";
 
 export default {
   name: "Dom w\xa0Będzinie",
+	enName: 'House in\xa0Będzin',
   exhibit: p2_tn,
   images: [
     {

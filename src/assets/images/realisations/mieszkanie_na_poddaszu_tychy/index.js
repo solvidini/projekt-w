@@ -21,6 +21,7 @@ import p11_tn from "./p11_tn.jpg";
 
 export default {
   name: "Mieszkanie\xa0na\xa0poddaszu, Tychy",
+	enName: 'Attic\xa0flat, Tychy',
   exhibit: p4_tn,
   images: [
     {

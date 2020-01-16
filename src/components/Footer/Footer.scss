@@ -120,12 +120,47 @@
     a {
       font-weight: 400;
       color: rgb(119, 119, 119);
+
       &:hover {
         transform: scale(1.05);
         color: $color-white;
       }
     }
 
+  }
+
+  &__languages {
+    background-color: rgb(19, 19, 19);
+
+    &__button {
+      background-color: transparent;
+      outline: none;
+      position: relative;
+      cursor: pointer;
+      color: rgb(204, 204, 204);
+      letter-spacing: .2rem;
+      font-size: $small-font-size;
+      border: none;
+      margin-left: 2rem;
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+      }
+
+      &::before {
+        content: "•";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: rgb(204, 204, 204);
+        font-size: $small-font-size;
+        margin-left: -1rem;
+
+        @include respond(phone) {
+          font-size: 1.4rem;
+        }
+      }
+    }
   }
 
   &__copyright {
@@ -159,12 +194,14 @@
 
 .creator {
   color: rgb(100, 100, 100);
+
   a,
   a:link,
   a:visited {
     color: rgb(155, 155, 156);
     text-decoration: none;
     transition: color .2s ease;
+
     &:hover {
       color: $color-white;
     }

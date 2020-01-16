@@ -81,6 +81,7 @@ import p40_tn from "./p40_tn.jpg";
 
 export default {
   name: "Dom w\xa0Tychach",
+  enName: "House in\xa0Tychy",
   exhibit: p5,
   images: [
     {

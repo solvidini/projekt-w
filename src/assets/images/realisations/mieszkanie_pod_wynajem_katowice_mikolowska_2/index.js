@@ -29,6 +29,7 @@ import p14_tn from "./p14_tn.jpg";
 
 export default {
   name: "Mieszkanie\xa0pod\xa0wynajem, Katowice\xa0Mikołowska",
+	enName: 'Apartment\xa0for\xa0rent, Katowice\xa0Mikołowska',
   exhibit: p1,
   images: [
     {

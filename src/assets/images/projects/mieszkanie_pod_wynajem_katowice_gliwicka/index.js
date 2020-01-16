@@ -17,6 +17,7 @@ import p8_tn from "./p8_tn.jpg";
 
 export default {
   name: "Mieszkanie pod\xa0wynajem, Katowice\xa0Gliwicka",
+	enName: 'Apartment\xa0for\xa0rent, Katowice\xa0Gliwicka',
   exhibit: p2_tn,
   images: [
     {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Lightbox from 'react-image-lightbox';
 import './Offer.scss';
 
@@ -7,6 +7,7 @@ import OfferItem from '../../components/OfferItem/OfferItem';
 import picture1 from '../../assets/images/offer_minimum.jpg';
 import picture2 from '../../assets/images/offer_medium.jpg';
 import picture3 from '../../assets/images/offer_full.jpg';
+import { LanguageContext } from '../../context';
 
 const customStyles = {
 	content: {
@@ -16,33 +17,34 @@ const customStyles = {
 };
 
 const Offer = props => {
+	const context = useContext(LanguageContext);
 	const [toggler, setToggler] = useState(false);
 	const [photoIndex, setPhotoIndex] = useState(0);
 
 	const images = [
 		{
 			src: picture1,
-			caption: 'OFERTA 1',
-			title: 'Projekt\xa0funkcjonalny (układ\xa0na\xa0rzucie\xa02D)',
+			caption: context.dictionary.offer.title + ' 1',
+			title: context.dictionary.offer.functional,
 		},
 		{
 			src: picture2,
-			caption: 'OFERTA 2',
-			title: 'Projekt\xa0koncepcyjno-wykonawczy z\xa0wizualizacjami\xa03D',
+			caption: context.dictionary.offer.title + ' 2',
+			title: context.dictionary.offer.conceptual,
 		},
 		{
 			src: picture3,
-			caption: 'OFERTA 3',
-			title: 'Projekt\xa0kompleksowy (realizacja\xa0pod\xa0klucz)',
+			caption: context.dictionary.offer.title + ' 3',
+			title: context.dictionary.offer.comprehensive,
 		},
 	];
 	return (
 		<section className="section-offer">
-			<h1 className="section-title">Oferta</h1>
+			<h1 className="section-title">{context.dictionary.nav.offer}</h1>
 			<div className="offers">
 				<OfferItem
 					source={images[0].src}
-					alt="Projekt funkcjonalny (układ na rzucie 2D)"
+					alt={context.dictionary.offer.functional}
 					name={images[0].title}
 					clicked={() => {
 						setToggler(true);
@@ -51,7 +53,7 @@ const Offer = props => {
 				/>
 				<OfferItem
 					source={images[1].src}
-					alt="Projekt koncepcyjno-wykonawczy z wizualizacjami 3D"
+					alt={context.dictionary.offer.conceptual}
 					name={images[1].title}
 					clicked={() => {
 						setToggler(true);
@@ -60,7 +62,7 @@ const Offer = props => {
 				/>
 				<OfferItem
 					source={images[2].src}
-					alt="Projekt kompleksowy (realizacja pod klucz)"
+					alt={context.dictionary.offer.comprehensive}
 					name={images[2].title}
 					clicked={() => {
 						setToggler(true);

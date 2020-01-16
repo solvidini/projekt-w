@@ -97,6 +97,7 @@ import p48_tn from "./p48_tn.jpg";
 
 export default {
   name: "Dom w\xa0Katowicach",
+	enName: 'House in\xa0Katowice',
   exhibit: p4_tn,
   images: [
     {

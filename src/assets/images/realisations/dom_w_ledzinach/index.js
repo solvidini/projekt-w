@@ -27,6 +27,7 @@ import p13_tn from "./p13_tn.jpg";
 
 export default {
   name: "Dom\xa0w\xa0Lędzinach",
+	enName: 'House\xa0in\xa0Lędziny',
   exhibit: p3_tn,
   images: [
     {

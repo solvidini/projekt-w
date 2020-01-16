@@ -89,6 +89,7 @@ import p44_tn from "./p44_tn.jpg";
 
 export default {
   name: "Dom w\xa0Orzeszu",
+	enName: 'House in\xa0Orzesz',
   exhibit: p3,
   images: [
     {

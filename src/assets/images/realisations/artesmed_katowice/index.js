@@ -19,6 +19,7 @@ import p9_tn from './p9_tn.jpg';
 
 export default {
 	name: 'Artesmed\xa0w\xa0Katowicach',
+	enName: 'Artesmed\xa0in\xa0Katowice',
 	exhibit: p8_tn,
 	images: [
 		{

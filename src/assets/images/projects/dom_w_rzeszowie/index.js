@@ -49,6 +49,7 @@ import p24_tn from './p24_tn.jpg';
 
 export default {
 	name: 'Dom w\xa0Rzeszowie',
+	enName: 'House\xa0in\xa0Rzeszów',
 	exhibit: p9_tn,
 	images: [
 		{

@@ -43,6 +43,7 @@ import p21_tn from "./p21_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Gliwicach",
+	enName: 'Apartment in\xa0Gliwice',
   exhibit: p5_tn,
   images: [
     {

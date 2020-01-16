@@ -127,6 +127,7 @@ import p63_tn from "./p63_tn.jpg";
 
 export default {
   name: "Dom w\xa0Ogrodzieńcu",
+	enName: 'House in\xa0Ogrodzieniec',
   exhibit: p1_tn,
   images: [
     {

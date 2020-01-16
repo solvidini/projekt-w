@@ -73,6 +73,7 @@ import p36_tn from "./p36_tn.jpg";
 
 export default {
   name: "Mieszkania\xa0pod\xa0wynajem, ATAL\xa0Park\xa0Katowice",
+	enName: 'Apartments\xa0for\xa0rent, ATAL\xa0Park\xa0Katowice',
   exhibit: p2_tn,
   images: [
     {

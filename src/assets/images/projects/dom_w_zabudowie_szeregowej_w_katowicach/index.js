@@ -45,6 +45,7 @@ import p22_tn from "./p22_tn.jpg";
 
 export default {
   name: "Dom w\xa0zabudowie szeregowej w\xa0Katowicach",
+	enName: 'Terraced\xa0house in\xa0Katowice',
   exhibit: p6_tn,
   images: [
     {

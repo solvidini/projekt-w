@@ -23,6 +23,7 @@ import p11_tn from "./p11_tn.jpg";
 
 export default {
   name: "Mieszkanie\xa0pod\xa0wynajem, Katowice\xa0Nasypowa",
+	enName: 'Apartment\xa0for\xa0rent, Katowice\xa0Nasypowa',
   exhibit: p10_tn,
   images: [
     {

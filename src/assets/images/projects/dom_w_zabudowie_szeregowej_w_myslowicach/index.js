@@ -41,6 +41,7 @@ import p20_tn from "./p20_tn.jpg";
 
 export default {
   name: "Dom w\xa0zabudowie szeregowej w\xa0Mysłowicach",
+	enName: 'Terraced\xa0house in\xa0Mysłowice',
   exhibit: p3_tn,
   images: [
     {

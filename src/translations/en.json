@@ -1,0 +1,36 @@
+{
+	"language": "English",
+	"poland": "Poland",
+	"nav": {
+		"home": "Home",
+		"studio": "Studio",
+		"projects": "Projects",
+		"projectsPremium": "Premium\u00A0projects",
+		"realisations": "Realisations",
+		"realisationsPremium": "Premium\u00A0realisations",
+		"offer": "Offer",
+		"partners": "Partners",
+		"contact": "Contact"
+	},
+	"offer": {
+		"title": "OFFER",
+		"functional": "Functional\u00A0project (Layout\u00A0on\u00A0a\u00A02D\u00A0plan)",
+		"conceptual": "Conceptual\u00A0and executive project with\u00A03D\u00A0visualizations",
+		"comprehensive": "Comprehensive\u00A0project (Turnkey\u00A0implementation)"
+	},
+	"contact": {
+		"write": "Write to us",
+		"location": "Studio location"
+	},
+	"footer": {
+		"studio": "Studio",
+		"contact": "Contact",
+		"nav": "Navigation",
+		"followUs": "Follow\u00A0us",
+		"allRights": "All\u00A0rights\u00A0reserved.",
+		"siteMadeBy": "Site\u00A0made\u00A0by"
+	},
+	"soon": "Soon",
+	"noProjects": "No projects",
+	"discover": "Discover more"
+}

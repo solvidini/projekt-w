@@ -35,6 +35,7 @@ import p17_tn from "./p17_tn.jpg";
 
 export default {
   name: "Dom w\xa0Czeladzi",
+	enName: 'House\xa0in\xa0Czeladź',
   exhibit: p1_tn,
   images: [
     {

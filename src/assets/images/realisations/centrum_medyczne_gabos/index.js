@@ -29,6 +29,7 @@ import p14_tn from './p14_tn.jpg';
 
 export default {
 	name: 'Centrum Medyczne Gabos',
+	enName: 'Gabos\xa0Medical\xa0Center',
 	exhibit: p10_tn,
 	images: [
 		{

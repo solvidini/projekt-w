@@ -27,6 +27,7 @@ import p13_tn from "./p13_tn.jpg";
 
 export default {
   name: "Kompaktowy apartament w\xa0Katowicach - Park\xa0Bażantów",
+	enName: 'Compact\xa0apartment in\xa0Katowice - Pheasant\xa0Park',
   exhibit: p10,
   images: [
     {

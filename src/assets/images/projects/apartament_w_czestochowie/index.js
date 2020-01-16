@@ -23,6 +23,7 @@ import p11_tn from "./p11_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Częstochowie",
+	enName: 'Apartment\xa0in\xa0Częstochowa',
   exhibit: p6_tn,
   images: [
     {

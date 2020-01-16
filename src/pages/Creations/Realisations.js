@@ -1,24 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Realisation from "../../components/Creation/Creation";
 import "./Creations.scss";
+import { LanguageContext } from "../../context";
 
 const Realisations = props => {
-  return (
+	const context = useContext(LanguageContext);
+	return (
     <section className="section-creations">
-      <h1 className="section-title">Realizacje</h1>
+      <h1 className="section-title">{context.dictionary.nav.realisations}</h1>
       <div className="creations">
         {props.realisationsArray.length ? (
           props.realisationsArray.map((realisation, index) => (
             <Realisation
               key={realisation.name + index}
               to={props.match.url + "/" + (index + 1)}
-              name={realisation.name}
+              name={context.language === "pl" ? realisation.name : context.language === "en" ? realisation.enName : realisation.name}
               source={realisation.exhibit}
             />
           ))
         ) : (
-          <div className="no-creations">Brak realizacji</div>
+          <div className="no-creations">{context.dictionary.noProjects}</div>
         )}
       </div>
     </section>

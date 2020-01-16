@@ -13,6 +13,7 @@ import p6_tn from "./p6_tn.jpg";
 
 export default {
   name: "Pokój\xa0Stasia",
+	enName: 'Staś\'s\xa0room',
   exhibit: p1_tn,
   images: [
     {

@@ -63,6 +63,7 @@ import p31_tn from "./p31_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Katowicach w\xa0stylu\xa0Hampton",
+	enName: 'Apartment\xa0in\xa0Katowice in\xa0Hampton\xa0style',
   exhibit: p11_tn,
   images: [
     {

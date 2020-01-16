@@ -1,0 +1,90 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.language-pack {
+    position: fixed;
+    z-index: 700;
+    left: 0;
+    top: 13.5rem;
+    padding: 1rem 0;
+    user-select: none;
+    outline: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    transform: translateX(-9rem);
+    transition: all .5s ease;
+
+    &:hover {
+        transform: translateX(0);
+    }
+
+    &__toggler {
+        cursor: pointer;
+        width: 13rem;
+        color: $color-white;
+        font-size: 3rem;
+        padding: .6rem .5rem .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+          }
+           
+        box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
+        background-color: rgba($color-black, .8);
+
+        border-top-right-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+
+        transition: all .5s ease;
+
+        @include respond(tab-land) {
+            font-size: 3.4rem;
+        }
+    }
+
+    &__down {
+        display: block;
+        padding: 0 1rem;
+        margin: 0 -.1rem;
+    }
+
+    &__select {
+        @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+            -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+          }
+           
+        box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
+        background-color: rgba($color-black, .8);
+        
+        font-size: 1.4rem;
+        color: $color-white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        width: 8rem;
+        outline: none;
+        border: 1px solid rgba($color-black, .8);
+
+        @include respond(tab-land) {
+            font-size: 1.7rem;
+        }
+
+        &:active,
+        &:focus {
+            border: 1px solid $color-white;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+        }
+    }
+
+}

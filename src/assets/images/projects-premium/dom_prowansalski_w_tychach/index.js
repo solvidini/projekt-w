@@ -51,6 +51,7 @@ import p25_tn from './p25_tn.jpg';
 
 export default {
 	name: 'Dom prowansalski w\xa0Tychach',
+	enName: 'Provencal\xa0house in\xa0Tychy',
 	exhibit: p1_tn,
 	images: [
 		{

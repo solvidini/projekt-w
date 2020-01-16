@@ -35,6 +35,7 @@ import p17_tn from "./p17_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Mysłowicach",
+	enName: 'Apartment\xa0in\xa0Mysłowice',
   exhibit: p4_tn,
   images: [
     {

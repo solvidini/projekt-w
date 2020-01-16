@@ -47,6 +47,7 @@ import p23_tn from "./p23_tn.jpg";
 
 export default {
   name: "Mieszkanie w\xa0Katowicach",
+	enName: 'Apartment in\xa0Katowice',
   exhibit: p13_tn,
   images: [
     {

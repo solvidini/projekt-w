@@ -1,80 +1,79 @@
-import React from "react";
+import React, { useContext } from 'react';
 
-import "./NavigationItems.scss";
-import NavigationItem from "./NavigationItem/NavigationItem";
+import './NavigationItems.scss';
+import NavigationItem from './NavigationItem/NavigationItem';
+import { LanguageContext } from '../../../context';
 
-const NavigationItems = props => (
-  <ul className="navigation-items">
-    <li className="navigation-item">
-      <NavigationItem link="/">Home</NavigationItem>
-    </li>
-    <li className="navigation-item">
-      <NavigationItem link="/studio">Pracownia</NavigationItem>
-    </li>
-    <li className="navigation-dropdown">
-      <span>Projekty&nbsp;</span><i className="fas fa-caret-down"></i>
-      <div className="navigation-dropdown__content">
-        <NavigationItem link="/projects">Projekty</NavigationItem>
-        <NavigationItem link="/projects-premium">
-          Projekty&nbsp;Premium
-        </NavigationItem>
-      </div>
-    </li>
-    <li className="navigation-dropdown">
-      <span>Realizacje&nbsp;</span><i className="fas fa-caret-down"></i>
-      <div className="navigation-dropdown__content">
-        <NavigationItem exact link="/realisations">
-          Realizacje
-        </NavigationItem>
-        <NavigationItem exact link="/realisations-premium">
-          Realizacje&nbsp;Premium
-        </NavigationItem>
-      </div>
-    </li>
-    <li className="navigation-item">
-      <NavigationItem link="/offer">Oferta</NavigationItem>
-    </li>
-    <li className="navigation-item">
-      <NavigationItem link="/partners">Partnerzy</NavigationItem>
-    </li>
-    <li className="navigation-item">
-      <NavigationItem link="/contact">Kontakt</NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem link="/projects">Projekty</NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem link="/projects-premium">
-      &nbsp;&rarr;&nbsp;Premium
-      </NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem exact link="/realisations">
-        Realizacje
-      </NavigationItem>
-    </li>
-    <li className="navigation-item mobile-only">
-      <NavigationItem exact link="/realisations-premium">
-      &nbsp;&rarr;&nbsp;Premium
-      </NavigationItem>
-    </li>
-    <li className="navigation-item">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        className="navigation-icon"
-        href="https://www.facebook.com/ProjektWPAW/"
-      >
-        <i className="fab fa-facebook-f"></i>
-        <span
-          className="mobile-only navigation-icon__text"
-          style={{ textTransform: "lowercase" }}
-        >
-          acebook
-        </span>
-      </a>
-    </li>
-  </ul>
-);
+const NavigationItems = props => {
+	const context = useContext(LanguageContext);
+	return (
+		<ul className="navigation-items">
+			<li className="navigation-item">
+				<NavigationItem link="/">{context.dictionary.nav.home}</NavigationItem>
+			</li>
+			<li className="navigation-item">
+				<NavigationItem link="/studio">{context.dictionary.nav.studio}</NavigationItem>
+			</li>
+			<li className="navigation-dropdown">
+				<span>{context.dictionary.nav.projects}&nbsp;</span>
+				<i className="fas fa-caret-down"></i>
+				<div className="navigation-dropdown__content">
+					<NavigationItem link="/projects">{context.dictionary.nav.projects}</NavigationItem>
+					<NavigationItem link="/projects-premium">{context.dictionary.nav.projectsPremium}</NavigationItem>
+				</div>
+			</li>
+			<li className="navigation-dropdown">
+				<span>{context.dictionary.nav.realisations}&nbsp;</span>
+				<i className="fas fa-caret-down"></i>
+				<div className="navigation-dropdown__content">
+					<NavigationItem exact link="/realisations">
+          {context.dictionary.nav.realisations}
+					</NavigationItem>
+					<NavigationItem exact link="/realisations-premium">
+          {context.dictionary.nav.realisationsPremium}
+					</NavigationItem>
+				</div>
+			</li>
+			<li className="navigation-item">
+				<NavigationItem link="/offer">{context.dictionary.nav.offer}</NavigationItem>
+			</li>
+			<li className="navigation-item">
+				<NavigationItem link="/partners">{context.dictionary.nav.partners}</NavigationItem>
+			</li>
+			<li className="navigation-item">
+				<NavigationItem link="/contact">{context.dictionary.nav.contact}</NavigationItem>
+			</li>
+			<li className="navigation-item mobile-only">
+				<NavigationItem link="/projects">{context.dictionary.nav.projects}</NavigationItem>
+			</li>
+			<li className="navigation-item mobile-only">
+				<NavigationItem link="/projects-premium">&nbsp;&rarr;&nbsp;Premium</NavigationItem>
+			</li>
+			<li className="navigation-item mobile-only">
+				<NavigationItem exact link="/realisations">
+        {context.dictionary.nav.realisations}
+				</NavigationItem>
+			</li>
+			<li className="navigation-item mobile-only">
+				<NavigationItem exact link="/realisations-premium">
+					&nbsp;&rarr;&nbsp;Premium
+				</NavigationItem>
+			</li>
+			<li className="navigation-item">
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					className="navigation-icon"
+					href="https://www.facebook.com/ProjektWPAW/"
+				>
+					<i className="fab fa-facebook-f"></i>
+					<span className="mobile-only navigation-icon__text" style={{ textTransform: 'lowercase' }}>
+						acebook
+					</span>
+				</a>
+			</li>
+		</ul>
+	);
+};
 
 export default NavigationItems;
