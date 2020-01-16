@@ -17,9 +17,16 @@ export const LanguageProvider = props => {
 	}, []);
 
 	useEffect(() => {
-		if (language === 'pl') setDictionary(polish);
-		else if (language === 'en') setDictionary(english);
-		else setDictionary(english);
+		if (language === 'pl') {
+			setDictionary(polish);
+			document.title = polish.title
+		} else if (language === 'en') {
+			setDictionary(english);
+			document.title = english.title
+		} else {
+			setDictionary(english);
+			document.title = english.title
+		}
 	}, [language]);
 
 	const changeLanguage = e => {
@@ -33,7 +40,7 @@ export const LanguageProvider = props => {
 			value={{
 				language: language,
 				changeLanguage: changeLanguage,
-				dictionary: dictionary
+				dictionary: dictionary,
 			}}
 		>
 			{props.children}
