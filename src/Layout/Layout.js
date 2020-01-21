@@ -10,6 +10,7 @@ import LanguagePack from '../components/LanguagePack/LanguagePack';
 const Layout = props => {
 	const context = useContext(LanguageContext);
 	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+	const [showLanguages, setShowLanguages] = useState(false);
 	const [scrollY, setScrollY] = useState(0);
 	const [resizeX, setResizeX] = useState(0);
 	const [stickyToolbar, setStickyToolbar] = useState(false);
@@ -74,7 +75,15 @@ const Layout = props => {
 			<div className="toolbar-height" ref={toolbarRef}>
 				<div className="toolbar-height--small" ref={toolbarSmallRef}></div>
 			</div>
-			{(!sideDrawerIsVisible && props.location.pathname === '/') && <LanguagePack moveUp={stickyToolbar} clicked={context.changeLanguage} />}
+			{!sideDrawerIsVisible && props.location.pathname === '/' && (
+				<LanguagePack
+					moveUp={stickyToolbar}
+					clicked={context.changeLanguage}
+					show={showLanguages}
+					showToggler={() => setShowLanguages(!showLanguages)}
+					hideToggler={() => setShowLanguages(false)}
+				/>
+			)}
 			<Toolbar
 				sideDrawerToggleClicked={sideDrawerToggleHandler}
 				sideDrawerIsVisible={sideDrawerIsVisible}
@@ -87,4 +96,4 @@ const Layout = props => {
 	);
 };
 
-export default withRouter(Layout);
+export default withRouter(React.memo(Layout));

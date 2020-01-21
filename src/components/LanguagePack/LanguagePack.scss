@@ -1,9 +1,10 @@
 @import '../../sass/variables';
 @import '../../sass/mixins';
+@import '../../sass/animations';
 
 .language-pack {
     position: fixed;
-    z-index: 700;
+    z-index: 1200;
     left: 0;
     top: 13.5rem;
     padding: 1rem 0;
@@ -14,9 +15,9 @@
     transform: translateX(-9rem);
     transition: all .5s ease;
 
-    &:hover {
-        transform: translateX(0);
-    }
+    // &:hover {
+    //     transform: translateX(0);
+    // }
 
     &__toggler {
         cursor: pointer;
@@ -31,8 +32,8 @@
         @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
             -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
-          }
-           
+        }
+
         box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
         background-color: rgba($color-black, .8);
 
@@ -43,6 +44,13 @@
 
         @include respond(tab-land) {
             font-size: 3.4rem;
+        }
+
+        &__icon {
+            transition: all .5s ease;
+            &:hover {
+                animation: spinAround 3s infinite;
+            }
         }
     }
 
@@ -56,11 +64,11 @@
         @supports(-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
             -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
-          }
-           
+        }
+
         box-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
         background-color: rgba($color-black, .8);
-        
+
         font-size: 1.4rem;
         color: $color-white;
         border: none;
@@ -85,6 +93,18 @@
             border-bottom-left-radius: .5rem;
             border-bottom-right-radius: .5rem;
         }
+    }
+
+    &--show {
+        transform: translateX(0);
+    }
+
+    &--hide {
+        transform: translateX(-9rem);
+    }
+
+    &--moveUp {
+        top: 4.5rem;
     }
 
 }

@@ -143,8 +143,8 @@
       border: none;
       margin-left: 2rem;
 
-      @include respond(phone) {
-        font-size: 1.4rem;
+      @include respond(tab-land) {
+        font-size: $default-font-size;
       }
 
       &::before {
@@ -156,8 +156,8 @@
         font-size: $small-font-size;
         margin-left: -1rem;
 
-        @include respond(phone) {
-          font-size: 1.4rem;
+        @include respond(tab-land) {
+          font-size: $default-font-size;
         }
       }
     }
