@@ -17,6 +17,7 @@ import proAudio from '../../assets/images/partners/pro-audio.png';
 import profit from '../../assets/images/partners/profit.png';
 import stolarnieGalicyjskie from '../../assets/images/partners/stolarnie-galicyjskie.png';
 import magdalenaRzepka from '../../assets/images/partners/magdalena-rzepka.png';
+import fizia from '../../assets/images/partners/fizia.png';
 import { LanguageContext } from '../../context';
 
 const Partners = () => {
@@ -45,6 +46,7 @@ const Partners = () => {
 					alt="Stolarnie Galicyjskie"
 				/>
 				<Partner link="https://www.facebook.com/PaniTapetka/" src={magdalenaRzepka} alt="Magdalena Rzepka" />
+				<Partner link="http://www.fizia.pl/" src={fizia} alt="Fizia" />
 			</div>
 		</div>
 	);

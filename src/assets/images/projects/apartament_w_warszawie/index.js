@@ -43,7 +43,7 @@ import p21_tn from "./p21_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Warszawie",
-	enName: 'Apartment in\xa0Warszawa',
+	enName: 'Apartment in\xa0Warsaw',
   exhibit: p7_tn,
   images: [
     {
