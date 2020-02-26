@@ -23,6 +23,10 @@
 		"write": "Napisz do nas",
 		"location": "Lokalizacja pracowni"
 	},
+	"gallery": {
+		"back": "Powrót",
+		"photo": "Zdjecie z projektu" 
+	},
 	"footer": {
 		"studio": "Pracownia",
 		"contact": "Kontakt",

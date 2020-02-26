@@ -2,7 +2,7 @@
 @import "../../sass/mixins";
 
 .project {
-    &__title {
+    &-title {
         text-align: center;
         font-size: $title-font-size;
         letter-spacing: .6rem;
@@ -64,14 +64,14 @@
 
         &:last-child {
             max-width: 49%;
-            
+
             @include respond(tab-port) {
                 flex: 1 1 100%;
                 max-width: 100%;
             }
         }
 
-        &__curtain {
+        &-curtain {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -99,12 +99,20 @@
                 background-color: rgba($color-background, .7);
             }
 
-            &:hover::before {
-                content: "PEŁNY EKRAN";
+            &--pl {
+                &:hover::before {
+                    content: "PEŁNY EKRAN";
+                }
+            }
+
+            &--en {
+                &:hover::before {
+                    content: "FULL SCREEN";
+                }
             }
         }
 
-        &__image {
+        &-image {
             object-fit: cover; //cover / fill
             width: 100%;
             height: 100%;
@@ -112,7 +120,7 @@
             transition: all .5s ease-out;
         }
 
-        &:hover &__image {
+        &:hover &-image {
             filter: brightness(110%);
             transform: scale(1.1);
         }

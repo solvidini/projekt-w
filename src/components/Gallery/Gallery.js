@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Redirect } from "react-router-dom";
 import Lightbox from "react-image-lightbox";
 import "./Gallery.scss";
+import { LanguageContext } from '../../context';
 
 const customStyles = {
   content: {
@@ -10,6 +11,7 @@ const customStyles = {
 };
 
 const Gallery = props => {
+  const context = useContext(LanguageContext);
   const [toggler, setToggler] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
@@ -43,11 +45,11 @@ const Gallery = props => {
           setToggler(true);
         }}
       >
-        <div className="gallery__thumbnail__curtain"></div>
+        <div className={context.language === "pl" ? "gallery__thumbnail-curtain gallery__thumbnail-curtain--pl" : "gallery__thumbnail-curtain gallery__thumbnail-curtain--en"}></div>
         <img
-          className="gallery__thumbnail__image"
+          className="gallery__thumbnail-image"
           src={image.tn}
-          alt="Zdjecie z realizacji"
+          alt={context.dictionary.gallery.photo}
         />
       </div>
     );
@@ -57,7 +59,7 @@ const Gallery = props => {
 
   return (
     <article className="project">
-      <h1 className="project__title">{props.name}</h1>
+      <h1 className="project-title">{props.name}</h1>
       <div className="gallery">{thumbnails}</div>
       {toggler && (
         <Lightbox
@@ -74,7 +76,7 @@ const Gallery = props => {
           reactModalStyle={customStyles}
         />
       )}
-      <div title="Powrót" className="return" onClick={() => goBack()}><i className="fas fa-arrow-left"></i></div>
+      <div title={context.dictionary.gallery.back} className="return" onClick={() => goBack()}><i className="fas fa-arrow-left"></i></div>
     </article>
   );
 };

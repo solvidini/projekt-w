@@ -1,10 +1,11 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useContext } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.scss';
 import Spinner from './components/UI/Spinner/Spinner';
 import ScrollToTop from './hoc/ScrollToTop';
 import Layout from './Layout/Layout';
+import { LanguageContext } from './context';
 
 //PROJECTS IMPORT
 import project_1 from './assets/images/projects/apartament_w_gliwicach/index';
@@ -121,6 +122,7 @@ const projectsPremiumArray = [
 ];
 
 const RealisationsPaths = props => {
+	const context = useContext(LanguageContext);
 	const id = props.match.params.id - 1;
 	const url = props.match.url;
 	if (!realisationsArray[id]) return <Redirect to="/" />;
@@ -133,7 +135,7 @@ const RealisationsPaths = props => {
 						{...props}
 						yOffset={window.pageYOffset}
 						images={realisationsArray[id].images}
-						name={realisationsArray[id].name}
+						name={context.language === 'pl' ? realisationsArray[id].name : realisationsArray[id].enName}
 					/>
 				)}
 			/>
@@ -142,6 +144,7 @@ const RealisationsPaths = props => {
 };
 
 const RealisationsPremiumPaths = props => {
+	const context = useContext(LanguageContext);
 	const id = props.match.params.id - 1;
 	const url = props.match.url;
 	if (!realisationsPremiumArray[id]) return <Redirect to="/" />;
@@ -154,7 +157,7 @@ const RealisationsPremiumPaths = props => {
 						{...props}
 						yOffset={window.pageYOffset}
 						images={realisationsPremiumArray[id].images}
-						name={realisationsPremiumArray[id].name}
+						name={context.language === 'pl' ? realisationsPremiumArray[id].name : realisationsPremiumArray[id].enName}
 					/>
 				)}
 			/>
@@ -163,6 +166,7 @@ const RealisationsPremiumPaths = props => {
 };
 
 const ProjectsPaths = props => {
+	const context = useContext(LanguageContext);
 	const id = props.match.params.id - 1;
 	const url = props.match.url;
 	if (!projectsArray[id]) return <Redirect to="/" />;
@@ -175,7 +179,7 @@ const ProjectsPaths = props => {
 						{...props}
 						yOffset={window.pageYOffset}
 						images={projectsArray[id].images}
-						name={projectsArray[id].name}
+						name={context.language === 'pl' ? projectsArray[id].name : projectsArray[id].enName}
 					/>
 				)}
 			/>
@@ -184,6 +188,7 @@ const ProjectsPaths = props => {
 };
 
 const ProjectsPremiumPaths = props => {
+	const context = useContext(LanguageContext);
 	const id = props.match.params.id - 1;
 	const url = props.match.url;
 	if (!projectsPremiumArray[id]) return <Redirect to="/" />;
@@ -196,7 +201,7 @@ const ProjectsPremiumPaths = props => {
 						{...props}
 						yOffset={window.pageYOffset}
 						images={projectsPremiumArray[id].images}
-						name={projectsPremiumArray[id].name}
+						name={context.language === 'pl' ? projectsPremiumArray[id].name : projectsPremiumArray[id].enName}
 					/>
 				)}
 			/>

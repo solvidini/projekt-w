@@ -23,6 +23,10 @@
 		"write": "Write to us",
 		"location": "Studio location"
 	},
+	"gallery": {
+		"back": "Back",
+		"photo": "Photo from project" 
+	},
 	"footer": {
 		"studio": "Studio",
 		"contact": "Contact",
