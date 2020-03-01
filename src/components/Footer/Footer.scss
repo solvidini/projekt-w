@@ -32,7 +32,7 @@
       align-items: center;
     }
 
-    &__item {
+    &-item {
       display: flex;
       flex: 1 1 50%;
 
@@ -92,7 +92,7 @@
       align-self: center;
     }
 
-    &__item {
+    &-item {
       display: flex;
       flex-flow: column;
       align-self: flex-start;
@@ -132,7 +132,7 @@
   &__languages {
     background-color: rgb(19, 19, 19);
 
-    &__button {
+    &-button {
       background-color: transparent;
       outline: none;
       position: relative;
@@ -182,7 +182,7 @@
       letter-spacing: .15rem;
     }
 
-    &__item {
+    &-item {
       @include respond(tab-port) {
         &:last-child {
           margin-top: 1rem;

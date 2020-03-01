@@ -14,7 +14,7 @@ const LanguagePack = props => {
 			<Backdrop show={props.show} notVisible={true} clicked={props.showToggler}/>
 			<div className={lpClasses.join(' ')} title="PL / ENG">
 				<div className="language-pack__toggler" onClick={props.showToggler}>
-					<i className="fas fa-globe language-pack__toggler__icon"></i>
+					<i className="fas fa-globe language-pack__toggler-icon"></i>
 				</div>
 				<div className="language-pack__down" onClick={props.hideToggler}>
 					<button className="language-pack__select" onClick={props.clicked} data-language="pl">
