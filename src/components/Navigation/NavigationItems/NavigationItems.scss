@@ -1,12 +1,13 @@
 @import '../../../sass/mixins';
 @import '../../../sass/variables';
 
-.navigation-items {
+.navigation-item-list {
     display: flex;
     flex-flow: row;
 
     height: 100%;
     font-weight: 300;
+
     font-size: $small-font-size;
     text-transform: uppercase;
 

@@ -4,7 +4,6 @@ import './LanguagePack.scss';
 import Backdrop from './../UI/Backdrop/Backdrop';
 
 const LanguagePack = props => {
-	console.log(props.show);
 	const lpClasses = ['language-pack'];
 	props.show ? lpClasses.push('language-pack--show') : lpClasses.push('language-pack--hide');
 	props.moveUp && lpClasses.push('language-pack--moveUp');

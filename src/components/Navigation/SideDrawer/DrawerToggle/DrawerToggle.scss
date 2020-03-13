@@ -6,7 +6,7 @@
     position: relative;
     height: 100%;
     width: 8rem;
-    margin-right: 3rem;
+    margin-right: 2.5rem;
 
     cursor: pointer;
 
@@ -17,7 +17,7 @@
     }
 
     @include respond(phone) {
-        margin-right: 1rem;
+        margin-right: .5rem;
     }
 }
 
@@ -32,7 +32,7 @@
     &,
     &::before,
     &::after {
-        width: 5rem;
+        width: 4.5rem;
         height: 2px;
         background-color: $color-white;
         display: block;
@@ -62,13 +62,21 @@
         z-index: 1000;
         background-color: transparent;
 
+        &,
+        &::before,
+        &::after {
+            @include respond(phone) {
+                width: 3rem;
+            }
+        }
+
         &::before {
-            top: 0;
+            top: -1rem;
             transform: rotate(-45deg);
         }
 
         &::after {
-            top: 0;
+            top: -1rem;
             transform: rotate(-135deg);
         }
 
