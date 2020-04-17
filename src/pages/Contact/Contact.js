@@ -1,4 +1,7 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
 import './Contact.scss';
 import GoogleMap from '../../components/GoogleMap/GoogleMap';
 import { LanguageContext } from '../../context';
@@ -11,15 +14,18 @@ const Contact = () => {
 			<div className="section-contact__content">
 				<div className="contact-details">
 					<div className="contact-details__row">
-						<i className="far fa-envelope"></i>&nbsp;&nbsp;{context.dictionary.contact.write}:&nbsp;&nbsp;
+						<FontAwesomeIcon icon={faEnvelope} />
+						&nbsp;&nbsp;{context.dictionary.contact.write}:&nbsp;&nbsp;
 						<a href="mailto:biuro@projektw.pl">biuro@projektw.pl</a>
 					</div>
 					<div className="contact-details__row">
-						<i className="fas fa-phone-alt"></i>&nbsp;&nbsp;Sabina Masłowska:&nbsp;&nbsp;
+						<FontAwesomeIcon icon={faPhoneAlt} />
+						&nbsp;&nbsp;Sabina Masłowska:&nbsp;&nbsp;
 						<a href="tel:+48608466901">+48 608 466 901</a>
 					</div>
 					<div className="contact-details__row">
-						<i className="fas fa-phone-alt"></i>&nbsp;&nbsp;Weronika Kędziora:&nbsp;&nbsp;
+						<FontAwesomeIcon icon={faPhoneAlt} />
+						&nbsp;&nbsp;Weronika Kędziora:&nbsp;&nbsp;
 						<a href="tel:+48602194398">+48 602 194 398</a>
 					</div>
 				</div>

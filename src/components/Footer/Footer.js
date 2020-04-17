@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 import './Footer.scss';
 import NavigationItem from '../Navigation/NavigationItems/NavigationItem/NavigationItem';
 import { LanguageContext } from '../../context';
 
-const Footer = props => {
+const Footer = (props) => {
 	const currentDate = new Date().getFullYear();
 	const context = useContext(LanguageContext);
 
@@ -27,7 +29,7 @@ const Footer = props => {
 					<nav className="footer__nav">
 						<div className="footer__nav-item">
 							<NavigationItem exact link="/">
-              {context.dictionary.nav.home}
+								{context.dictionary.nav.home}
 							</NavigationItem>
 							<NavigationItem link="/studio">{context.dictionary.nav.studio}</NavigationItem>
 							<NavigationItem link="/offer">{context.dictionary.nav.offer}</NavigationItem>
@@ -45,7 +47,7 @@ const Footer = props => {
 				<div className="footer__info-item">
 					<h4>{context.dictionary.footer.followUs}</h4>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/ProjektWPAW/">
-						<i className="fab fa-facebook footer__icon"></i>
+						<FontAwesomeIcon icon={faFacebook} className="footer__icon" />
 					</a>
 				</div>
 			</div>

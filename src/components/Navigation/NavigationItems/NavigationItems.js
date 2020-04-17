@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 import './NavigationItems.scss';
 import NavigationItem from './NavigationItem/NavigationItem';
 import { LanguageContext } from '../../../context';
 
-const NavigationItems = props => {
+const NavigationItems = (props) => {
 	const context = useContext(LanguageContext);
 	return (
 		<ul className="navigation-item-list">
@@ -16,7 +19,7 @@ const NavigationItems = props => {
 			</li>
 			<li className="navigation-dropdown">
 				<span>{context.dictionary.nav.projects}&nbsp;</span>
-				<i className="fas fa-caret-down"></i>
+				<FontAwesomeIcon icon={faCaretDown} />
 				<div className="navigation-dropdown__content">
 					<NavigationItem link="/projects">{context.dictionary.nav.projects}</NavigationItem>
 					<NavigationItem link="/projects-premium">{context.dictionary.nav.projectsPremium}</NavigationItem>
@@ -24,7 +27,7 @@ const NavigationItems = props => {
 			</li>
 			<li className="navigation-dropdown">
 				<span>{context.dictionary.nav.realisations}&nbsp;</span>
-				<i className="fas fa-caret-down"></i>
+				<FontAwesomeIcon icon={faCaretDown} />
 				<div className="navigation-dropdown__content">
 					<NavigationItem exact link="/realisations">
 						{context.dictionary.nav.realisations}
@@ -66,7 +69,7 @@ const NavigationItems = props => {
 					className="navigation-icon"
 					href="https://www.facebook.com/ProjektWPAW/"
 				>
-					<i className="fab fa-facebook-f"></i>
+					<FontAwesomeIcon icon={faFacebookF} />
 					<span className="mobile-only navigation-icon__text" style={{ textTransform: 'lowercase' }}>
 						acebook
 					</span>

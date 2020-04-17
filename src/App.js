@@ -209,6 +209,8 @@ const ProjectsPremiumPaths = props => {
 	);
 };
 
+console.log('Thanks for image lightbox to: \'https://www.npmjs.com/package/react-image-lightbox\'');
+
 function App() {
 	return (
 		<ScrollToTop>
