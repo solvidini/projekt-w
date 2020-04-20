@@ -23,6 +23,13 @@ import project_12 from './assets/images/projects/mieszkanie_pod_wynajem_katowice
 import project_13 from './assets/images/projects/mieszkanie_pod_wynajem_katowice_gliwicka_2/index';
 import project_14 from './assets/images/projects/mieszkanie_pod_wynajem_w_katowicach/index';
 import project_15 from './assets/images/projects/mieszkanie_w_katowicach/index';
+import project_16 from './assets/images/projects/apartament_sokolska_tower/index';
+import project_17 from './assets/images/projects/apartament_sokolska_tower_2/index';
+import project_18 from './assets/images/projects/apartament_w_bedzinie/index';
+import project_19 from './assets/images/projects/dom_w_katowicach/index';
+import project_20 from './assets/images/projects/dom_w_katowicach_2/index';
+import project_21 from './assets/images/projects/mieszkanie_w_kamienicy_z_lat_60_w_tychach/index';
+import project_22 from './assets/images/projects/mieszkanie_w_katowicach_2/index';
 //PREMIUM PROJECTS IMPORT
 import projectPremium_1 from './assets/images/projects-premium/dom_w_ogrodziencu/index';
 import projectPremium_2 from './assets/images/projects-premium/dom_w_katowicach/index';
@@ -32,6 +39,11 @@ import projectPremium_5 from './assets/images/projects-premium/apartament_w_mysl
 import projectPremium_6 from './assets/images/projects-premium/apartament_w_katowicach/index';
 import projectPremium_7 from './assets/images/projects-premium/apartament_w_katowicach_w_stylu_hampton/index';
 import projectPremium_8 from './assets/images/projects-premium/dom_w_orzeszu/index';
+import projectPremium_9 from './assets/images/projects-premium/apartament_w_kamienicy_w_krakowie/index';
+import projectPremium_10 from './assets/images/projects-premium/apartament_w_katowicach_park_bazantow/index';
+import projectPremium_11 from './assets/images/projects-premium/apartament_w_katowicach_park_bazantow_2/index';
+import projectPremium_12 from './assets/images/projects-premium/apartament_w_katowicach_pierwsza_dzielnica/index';
+import projectPremium_13 from './assets/images/projects-premium/dom_w_iserlohn_niemcy/index';
 //REALISATIONS IMPORT
 import realisation_1 from './assets/images/realisations/artesmed_katowice/index';
 import realisation_2 from './assets/images/realisations/pokoj_stasia/index';
@@ -94,6 +106,13 @@ const realisationsArray = [
 ];
 const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
 const projectsArray = [
+	project_16,
+	project_17,
+	project_18,
+	project_19,
+	project_20,
+	project_21,
+	project_22,
 	project_4,
 	project_1,
 	project_3,
@@ -111,6 +130,11 @@ const projectsArray = [
 	project_15,
 ];
 const projectsPremiumArray = [
+	projectPremium_9,
+	projectPremium_10,
+	projectPremium_11,
+	projectPremium_12,
+	projectPremium_13,
 	projectPremium_3,
 	projectPremium_7,
 	projectPremium_1,

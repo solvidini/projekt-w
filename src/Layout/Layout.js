@@ -10,7 +10,7 @@ import LanguagePack from '../components/LanguagePack/LanguagePack';
 const Layout = props => {
 	const context = useContext(LanguageContext);
 	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
-	const [showLanguages, setShowLanguages] = useState(false);
+	const [showLanguages, setShowLanguages] = useState(true);
 	const [scrollY, setScrollY] = useState(0);
 	const [resizeX, setResizeX] = useState(0);
 	const [stickyToolbar, setStickyToolbar] = useState(false);
