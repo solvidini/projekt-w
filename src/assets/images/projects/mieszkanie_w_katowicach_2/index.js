@@ -28,8 +28,8 @@ import p14 from "./p14.jpg";
 import p14_tn from "./p14_tn.jpg";
 
 export default {
-  name: "Dom w\xa0Katowicach",
-	enName: 'House in\xa0Katowice',
+  name: "Mieszkanie w\xa0Katowicach",
+	enName: 'Flat in\xa0Katowice',
   exhibit: p2_tn,
   images: [
     {
