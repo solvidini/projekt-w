@@ -1,5 +1,5 @@
 # Project W
-This is a website I made for interior architecture studio - Project W.
+This is a website I made for interior architecture studio - Projekt W.
 	
 ## Technologies
 Main technologies I used to create this website:
