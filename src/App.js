@@ -68,216 +68,227 @@ import Offer from './pages/Offer/Offer';
 
 //PAGES AND COMPONENTS LAZY LOADED
 const Gallery = lazy(() => {
-	return import('./components/Gallery/Gallery');
+  return import('./components/Gallery/Gallery');
 });
 
 const Partners = lazy(() => {
-	return import('./pages/Partners/Partners');
+  return import('./pages/Partners/Partners');
 });
 
 const Realisations = lazy(() => {
-	return import('./pages/Creations/Realisations');
+  return import('./pages/Creations/Realisations');
 });
 
 const RealisationsPremium = lazy(() => {
-	return import('./pages/Creations/RealisationsPremium');
+  return import('./pages/Creations/RealisationsPremium');
 });
 
 const Projects = lazy(() => {
-	return import('./pages/Creations/Projects');
+  return import('./pages/Creations/Projects');
 });
 
 const ProjectsPremium = lazy(() => {
-	return import('./pages/Creations/ProjectsPremium');
+  return import('./pages/Creations/ProjectsPremium');
 });
 
 const realisationsArray = [
-	realisation_5,
-	realisation_8,
-	realisation_10,
-	realisation_11,
-	realisation_2,
-	realisation_6,
-	realisation_9,
-	realisation_3,
-	realisation_4,
-	realisation_7,
-	realisation_1,
+  realisation_5,
+  realisation_8,
+  realisation_10,
+  realisation_11,
+  realisation_2,
+  realisation_6,
+  realisation_9,
+  realisation_3,
+  realisation_4,
+  realisation_7,
+  realisation_1,
 ];
-const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
+const realisationsPremiumArray = [
+  realisationPremium_1,
+  realisationPremium_2,
+];
 const projectsArray = [
-	project_4,
-	project_3,
-	project_17,
-	project_19,
-	project_20,
-	project_21,
-	project_22,
-	project_1,
-	project_16,
-	project_11,
-	project_18,
-	project_5,
-	project_9,
-	project_13,
-	project_6,
-	project_7,
-	project_8,
-	project_10,
-	project_12,
-	project_14,
-	project_2,
-	project_15,
+  project_4,
+  project_3,
+  project_17,
+  project_19,
+  project_20,
+  project_21,
+  project_22,
+  project_1,
+  project_16,
+  project_11,
+  project_18,
+  project_5,
+  project_9,
+  project_13,
+  project_6,
+  project_7,
+  project_8,
+  project_10,
+  project_12,
+  project_14,
+  project_2,
+  project_15,
 ];
 const projectsPremiumArray = [
-	projectPremium_9,
-	projectPremium_10,
-	projectPremium_11,
-	projectPremium_12,
-	projectPremium_13,
-	projectPremium_3,
-	projectPremium_7,
-	projectPremium_1,
-	projectPremium_2,
-	projectPremium_4,
-	projectPremium_5,
-	projectPremium_6,
-	projectPremium_8,
+  projectPremium_9,
+  projectPremium_10,
+  projectPremium_11,
+  projectPremium_12,
+  projectPremium_13,
+  projectPremium_3,
+  projectPremium_7,
+  projectPremium_1,
+  projectPremium_2,
+  projectPremium_4,
+  projectPremium_5,
+  projectPremium_6,
+  projectPremium_8,
 ];
 
-const RealisationsPaths = props => {
-	const context = useContext(LanguageContext);
-	const id = props.match.params.id - 1;
-	const url = props.match.url;
-	if (!realisationsArray[id]) return <Redirect to="/" />;
-	return (
-		<React.Fragment>
-			<Route
-				path={url}
-				render={props => (
-					<Gallery
-						{...props}
-						yOffset={window.pageYOffset}
-						images={realisationsArray[id].images}
-						name={context.language === 'pl' ? realisationsArray[id].name : realisationsArray[id].enName}
-					/>
-				)}
-			/>
-		</React.Fragment>
-	);
-};
-
-const RealisationsPremiumPaths = props => {
-	const context = useContext(LanguageContext);
-	const id = props.match.params.id - 1;
-	const url = props.match.url;
-	if (!realisationsPremiumArray[id]) return <Redirect to="/" />;
-	return (
-		<React.Fragment>
-			<Route
-				path={url}
-				render={props => (
-					<Gallery
-						{...props}
-						yOffset={window.pageYOffset}
-						images={realisationsPremiumArray[id].images}
-						name={context.language === 'pl' ? realisationsPremiumArray[id].name : realisationsPremiumArray[id].enName}
-					/>
-				)}
-			/>
-		</React.Fragment>
-	);
-};
-
-const ProjectsPaths = props => {
-	const context = useContext(LanguageContext);
-	const id = props.match.params.id - 1;
-	const url = props.match.url;
-	if (!projectsArray[id]) return <Redirect to="/" />;
-	return (
-		<React.Fragment>
-			<Route
-				path={url}
-				render={props => (
-					<Gallery
-						{...props}
-						yOffset={window.pageYOffset}
-						images={projectsArray[id].images}
-						name={context.language === 'pl' ? projectsArray[id].name : projectsArray[id].enName}
-					/>
-				)}
-			/>
-		</React.Fragment>
-	);
-};
-
-const ProjectsPremiumPaths = props => {
-	const context = useContext(LanguageContext);
-	const id = props.match.params.id - 1;
-	const url = props.match.url;
-	if (!projectsPremiumArray[id]) return <Redirect to="/" />;
-	return (
-		<React.Fragment>
-			<Route
-				path={url}
-				render={props => (
-					<Gallery
-						{...props}
-						yOffset={window.pageYOffset}
-						images={projectsPremiumArray[id].images}
-						name={context.language === 'pl' ? projectsPremiumArray[id].name : projectsPremiumArray[id].enName}
-					/>
-				)}
-			/>
-		</React.Fragment>
-	);
-};
-
-console.log('Thanks for image lightbox to: \'https://www.npmjs.com/package/react-image-lightbox\'');
+console.log(
+  "Thanks for image lightbox to: 'https://www.npmjs.com/package/react-image-lightbox'"
+);
 
 function App() {
-	return (
-		<ScrollToTop>
-			<Layout>
-				<Suspense fallback={<Spinner />}>
-					<Switch>
-						<Route exact path="/studio" component={Studio} />
-						<Route exact path="/offer" component={Offer} />
-						<Route exact path="/contact" component={Contact} />
-						<Route exact path="/partners" render={props => <Partners {...props} />} />
-						<Route
-							exact
-							path="/realisations"
-							render={props => <Realisations {...props} realisationsArray={realisationsArray} />}
-						/>
-						<Route path="/realisations/:id" component={RealisationsPaths} />
-						<Route
-							exact
-							path="/realisations-premium"
-							render={props => (
-								<RealisationsPremium {...props} realisationsPremiumArray={realisationsPremiumArray} />
-							)}
-						/>
-						<Route path="/realisations-premium/:id" component={RealisationsPremiumPaths} />
-						<Route
-							exact
-							path="/projects"
-							render={props => <Projects {...props} projectsArray={projectsArray} />}
-						/>
-						<Route path="/projects/:id" component={ProjectsPaths} />
-						<Route
-							exact
-							path="/projects-premium"
-							render={props => <ProjectsPremium {...props} projectsPremiumArray={projectsPremiumArray} />}
-						/>
-						<Route path="/projects-premium/:id" component={ProjectsPremiumPaths} />
-						<Route exact path="/" component={Home} />
-						<Redirect to="/" />
-					</Switch>
-				</Suspense>
-			</Layout>
-		</ScrollToTop>
-	);
+  const context = useContext(LanguageContext);
+  return (
+    <ScrollToTop>
+      <Layout>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route exact path="/studio" component={Studio} />
+            <Route exact path="/offer" component={Offer} />
+            <Route exact path="/contact" component={Contact} />
+            <Route
+              exact
+              path="/partners"
+              render={(props) => <Partners {...props} />}
+            />
+            <Route
+              exact
+              path="/realisations"
+              render={(props) => (
+                <Realisations
+                  {...props}
+                  realisationsArray={realisationsArray}
+                />
+              )}
+            />
+            <Route
+              path="/realisations/:id"
+              render={(props) => {
+                const id = props.match.params.id - 1;
+                if (!realisationsArray[id]) return <Redirect to="/" />;
+                return (
+                  <Gallery
+                    {...props}
+                    yOffset={window.pageYOffset}
+                    images={realisationsArray[id].images}
+                    name={
+                      context.language === 'pl'
+                        ? realisationsArray[id].name
+                        : realisationsArray[id].enName
+                    }
+                  />
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/realisations-premium"
+              render={(props) => (
+                <RealisationsPremium
+                  {...props}
+                  realisationsPremiumArray={realisationsPremiumArray}
+                />
+              )}
+            />
+            <Route
+              path="/realisations-premium/:id"
+              render={(props) => {
+                const id = props.match.params.id - 1;
+                if (!realisationsPremiumArray[id])
+                  return <Redirect to="/" />;
+                return (
+                  <Gallery
+                    {...props}
+                    yOffset={window.pageYOffset}
+                    images={realisationsPremiumArray[id].images}
+                    name={
+                      context.language === 'pl'
+                        ? realisationsPremiumArray[id].name
+                        : realisationsPremiumArray[id].enName
+                    }
+                  />
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/projects"
+              render={(props) => (
+                <Projects {...props} projectsArray={projectsArray} />
+              )}
+            />
+            <Route
+              path="/projects/:id"
+              render={(props) => {
+                const id = props.match.params.id - 1;
+                if (!projectsArray[id]) return <Redirect to="/" />;
+                return (
+                  <Gallery
+                    {...props}
+                    yOffset={window.pageYOffset}
+                    images={projectsArray[id].images}
+                    name={
+                      context.language === 'pl'
+                        ? projectsArray[id].name
+                        : projectsArray[id].enName
+                    }
+                  />
+                );
+              }}
+            />
+            <Route
+              exact
+              path="/projects-premium"
+              render={(props) => (
+                <ProjectsPremium
+                  {...props}
+                  projectsPremiumArray={projectsPremiumArray}
+                />
+              )}
+            />
+            <Route
+              path="/projects-premium/:id"
+              render={(props) => {
+                const id = props.match.params.id - 1;
+                if (!projectsPremiumArray[id])
+                  return <Redirect to="/" />;
+                return (
+                  <Gallery
+                    {...props}
+                    yOffset={window.pageYOffset}
+                    images={projectsPremiumArray[id].images}
+                    name={
+                      context.language === 'pl'
+                        ? projectsPremiumArray[id].name
+                        : projectsPremiumArray[id].enName
+                    }
+                  />
+                );
+              }}
+            />
+            <Route exact path="/" component={Home} />
+            <Redirect to="/" />
+          </Switch>
+        </Suspense>
+      </Layout>
+    </ScrollToTop>
+  );
 }
 
 export default App;
