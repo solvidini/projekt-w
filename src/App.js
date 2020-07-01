@@ -106,17 +106,17 @@ const realisationsArray = [
 ];
 const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
 const projectsArray = [
-	project_16,
+	project_4,
+	project_3,
 	project_17,
-	project_18,
 	project_19,
 	project_20,
 	project_21,
 	project_22,
-	project_4,
 	project_1,
-	project_3,
+	project_16,
 	project_11,
+	project_18,
 	project_5,
 	project_9,
 	project_13,

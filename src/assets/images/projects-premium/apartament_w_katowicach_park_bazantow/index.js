@@ -66,7 +66,7 @@ import p32_tn from "./p32_tn.jpg";
 
 export default {
   name: "Apartament w\xa0Katowicach, Park Bażantów",
-  enName: "Apartment in\xa0Katowice, Pheasent Park",
+  enName: "Apartment in\xa0Katowice, Park Bażantów",
   exhibit: p15_tn,
   images: [
     {

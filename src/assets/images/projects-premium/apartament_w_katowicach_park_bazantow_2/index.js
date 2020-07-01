@@ -95,7 +95,7 @@ import p47_tn from './p47_tn.jpg';
 
 export default {
 	name: 'Apartament w\xa0Katowicach, Park Bażantów',
-	enName: 'Apartment in\xa0Katowice, Pheasent Park',
+	enName: 'Apartment in\xa0Katowice, Park Bażantów',
 	exhibit: p6_tn,
 	images: [
 		{

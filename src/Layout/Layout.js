@@ -7,93 +7,120 @@ import Footer from '../components/Footer/Footer';
 import { LanguageContext } from '../context';
 import LanguagePack from '../components/LanguagePack/LanguagePack';
 
-const Layout = props => {
-	const context = useContext(LanguageContext);
-	const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
-	const [showLanguages, setShowLanguages] = useState(true);
-	const [scrollY, setScrollY] = useState(0);
-	const [resizeX, setResizeX] = useState(0);
-	const [stickyToolbar, setStickyToolbar] = useState(false);
-	const [minHeight, setMinHeight] = useState({});
-	const toolbarRef = useRef(null);
-	const toolbarSmallRef = useRef(null);
-	const footerRef = useRef(null);
+const Layout = (props) => {
+  const context = useContext(LanguageContext);
+  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+  const [showLanguages, setShowLanguages] = useState(true);
+  const [scrollY, setScrollY] = useState(0);
+  const [resizeX, setResizeX] = useState(0);
+  const [stickyToolbar, setStickyToolbar] = useState(false);
+  const [minHeight, setMinHeight] = useState({});
+  const toolbarRef = useRef(null);
+  const toolbarSmallRef = useRef(null);
+  const footerRef = useRef(null);
+  const languagePackRef = useRef(null);
 
-	const yOffset = () => {
-		setScrollY(window.pageYOffset);
-	};
+  const yOffset = () => {
+    setScrollY(window.pageYOffset);
+  };
 
-	const xOffset = () => {
-		setResizeX(window.pageXOffset);
-	};
+  const xOffset = () => {
+    setResizeX(window.pageXOffset);
+  };
 
-	useEffect(() => {
-		const watchScroll = () => {
-			window.addEventListener('scroll', yOffset);
-		};
-		const watchResize = () => {
-			window.addEventListener('resize', xOffset);
-		};
+  useEffect(() => {
+    const watchScroll = () => {
+      window.addEventListener('scroll', yOffset);
+    };
+    const watchResize = () => {
+      window.addEventListener('resize', xOffset);
+    };
+    const languagePackClosedDetector = () => {
+      window.addEventListener('click', languagePackClosedHandler);
+    };
 
-		watchResize();
-		watchScroll();
+    watchResize();
+    watchScroll();
+    languagePackClosedDetector();
 
-		return () => {
-			window.removeEventListener('scroll', yOffset);
-			window.removeEventListener('resize', xOffset);
-		};
-	}, []);
+    return () => {
+      window.removeEventListener('scroll', yOffset);
+      window.removeEventListener('resize', xOffset);
+      window.removeEventListener('click', languagePackClosedHandler);
+    };
+  }, []);
 
-	useEffect(() => {
-		const toolbarHeight = toolbarRef.current
-			? toolbarRef.current.offsetHeight - toolbarSmallRef.current.offsetHeight
-			: 90;
+  useEffect(() => {
+    const toolbarHeight = toolbarRef.current
+      ? toolbarRef.current.offsetHeight - toolbarSmallRef.current.offsetHeight
+      : 90;
 
-		if (scrollY > toolbarHeight) {
-			setStickyToolbar(true);
-		} else {
-			setStickyToolbar(false);
-		}
-	}, [scrollY]);
+    if (scrollY > toolbarHeight) {
+      setStickyToolbar(true);
+    } else {
+      setStickyToolbar(false);
+    }
+  }, [scrollY]);
 
-	useEffect(() => {
-		const footerHeight = footerRef.current ? footerRef.current.offsetHeight : 200;
-		const toolbarHeight = toolbarRef.current ? toolbarRef.current.offsetHeight : 90;
-		setMinHeight({ minHeight: 'calc(100vh - ' + (footerHeight + toolbarHeight) + 'px)' });
-	}, [resizeX]);
+  useEffect(() => {
+    const footerHeight = footerRef.current
+      ? footerRef.current.offsetHeight
+      : 200;
+    const toolbarHeight = toolbarRef.current
+      ? toolbarRef.current.offsetHeight
+      : 90;
+    setMinHeight({
+      minHeight: 'calc(100vh - ' + (footerHeight + toolbarHeight) + 'px)',
+    });
+  }, [resizeX]);
 
-	const sideDrawerToggleHandler = () => {
-		setSideDrawerIsVisible(!sideDrawerIsVisible);
-	};
+  const sideDrawerToggleHandler = () => {
+    setSideDrawerIsVisible(!sideDrawerIsVisible);
+  };
 
-	const sideDrawerClosedHandler = () => {
-		setSideDrawerIsVisible(false);
-	};
+  const sideDrawerClosedHandler = () => {
+    setSideDrawerIsVisible(false);
+  };
 
-	return (
-		<React.Fragment>
-			<div className="toolbar-height" ref={toolbarRef}>
-				<div className="toolbar-height--small" ref={toolbarSmallRef}></div>
-			</div>
-			{!sideDrawerIsVisible && props.location.pathname === '/' && (
-				<LanguagePack
-					moveUp={stickyToolbar}
-					clicked={context.changeLanguage}
-					show={showLanguages}
-					showToggler={() => setShowLanguages(!showLanguages)}
-					hideToggler={() => setShowLanguages(false)}
-				/>
-			)}
-			<Toolbar
-				sideDrawerToggleClicked={sideDrawerToggleHandler}
-				sideDrawerIsVisible={sideDrawerIsVisible}
-				sticky={stickyToolbar}
-			/>
-			<SideDrawer opened={sideDrawerIsVisible} closed={sideDrawerClosedHandler} />
-			<div style={minHeight}>{props.children}</div>
-			<Footer footerRef={footerRef} />
-		</React.Fragment>
-	);
+  const languagePackToggleHandler = () => {
+    setShowLanguages(!showLanguages);
+  };
+
+  const languagePackClosedHandler = (e) => {
+    if (languagePackRef.current) {
+      if (!languagePackRef.current.contains(e.target)) {
+        setShowLanguages(false);
+      }
+    }
+  };
+
+  return (
+    <React.Fragment>
+      <div className="toolbar-height" ref={toolbarRef}>
+        <div className="toolbar-height--small" ref={toolbarSmallRef}></div>
+      </div>
+      {!sideDrawerIsVisible && props.location.pathname === '/' && (
+        <LanguagePack
+          visible={showLanguages}
+          moveUp={stickyToolbar}
+          showToggler={languagePackToggleHandler}
+          languagePackRef={languagePackRef}
+          languageChange={context.changeLanguage}
+        />
+      )}
+      <Toolbar
+        sideDrawerToggleClicked={sideDrawerToggleHandler}
+        sideDrawerIsVisible={sideDrawerIsVisible}
+        sticky={stickyToolbar}
+      />
+      <SideDrawer
+        opened={sideDrawerIsVisible}
+        closed={sideDrawerClosedHandler}
+      />
+      <div style={minHeight}>{props.children}</div>
+      <Footer footerRef={footerRef} />
+    </React.Fragment>
+  );
 };
 
 export default withRouter(React.memo(Layout));
