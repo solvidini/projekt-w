@@ -22,7 +22,7 @@
             bottom: 20%;
             right: 20%;
             transform: translate(30%, 30%);
-            
+
             @include respond(tab-land) {
                 right: 25%;
             }
@@ -33,7 +33,6 @@
                 right: 0;
                 transform: translate(0, 50%)
             }
-                
 
             &__title {
                 padding: 1rem;
