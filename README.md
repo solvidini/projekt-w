@@ -1,12 +1,15 @@
-## General info
-This is a site I made for interior architecture studio - Project W.
+# Project W
+This is a website I made for interior architecture studio - Projekt W.
 	
 ## Technologies
 Main technologies I used to create this website:
 * React
-* SASS
+* Sass
 
 &other
 	
 ## Live
 http://projektw.pl/
+
+## Author
+Samuel Kędziora
