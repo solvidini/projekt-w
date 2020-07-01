@@ -53,6 +53,7 @@
     align-content: center;
 
     &__thumbnail {
+        animation: appear .2s ease-in-out;
         position: relative;
         overflow: hidden;
         margin: .3rem;

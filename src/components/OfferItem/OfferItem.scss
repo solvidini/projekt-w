@@ -9,6 +9,7 @@
         background-color: $color-dark;
         cursor: pointer;
         backface-visibility: hidden;
+        animation: appear 1s ease-in-out;
 
         flex: 1 1 30%;
 

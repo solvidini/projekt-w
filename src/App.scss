@@ -67,6 +67,7 @@ code {
 }
 
 .soon {
+    animation: slideAppear 1s ease-in-out;
     color: $color-dark;
     font-size: 2.5rem;
     background-color: $color-white;

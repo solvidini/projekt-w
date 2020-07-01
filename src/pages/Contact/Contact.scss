@@ -45,8 +45,9 @@
 .contact-location {
     height: 100%;
     width: 100%;
-
+    
     &__map {
+        animation: appear 1s ease-in-out;
         position: relative;
         height: 42rem;
         width: 100%;
