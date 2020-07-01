@@ -16,7 +16,6 @@
 
 
 .contact-details {
-    margin-bottom: 4rem;
     margin-left: 2rem;
     letter-spacing: .1rem;
     color: rgb(196, 196, 196);
@@ -56,6 +55,7 @@
 
     &__title {
         color: rgb(196, 196, 196);
+        font-weight: 400;
         letter-spacing: .1rem;
         font-size: 1.8rem;
         text-transform: uppercase;
