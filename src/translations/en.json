@@ -25,7 +25,9 @@
 	},
 	"gallery": {
 		"back": "Back",
-		"photo": "Photo from project" 
+		"photo": "Photo from project",
+		"projectsRef": "Go to photos from realisation",
+		"realisationsRef": "Go to project"
 	},
 	"footer": {
 		"studio": "Studio",

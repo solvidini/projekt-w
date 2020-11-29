@@ -6,7 +6,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import './Contact.scss';
-import GoogleMap from '../../components/GoogleMap/GoogleMap';
+import Map from '../../components/Map/Map';
 import { LanguageContext } from '../../context';
 
 const Contact = () => {
@@ -40,7 +40,7 @@ const Contact = () => {
           {context.dictionary.contact.location}
         </h3>
         <div className="contact-location__map">
-          <GoogleMap />
+          <Map />
         </div>
       </div>
     </section>

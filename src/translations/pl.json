@@ -1,41 +1,43 @@
 {
-	"language": "Polski",
-	"title": "Projekt W - Pracownia Architektury Wnętrz",
-	"poland": "Polska",
-	"nav": {
-		"home": "Home",
-		"studio": "Pracownia",
-		"projects": "Projekty",
-		"projectsPremium": "Projekty\u00A0premium",
-		"realisations": "Realizacje",
-		"realisationsPremium": "Realizacje\u00A0premium",
-		"offer": "Oferta",
-		"partners": "Partnerzy",
-		"contact": "Kontakt"
-	},
-	"offer": {
-		"title": "OFERTA",
-		"functional": "Projekt\u00A0funkcjonalny (układ\u00A0na\u00A0rzucie\u00A02D)",
-		"conceptual": "Projekt\u00A0koncepcyjno-wykonawczy z\u00A0wizualizacjami\u00A03D",
-		"comprehensive": "Projekt\u00A0kompleksowy (realizacja\u00A0pod\u00A0klucz)"
-	},
-	"contact": {
-		"write": "Napisz do nas",
-		"location": "Lokalizacja pracowni"
-	},
-	"gallery": {
-		"back": "Powrót",
-		"photo": "Zdjecie z projektu" 
-	},
-	"footer": {
-		"studio": "Pracownia",
-		"contact": "Kontakt",
-		"nav": "Nawigacja",
-		"followUs": "Obserwuj\u00A0nas",
-		"allRights": "Wszystkie\u00A0prawa\u00A0zastrzeżone.",
-		"siteMadeBy": "Strona\u00A0stworzona\u00A0przez"
-	},
-	"soon": "Wkrótce",
-	"noProjects": "Brak projektów",
-	"discover": "Odkryj więcej"
+   "language": "Polski",
+   "title": "Projekt W - Pracownia Architektury Wnętrz",
+   "poland": "Polska",
+   "nav": {
+      "home": "Home",
+      "studio": "Pracownia",
+      "projects": "Projekty",
+      "projectsPremium": "Projekty\u00A0premium",
+      "realisations": "Realizacje",
+      "realisationsPremium": "Realizacje\u00A0premium",
+      "offer": "Oferta",
+      "partners": "Partnerzy",
+      "contact": "Kontakt"
+   },
+   "offer": {
+      "title": "OFERTA",
+      "functional": "Projekt\u00A0funkcjonalny (układ\u00A0na\u00A0rzucie\u00A02D)",
+      "conceptual": "Projekt\u00A0koncepcyjno-wykonawczy z\u00A0wizualizacjami\u00A03D",
+      "comprehensive": "Projekt\u00A0kompleksowy (realizacja\u00A0pod\u00A0klucz)"
+   },
+   "contact": {
+      "write": "Napisz do nas",
+      "location": "Lokalizacja pracowni"
+   },
+   "gallery": {
+      "back": "Powrót",
+      "photo": "Zdjecie z projektu",
+      "projectsRef": "Przejdź do zdjęć z realizacji",
+      "realisationsRef": "Przejdź do projektu"
+   },
+   "footer": {
+      "studio": "Pracownia",
+      "contact": "Kontakt",
+      "nav": "Nawigacja",
+      "followUs": "Obserwuj\u00A0nas",
+      "allRights": "Wszystkie\u00A0prawa\u00A0zastrzeżone.",
+      "siteMadeBy": "Strona\u00A0stworzona\u00A0przez"
+   },
+   "soon": "Wkrótce",
+   "noProjects": "Brak projektów",
+   "discover": "Odkryj więcej"
 }

@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import Lightbox from 'react-image-lightbox';
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,79 +9,108 @@ import './Gallery.scss';
 import { LanguageContext } from '../../context';
 
 const customStyles = {
-	content: {
-		backgroundColor: 'rgba(0,0,0,0.6)',
-	},
+   content: {
+      backgroundColor: 'rgba(0,0,0,0.6)',
+   },
 };
 
 const Gallery = (props) => {
-	const context = useContext(LanguageContext);
-	const [toggler, setToggler] = useState(false);
-	const [photoIndex, setPhotoIndex] = useState(0);
-	const images = props.images;
+   const { images, match, history, yOffset = 0, name = '', reference = null } = props;
+   const context = useContext(LanguageContext);
+   const [toggler, setToggler] = useState(false);
+   const [photoIndex, setPhotoIndex] = useState(0);
 
-	if (!images) return <Redirect to="/" />;
+   if (!images) return <Redirect to="/" />;
 
-	const getReturnUrl = () => {
-		const currentUrl = props.match.url;
-		let howManyToLeave = 1;
-		for (let i = 1; i < currentUrl.length; i++) {
-			if (currentUrl[i] === '/') {
-				break;
-			}
-			howManyToLeave++;
-		}
-		const returnUrl = currentUrl.slice(0, howManyToLeave);
-		return returnUrl;
-	};
+   const getReturnUrl = () => {
+      const currentUrl = match.url;
+      let howManyToLeave = 1;
+      for (let i = 1; i < currentUrl.length; i++) {
+         if (currentUrl[i] === '/') {
+            break;
+         }
+         howManyToLeave++;
+      }
+      const returnUrl = currentUrl.slice(0, howManyToLeave);
+      return returnUrl;
+   };
 
-	const goBack = () => {
-		const returnUrl = getReturnUrl();
-		props.history.push(returnUrl, props.yOffset);
-	};
+   const goBack = () => {
+      history.push(getReturnUrl(), yOffset);
+   };
 
-	const thumbnails = images.map((image, index) => {
-		return (
-			<div
-				key={index}
-				className="gallery__thumbnail"
-				onClick={() => {
-					setPhotoIndex(index);
-					setToggler(true);
-				}}
-			>
-				<div
-					className={
-						context.language === 'pl'
-							? 'gallery__thumbnail-curtain gallery__thumbnail-curtain--pl'
-							: 'gallery__thumbnail-curtain gallery__thumbnail-curtain--en'
-					}
-				></div>
-				<img className="gallery__thumbnail-image" src={image.tn} alt={context.dictionary.gallery.photo} />
-			</div>
-		);
-	});
+   const thumbnails = images.map((image, index) => {
+      return (
+         <div
+            key={index}
+            className="gallery__thumbnail"
+            onClick={() => {
+               setPhotoIndex(index);
+               setToggler(true);
+            }}
+         >
+            <div
+               className={
+                  context.language === 'pl'
+                     ? 'gallery__thumbnail-curtain gallery__thumbnail-curtain--pl'
+                     : 'gallery__thumbnail-curtain gallery__thumbnail-curtain--en'
+               }
+            ></div>
+            <img
+               className="gallery__thumbnail-image"
+               src={image.tn}
+               alt={context.dictionary.gallery.photo}
+            />
+         </div>
+      );
+   });
 
-	return (
-		<article className="project">
-			<h1 className="project-title">{props.name}</h1>
-			<div className="gallery">{thumbnails}</div>
-			{toggler && (
-				<Lightbox
-					mainSrc={images[photoIndex].src}
-					nextSrc={images[(photoIndex + 1) % images.length].src}
-					prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
-					onCloseRequest={() => setToggler(false)}
-					onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
-					onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
-					reactModalStyle={customStyles}
-				/>
-			)}
-			<div title={context.dictionary.gallery.back} className="return" onClick={() => goBack()}>
-				<FontAwesomeIcon icon={faArrowLeft} />
-			</div>
-		</article>
-	);
+   const renderReference = () => {
+      if (reference) {
+         const nameOfReference = /projects/gi.test(reference)
+            ? context.dictionary.gallery.projectsRef
+            : context.dictionary.gallery.realisationsRef;
+         return (
+            <div className="reference">
+               <NavLink className="reference__link" to={reference} exact={true}>
+                  ({nameOfReference})
+               </NavLink>
+            </div>
+         );
+      }
+      return null;
+   };
+
+   const renderLightbox = () => {
+      if (toggler) {
+         return (
+            <Lightbox
+               mainSrc={images[photoIndex].src}
+               nextSrc={images[(photoIndex + 1) % images.length].src}
+               prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
+               onCloseRequest={() => setToggler(false)}
+               onMovePrevRequest={() =>
+                  setPhotoIndex((photoIndex + images.length - 1) % images.length)
+               }
+               onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
+               reactModalStyle={customStyles}
+            />
+         );
+      }
+      return null;
+   };
+
+   return (
+      <article className="project">
+         <h1 className="project-title">{name}</h1>
+         {renderReference()}
+         <div className="gallery">{thumbnails}</div>
+         {renderLightbox()}
+         <div title={context.dictionary.gallery.back} className="return" onClick={goBack}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+         </div>
+      </article>
+   );
 };
 
 export default Gallery;

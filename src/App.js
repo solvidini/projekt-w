@@ -192,6 +192,7 @@ function App() {
                         ? realisationsArray[id].name
                         : realisationsArray[id].enName
                     }
+                    reference={realisationsArray[id]?.reference}
                   />
                 );
               }}
@@ -222,6 +223,7 @@ function App() {
                         ? realisationsPremiumArray[id].name
                         : realisationsPremiumArray[id].enName
                     }
+                    reference={realisationsPremiumArray[id]?.reference}
                   />
                 );
               }}
@@ -248,6 +250,7 @@ function App() {
                         ? projectsArray[id].name
                         : projectsArray[id].enName
                     }
+                    reference={projectsArray[id]?.reference}
                   />
                 );
               }}
@@ -278,6 +281,7 @@ function App() {
                         ? projectsPremiumArray[id].name
                         : projectsPremiumArray[id].enName
                     }
+                    reference={projectsPremiumArray[id]?.reference}
                   />
                 );
               }}

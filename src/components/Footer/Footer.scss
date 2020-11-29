@@ -37,7 +37,7 @@
       flex: 1 1 50%;
 
       flex-flow: column wrap;
-      color: rgb(119, 119, 119);
+      color: #b1b1b1;
       line-height: 1.7;
       letter-spacing: .2rem;
       text-align: center;
@@ -68,7 +68,7 @@
       &>a,
       a:link,
       a:visited {
-        color: rgb(155, 155, 155);
+        color: #b1b1b1;
         text-decoration: none;
         transition: all .2s ease;
 
@@ -121,7 +121,7 @@
     a:visited,
     a {
       font-weight: 400;
-      color: rgb(119, 119, 119);
+      color: #b1b1b1;
 
       &:hover {
         transform: scale(1.05);
@@ -168,7 +168,7 @@
   &__copyright {
     padding: 1.6rem;
     background: $color-dark;
-    color: rgb(127, 127, 131);
+    color: #7f7f83;
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 1rem;
@@ -195,12 +195,12 @@
 }
 
 .creator {
-  color: rgb(100, 100, 100);
+  color: #7f7f83;
 
   a,
   a:link,
   a:visited {
-    color: rgb(155, 155, 156);
+    color: #b1b1b1;
     text-decoration: none;
     transition: color .2s ease;
 

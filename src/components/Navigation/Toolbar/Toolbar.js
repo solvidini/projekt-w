@@ -29,7 +29,7 @@ const Toolbar = props => {
         clicked={props.sideDrawerToggleClicked}
       />
       <nav className="toolbar__nav desktop-only">
-        <NavigationItems />
+        <NavigationItems isToolbarSticky={props.sticky} />
       </nav>
     </div>
   );
