@@ -7,13 +7,17 @@
         overflow: hidden;
         margin: .3rem;
         background-color: $color-dark;
-        cursor: pointer;
         backface-visibility: hidden;
         animation: appear 1s ease-in-out;
 
         flex: 1 1 30%;
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
+            width: 50%;
+            flex: 0 1 49%;
+        }
+
+        @include respond(phone) {
             flex: 1 1 100%;
         }
 
@@ -36,6 +40,18 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
+
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
 
             transition: all .5s ease-out;
             filter: brightness(90%);
