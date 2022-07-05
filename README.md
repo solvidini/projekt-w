@@ -1,4 +1,4 @@
-# Project W
+# Projekt W
 This is a website I made for interior architecture studio - Projekt W.
 	
 ## Technologies
