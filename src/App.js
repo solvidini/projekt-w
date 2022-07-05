@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useContext } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Routes, useNavigate, useParams } from 'react-router-dom';
 
 import './App.scss';
 import Spinner from './components/UI/Spinner/Spinner';
@@ -67,28 +67,16 @@ import Studio from './pages/Studio/Studio';
 import Offer from './pages/Offer/Offer';
 
 //PAGES AND COMPONENTS LAZY LOADED
-const Gallery = lazy(() => {
-  return import('./components/Gallery/Gallery');
+const GalleryPreparer = lazy(() => {
+  return import('./components/Gallery/GalleryPreparer');
 });
 
 const Partners = lazy(() => {
   return import('./pages/Partners/Partners');
 });
 
-const Realisations = lazy(() => {
-  return import('./pages/Creations/Realisations');
-});
-
-const RealisationsPremium = lazy(() => {
-  return import('./pages/Creations/RealisationsPremium');
-});
-
-const Projects = lazy(() => {
-  return import('./pages/Creations/Projects');
-});
-
-const ProjectsPremium = lazy(() => {
-  return import('./pages/Creations/ProjectsPremium');
+const Creations = lazy(() => {
+  return import('./pages/Creations/Creations');
 });
 
 const realisationsArray = [
@@ -104,10 +92,7 @@ const realisationsArray = [
   realisation_7,
   realisation_1,
 ];
-const realisationsPremiumArray = [
-  realisationPremium_1,
-  realisationPremium_2,
-];
+const realisationsPremiumArray = [realisationPremium_1, realisationPremium_2];
 const projectsArray = [
   project_4,
   project_3,
@@ -148,151 +133,76 @@ const projectsPremiumArray = [
   projectPremium_8,
 ];
 
-console.log(
-  "Thanks for image lightbox to: 'https://www.npmjs.com/package/react-image-lightbox'"
-);
+console.log("Thanks for image lightbox to: 'https://www.npmjs.com/package/react-image-lightbox'");
 
-function App() {
+const App = () => {
   const context = useContext(LanguageContext);
+
   return (
     <ScrollToTop>
       <Layout>
         <Suspense fallback={<Spinner />}>
-          <Switch>
-            <Route exact path="/studio" component={Studio} />
-            <Route exact path="/offer" component={Offer} />
-            <Route exact path="/contact" component={Contact} />
+          <Routes>
+            <Route path='/studio' element={<Studio />} />
+            <Route path='/offer' element={<Offer />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/partners' element={<Partners />} />
             <Route
-              exact
-              path="/partners"
-              render={(props) => <Partners {...props} />}
-            />
-            <Route
-              exact
-              path="/realisations"
-              render={(props) => (
-                <Realisations
-                  {...props}
-                  realisationsArray={realisationsArray}
+              path='/realisations'
+              element={
+                <Creations
+                  to='/realisations'
+                  creationsArray={realisationsArray}
+                  title={context.dictionary.nav.realisations}
                 />
-              )}
+              }
             />
             <Route
-              path="/realisations/:id"
-              render={(props) => {
-                const id = props.match.params.id - 1;
-                if (!realisationsArray[id]) return <Redirect to="/" />;
-                return (
-                  <Gallery
-                    {...props}
-                    yOffset={window.pageYOffset}
-                    images={realisationsArray[id].images}
-                    name={
-                      context.language === 'pl'
-                        ? realisationsArray[id].name
-                        : realisationsArray[id].enName
-                    }
-                    reference={realisationsArray[id]?.reference}
-                  />
-                );
-              }}
+              path='/realisations/:id'
+              element={<GalleryPreparer to='/realisations/*' creationsArray={realisationsArray} />}
             />
             <Route
-              exact
-              path="/realisations-premium"
-              render={(props) => (
-                <RealisationsPremium
-                  {...props}
-                  realisationsPremiumArray={realisationsPremiumArray}
+              path='/realisations-premium'
+              element={
+                <Creations
+                  to='/realisations-premium'
+                  creationsArray={realisationsPremiumArray}
+                  title={context.dictionary.nav.realisationsPremium}
                 />
-              )}
+              }
             />
             <Route
-              path="/realisations-premium/:id"
-              render={(props) => {
-                const id = props.match.params.id - 1;
-                if (!realisationsPremiumArray[id])
-                  return <Redirect to="/" />;
-                return (
-                  <Gallery
-                    {...props}
-                    yOffset={window.pageYOffset}
-                    images={realisationsPremiumArray[id].images}
-                    name={
-                      context.language === 'pl'
-                        ? realisationsPremiumArray[id].name
-                        : realisationsPremiumArray[id].enName
-                    }
-                    reference={realisationsPremiumArray[id]?.reference}
-                  />
-                );
-              }}
+              path='/realisations-premium/:id'
+              element={<GalleryPreparer to='/realisations-premium/*' creationsArray={realisationsPremiumArray} />}
             />
             <Route
-              exact
-              path="/projects"
-              render={(props) => (
-                <Projects {...props} projectsArray={projectsArray} />
-              )}
+              path='/projects'
+              element={
+                <Creations to='/projects' creationsArray={projectsArray} title={context.dictionary.nav.projects} />
+              }
             />
+            <Route path='/projects/:id' element={<GalleryPreparer to='/projects/*' creationsArray={projectsArray} />} />
             <Route
-              path="/projects/:id"
-              render={(props) => {
-                const id = props.match.params.id - 1;
-                if (!projectsArray[id]) return <Redirect to="/" />;
-                return (
-                  <Gallery
-                    {...props}
-                    yOffset={window.pageYOffset}
-                    images={projectsArray[id].images}
-                    name={
-                      context.language === 'pl'
-                        ? projectsArray[id].name
-                        : projectsArray[id].enName
-                    }
-                    reference={projectsArray[id]?.reference}
-                  />
-                );
-              }}
-            />
-            <Route
-              exact
-              path="/projects-premium"
-              render={(props) => (
-                <ProjectsPremium
-                  {...props}
-                  projectsPremiumArray={projectsPremiumArray}
+              path='/projects-premium'
+              element={
+                <Creations
+                  to='/projects-premium'
+                  creationsArray={projectsPremiumArray}
+                  title={context.dictionary.nav.projectsPremium}
                 />
-              )}
+              }
             />
             <Route
-              path="/projects-premium/:id"
-              render={(props) => {
-                const id = props.match.params.id - 1;
-                if (!projectsPremiumArray[id])
-                  return <Redirect to="/" />;
-                return (
-                  <Gallery
-                    {...props}
-                    yOffset={window.pageYOffset}
-                    images={projectsPremiumArray[id].images}
-                    name={
-                      context.language === 'pl'
-                        ? projectsPremiumArray[id].name
-                        : projectsPremiumArray[id].enName
-                    }
-                    reference={projectsPremiumArray[id]?.reference}
-                  />
-                );
-              }}
+              path='/projects-premium/:id'
+              element={<GalleryPreparer to='/projects-premium/*' creationsArray={projectsPremiumArray} />}
             />
-            <Route exact path="/" component={Home} />
-            <Redirect to="/" />
-          </Switch>
+            <Route path='/' element={<Home />} />
+            <Route path='*' element={<Home />} />
+          </Routes>
         </Suspense>
       </Layout>
     </ScrollToTop>
   );
-}
+};
 
 export default App;

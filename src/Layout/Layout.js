@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
-import { withRouter } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import './Layout.scss';
 import Toolbar from '../components/Navigation/Toolbar/Toolbar';
 import SideDrawer from '../components/Navigation/SideDrawer/SideDrawer';
@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 import { LanguageContext } from '../context';
 import LanguagePack from '../components/LanguagePack/LanguagePack';
 
-const Layout = (props) => {
+const Layout = ({ children }) => {
   const context = useContext(LanguageContext);
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
   const [showLanguages, setShowLanguages] = useState(true);
@@ -19,13 +19,14 @@ const Layout = (props) => {
   const toolbarSmallRef = useRef(null);
   const footerRef = useRef(null);
   const languagePackRef = useRef(null);
+  const location = useLocation();
 
   const yOffset = () => {
-    setScrollY(window.pageYOffset);
+    setScrollY(window.scrollY);
   };
 
   const xOffset = () => {
-    setResizeX(window.pageXOffset);
+    setResizeX(window.scrollX);
   };
 
   useEffect(() => {
@@ -63,12 +64,8 @@ const Layout = (props) => {
   }, [scrollY]);
 
   useEffect(() => {
-    const footerHeight = footerRef.current
-      ? footerRef.current.offsetHeight
-      : 200;
-    const toolbarHeight = toolbarRef.current
-      ? toolbarRef.current.offsetHeight
-      : 90;
+    const footerHeight = footerRef.current ? footerRef.current.offsetHeight : 200;
+    const toolbarHeight = toolbarRef.current ? toolbarRef.current.offsetHeight : 90;
     setMinHeight({
       minHeight: 'calc(100vh - ' + (footerHeight + toolbarHeight) + 'px)',
     });
@@ -96,10 +93,10 @@ const Layout = (props) => {
 
   return (
     <React.Fragment>
-      <div className="toolbar-height" ref={toolbarRef}>
-        <div className="toolbar-height--small" ref={toolbarSmallRef}></div>
+      <div className='toolbar-height' ref={toolbarRef}>
+        <div className='toolbar-height--small' ref={toolbarSmallRef}></div>
       </div>
-      {!sideDrawerIsVisible && props.location.pathname === '/' && (
+      {!sideDrawerIsVisible && location.pathname === '/' && (
         <LanguagePack
           visible={showLanguages}
           moveUp={stickyToolbar}
@@ -113,14 +110,11 @@ const Layout = (props) => {
         sideDrawerIsVisible={sideDrawerIsVisible}
         sticky={stickyToolbar}
       />
-      <SideDrawer
-        opened={sideDrawerIsVisible}
-        closed={sideDrawerClosedHandler}
-      />
-      <div style={minHeight}>{props.children}</div>
+      <SideDrawer opened={sideDrawerIsVisible} closed={sideDrawerClosedHandler} />
+      <div style={minHeight}>{children}</div>
       <Footer footerRef={footerRef} />
     </React.Fragment>
   );
 };
 
-export default withRouter(React.memo(Layout));
+export default React.memo(Layout);
