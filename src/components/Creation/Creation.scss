@@ -10,11 +10,8 @@
     background-color: $color-dark;
     animation: appear .3s ease-in-out;
 
-    flex: 1 1 30%;
     transition: all .5s ease-out;
-    &:last-child {
-        max-width: 49.5%;
-    }
+
     @include respond(tab-port) {
         max-width: 100%;
         flex: 1 1 49%;
@@ -22,9 +19,6 @@
 
     @include respond(phone) {
         flex: 1 1 100%;
-        &:last-child {
-            max-width: none;
-        }
     }
 
     &-discover {
@@ -50,7 +44,7 @@
         }
     }
 
-    &:hover &-discover{
+    &:hover &-discover {
         background-color: rgba($color-dark, .4);
         transform: translateX(0);
     }

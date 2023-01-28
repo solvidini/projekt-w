@@ -1,6 +1,6 @@
 {
   "name": "projekt-w",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "private": true,
   "author": "Samuel Kedziora <samuel@front-up.pro>",
   "scripts": {
@@ -24,9 +24,8 @@
     "mapbox-gl": "^2.9.1",
     "react": "^18.2.0",
     "react-animated-slider": "^2.0.0",
-    "react-animated-slider-2": "^1.1.5",
     "react-dom": "^18.2.0",
-    "react-image-lightbox": "^5.1.1",
+    "react-image-lightbox": "^5.1.4",
     "react-map-gl": "^7.0.17",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",

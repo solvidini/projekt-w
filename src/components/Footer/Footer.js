@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 import './Footer.scss';
 import NavigationItem from '../Navigation/NavigationItems/NavigationItem/NavigationItem';
@@ -32,21 +32,24 @@ const Footer = (props) => {
               <NavigationItem link='/studio'>{context.dictionary.nav.studio}</NavigationItem>
               <NavigationItem link='/offer'>{context.dictionary.nav.offer}</NavigationItem>
               <NavigationItem link='/partners'>{context.dictionary.nav.partners}</NavigationItem>
-              <NavigationItem link='/contact'>{context.dictionary.nav.contact}</NavigationItem>
             </div>
             <div className='footer__nav-item'>
+              <NavigationItem link='/contact'>{context.dictionary.nav.contact}</NavigationItem>
               <NavigationItem link='/projects'>{context.dictionary.nav.projects}</NavigationItem>
-              <NavigationItem link='/projects-premium'>&nbsp;&rarr;&nbsp;Premium</NavigationItem>
               <NavigationItem link='/realisations'>{context.dictionary.nav.realisations}</NavigationItem>
-              <NavigationItem link='/realisations-premium'>&nbsp;&rarr;&nbsp;Premium</NavigationItem>
             </div>
           </nav>
         </div>
         <div className='footer__info-item'>
           <h4>{context.dictionary.footer.followUs}</h4>
-          <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/ProjektWPAW/'>
-            <FontAwesomeIcon icon={faFacebook} className='footer__icon' />
-          </a>
+          <div className='footer__media'>
+            <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/ProjektWPAW/'>
+              <FontAwesomeIcon icon={faFacebookF} className='footer__icon' />
+            </a>
+            <a target='_blank' rel='noopener noreferrer' href='https://www.instagram.com/projekt__w/'>
+              <FontAwesomeIcon icon={faInstagram} className='footer__icon' />
+            </a>
+          </div>
         </div>
       </div>
       <div className='footer__languages'>
@@ -67,7 +70,7 @@ const Footer = (props) => {
         <div className='footer__copyright-item creator no-wrap'>
           {context.dictionary.footer.siteMadeBy}{' '}
           <a target='_blank' rel='noopener noreferrer' href='https://front-up.pro'>
-            &ndash;Samuel Kędziora&ndash;
+            &ndash;Front Up&ndash;
           </a>
         </div>
       </div>

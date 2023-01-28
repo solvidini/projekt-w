@@ -65,7 +65,7 @@
         &,
         &::before,
         &::after {
-            @include respond(phone) {
+            @include respond(tab-port) {
                 width: 3rem;
             }
         }

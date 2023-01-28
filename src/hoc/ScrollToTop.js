@@ -8,7 +8,7 @@ const ScrollToTop = ({ children }) => {
 
   useEffect(() => {
     yOffset ? window.scrollTo(0, yOffset) : window.scrollTo(0, 0);
-  }, [location]);
+  }, [location, yOffset]);
 
   return children;
 };

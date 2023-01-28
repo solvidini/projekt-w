@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useNavigate, useParams, useMatch } from 'react-router';
+import { useNavigate, useParams, useMatch } from 'react-router-dom';
 import { LanguageContext } from '../../context';
 import Gallery from './Gallery';
 

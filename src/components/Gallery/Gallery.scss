@@ -47,10 +47,20 @@
 .gallery {
     max-width: 120rem;
     margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
     overflow: hidden;
     align-content: center;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: dense;
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(phone) {
+        grid-template-columns: 1fr;
+    }
 
     &__thumbnail {
         animation: appear .3s ease-in-out;
@@ -63,23 +73,14 @@
 
         transition: all 1s;
 
-        &:last-child {
-            max-width: 49%;
-
-            @include respond(tab-port) {
-                flex: 1 1 100%;
-                max-width: 100%;
-            }
-        }
-
         &-curtain {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
-            width: 100%;
-            height: 100%;
+            width: 101%;
+            height: 101%;
             transition: all .5s;
 
             &::before {
@@ -114,7 +115,7 @@
         }
 
         &-image {
-            object-fit: cover; //cover / fill
+            object-fit: cover; // cover / fill
             width: 100%;
             height: 100%;
             filter: brightness(100%);

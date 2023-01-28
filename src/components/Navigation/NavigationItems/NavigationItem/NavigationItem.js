@@ -5,7 +5,12 @@ import './NavigationItem.scss';
 
 const NavigationItem = (props) => {
   return (
-    <NavLink className='navigation-item__link' to={props.link} activeClassName='navigation-item--active'>
+    <NavLink
+      className={({ isActive }) =>
+        isActive ? 'navigation-item__link navigation-item--active' : 'navigation-item__link'
+      }
+      to={props.link}
+    >
       {props.children}
     </NavLink>
   );

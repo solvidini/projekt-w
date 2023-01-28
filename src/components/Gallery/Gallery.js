@@ -57,7 +57,7 @@ const Gallery = ({ images, url, name = '', reference = null }) => {
               : 'gallery__thumbnail-curtain gallery__thumbnail-curtain--en'
           }
         ></div>
-        <img className='gallery__thumbnail-image' src={image.tn} alt={context.dictionary.gallery.photo} />
+        <img className='gallery__thumbnail-image' src={image} alt={context.dictionary.gallery.photo} />
       </div>
     );
   });
@@ -82,9 +82,9 @@ const Gallery = ({ images, url, name = '', reference = null }) => {
     if (toggler) {
       return (
         <Lightbox
-          mainSrc={images[photoIndex].src}
-          nextSrc={images[(photoIndex + 1) % images.length].src}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length].src}
+          mainSrc={images[photoIndex]}
+          nextSrc={images[(photoIndex + 1) % images.length]}
+          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
           onCloseRequest={() => setToggler(false)}
           onMovePrevRequest={() => setPhotoIndex((photoIndex + images.length - 1) % images.length)}
           onMoveNextRequest={() => setPhotoIndex((photoIndex + 1) % images.length)}
@@ -102,7 +102,7 @@ const Gallery = ({ images, url, name = '', reference = null }) => {
       <div className='gallery'>{thumbnails}</div>
       {renderLightbox()}
       <div title={context.dictionary.gallery.back} className='return' onClick={goBack}>
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <FontAwesomeIcon icon={faArrowLeft} style={{ color: '#141414' }} />
       </div>
     </article>
   );
