@@ -1,2 +1,81 @@
 @import '../../sass/mixins';
 @import '../../sass/variables';
+
+.studio {
+    &__description {
+        max-width: 70rem;
+        margin: 0 auto;
+
+        font-size: 1.6rem;
+        text-align: justify;
+
+        @include respond(phone) {
+            margin: 0 2rem;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 2rem;
+        font-weight: 300;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+    }
+
+    &__highlight {
+        font-weight: 600;
+    }
+
+    &__team-title {
+        max-width: 70rem;
+        margin: 2rem auto 2rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: center;
+
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__team {
+        max-width: 70rem;
+        margin: 2rem auto 4rem;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+            margin: 2rem 2rem 4rem;
+        }
+    }
+
+    &__team-name {
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+
+        @include respond(tab-port) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__team-profession {
+        font-size: 1.2rem;
+        color: #888;
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+}

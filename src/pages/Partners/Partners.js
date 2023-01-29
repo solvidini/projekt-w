@@ -18,15 +18,18 @@ import stolarnieGalicyjskie from '../../assets/images/partners/stolarnie-galicyj
 import magdalenaRzepka from '../../assets/images/partners/magdalena-rzepka.png';
 import fizia from '../../assets/images/partners/fizia.png';
 import muffin from '../../assets/images/partners/muffin.png';
+import button from '../../assets/images/partners/button.png';
+import wonderwall from '../../assets/images/partners/wonderwall.png';
+import gibon from '../../assets/images/partners/gibon.png';
 
 const Partners = () => {
   const context = useContext(LanguageContext);
+
   return (
     <div className='section-partners'>
       <h1 className='section-title'>{context.dictionary.nav.partners}</h1>
       <div className='content' style={{ padding: '5rem 0' }}>
         <Partner link='http://www.boscostudio.pl/' src={boscoStudio} alt='Bosco Studio' />
-        <Partner src={dha} alt='DHa' />
         <Partner link='http://www.elmax.tychy.pl/' src={elmax} alt='elmax' />
         <Partner link='https://www.maxfliz.pl/' src={maxfliz} alt='MAXFLIZ' />
         <Partner link='http://www.doubleroom.pl/' src={doubleRoom} alt='Double Room' />
@@ -34,6 +37,7 @@ const Partners = () => {
         <Partner link='https://www.hoder.eu/' src={hoder} alt='hoder' />
         <Partner link='https://www.boconcept.com/pl-pl/' src={boconcept} alt='BoConcept' />
         <Partner link='https://mera.eu/' src={mera} alt='mera' />
+        <Partner link='https://pracownia-button.pl/' src={button} alt='Button' />
         <Partner src={kudoWnetrza} alt='Kudo Wnetrza' />
         <Partner link='http://www.pro-audio.pl/' src={proAudio} alt='proaudio' />
         <Partner link='https://profit-sc.eu/' src={profit} alt='profit' />
@@ -41,6 +45,9 @@ const Partners = () => {
         <Partner link='https://stolarniegalicyjskie.pl/' src={stolarnieGalicyjskie} alt='Stolarnie Galicyjskie' />
         <Partner link='https://www.facebook.com/PaniTapetka/' src={magdalenaRzepka} alt='Magdalena Rzepka' />
         <Partner link='http://www.fizia.pl/' src={fizia} alt='Fizia' />
+        <Partner link='https://wonderwall-studio.pl/' src={wonderwall} alt='Wonderwall' />
+        <Partner src={dha} alt='DHa' />
+        <Partner link='http://meblegibon.pl/' src={gibon} alt='Gibon' />
       </div>
     </div>
   );

@@ -8,15 +8,18 @@
         padding: 3rem 0;
         max-width: 120rem;
         margin: 0 auto;
-        justify-content: space-evenly;
+
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
 }
 
 .contact-details {
     margin-left: 2rem;
-    letter-spacing: .1rem;
-    color: rgb(196, 196, 196);
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: #ccc;
     font-size: 2rem;
 
     @include respond(phone) {
@@ -43,7 +46,7 @@
 .contact-location {
     height: 100%;
     width: 100%;
-    
+
     &__map {
         animation: appear 1s ease-in-out;
         position: relative;

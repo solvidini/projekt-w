@@ -29,14 +29,14 @@ const Footer = ({ footerRef }) => {
           <nav className='footer__nav'>
             <div className='footer__nav-item'>
               <NavigationItem link='/'>{context.dictionary.nav.home}</NavigationItem>
-              <NavigationItem link='/studio'>{context.dictionary.nav.studio}</NavigationItem>
+              <NavigationItem link='/realisations'>{context.dictionary.nav.realisations}</NavigationItem>
+              <NavigationItem link='/projects'>{context.dictionary.nav.projects}</NavigationItem>
               <NavigationItem link='/offer'>{context.dictionary.nav.offer}</NavigationItem>
-              <NavigationItem link='/partners'>{context.dictionary.nav.partners}</NavigationItem>
             </div>
             <div className='footer__nav-item'>
+              <NavigationItem link='/studio'>{context.dictionary.nav.studio}</NavigationItem>
               <NavigationItem link='/contact'>{context.dictionary.nav.contact}</NavigationItem>
-              <NavigationItem link='/projects'>{context.dictionary.nav.projects}</NavigationItem>
-              <NavigationItem link='/realisations'>{context.dictionary.nav.realisations}</NavigationItem>
+              <NavigationItem link='/partners'>{context.dictionary.nav.partners}</NavigationItem>
             </div>
           </nav>
         </div>

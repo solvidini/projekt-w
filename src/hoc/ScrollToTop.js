@@ -6,9 +6,16 @@ const ScrollToTop = ({ children }) => {
 
   const yOffset = location?.state?.yOffset;
 
+  const checkIfGallery = new RegExp(/.+\/\d+/g).test(location.pathname);
+
   useEffect(() => {
-    yOffset ? window.scrollTo(0, yOffset) : window.scrollTo(0, 0);
-  }, [location, yOffset]);
+    if (yOffset && !checkIfGallery) {
+      window.scrollTo(0, yOffset);
+    } else {
+      window.scrollTo(0, 0);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
 
   return children;
 };
