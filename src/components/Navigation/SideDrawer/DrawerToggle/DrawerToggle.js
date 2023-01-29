@@ -1,15 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import "./DrawerToggle.scss";
+import './DrawerToggle.scss';
 
-const DrawerToggle = props => {
-  const iconClasses = ["drawer-toggle__icon"];
-  if (props.sideDrawerIsVisible) {
-    iconClasses.push("drawer-toggle__icon--active");
+const DrawerToggle = ({ sideDrawerIsVisible, clicked }) => {
+  const iconClasses = ['drawer-toggle__icon'];
+  if (sideDrawerIsVisible) {
+    iconClasses.push('drawer-toggle__icon--active');
   }
+
   return (
-    <div onClick={props.clicked} className="drawer-toggle__button">
-      <div className={iconClasses.join(" ")}>&nbsp;</div>
+    <div onClick={clicked} className='drawer-toggle__button'>
+      <div className={iconClasses.join(' ')}>&nbsp;</div>
     </div>
   );
 };

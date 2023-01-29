@@ -1,20 +1,20 @@
-import React from "react";
-import "./Partner.scss";
+import React from 'react';
+import './Partner.scss';
 
-const Partner = props => {
+const Partner = ({ link, src, alt }) => {
   let partner = null;
 
-  if (props.link === "") {
+  if (link === '') {
     partner = (
-      <div className="partner">
-        <img className="partner__image" src={props.src} alt={props.alt} />
+      <div className='partner'>
+        <img className='partner__image' src={src} alt={alt} />
       </div>
     );
   } else {
     partner = (
-      <a href={props.link} target="_blank" rel="noopener noreferrer">
-        <div className="partner">
-          <img className="partner__image" src={props.src} alt={props.alt} />
+      <a href={link} target='_blank' rel='noopener noreferrer'>
+        <div className='partner'>
+          <img className='partner__image' src={src} alt={alt} />
         </div>
       </a>
     );

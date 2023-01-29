@@ -50,13 +50,14 @@ const Gallery = ({ images, url, name = '', reference = null }) => {
           setToggler(true);
         }}
       >
+        <div className='gallery__thumbnail-loading'>Loading...</div>
         <div
           className={
             context.language === 'pl'
               ? 'gallery__thumbnail-curtain gallery__thumbnail-curtain--pl'
               : 'gallery__thumbnail-curtain gallery__thumbnail-curtain--en'
           }
-        ></div>
+        />
         <img className='gallery__thumbnail-image' src={image} alt={context.dictionary.gallery.photo} />
       </div>
     );

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import "./OfferItem.scss";
+import './OfferItem.scss';
 
-const OfferItem = props => {
+const OfferItem = ({ clicked, source, name }) => {
   return (
-    <div className="offer__item" onClick={props.clicked}>
-      <img className="offer__item-image" src={props.source} alt={props.name} />
-      <div className="offer__item-text">{props.name}</div>
+    <div className='offer__item' onClick={clicked}>
+      <img className='offer__item-image' src={source} alt={name} />
+      <div className='offer__item-text'>{name}</div>
     </div>
   );
 };

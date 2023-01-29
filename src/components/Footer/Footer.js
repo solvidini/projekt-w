@@ -6,12 +6,12 @@ import './Footer.scss';
 import NavigationItem from '../Navigation/NavigationItems/NavigationItem/NavigationItem';
 import { LanguageContext } from '../../context';
 
-const Footer = (props) => {
+const Footer = ({ footerRef }) => {
   const currentDate = new Date().getFullYear();
   const context = useContext(LanguageContext);
 
   return (
-    <footer className='footer' name='section-contact' ref={props.footerRef}>
+    <footer className='footer' name='section-contact' ref={footerRef}>
       <div className='footer__info'>
         <div className='footer__info-item'>
           <h4>{context.dictionary.footer.studio}</h4>

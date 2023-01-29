@@ -68,10 +68,21 @@
         overflow: hidden;
         margin: .3rem;
 
+        background-color: $color-dark;
+        min-height: 32rem;
         max-height: 32rem;
         flex: 1 1 auto;
 
         transition: all 1s;
+
+        &-loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.4rem;
+            color: #bbb;
+        }
 
         &-curtain {
             position: absolute;
