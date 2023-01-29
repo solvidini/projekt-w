@@ -60,7 +60,7 @@ import p58 from './p58.jpg';
 const config = {
   name: 'Apartament w\xa0kamienicy w\xa0Krakowie',
   enName: 'Apartment in a\xa0tenement in\xa0Cracow',
-  exhibit: p8,
+  exhibit: p1,
   images: [
     p1,
     p2,

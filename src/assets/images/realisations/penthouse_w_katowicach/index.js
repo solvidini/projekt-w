@@ -41,7 +41,7 @@ import p39 from './p39.jpg';
 const config = {
   name: 'Penthouse w\xa0Katowicach',
   enName: 'Penthouse in\xa0Katowice',
-  exhibit: p39,
+  exhibit: p11,
   images: [
     p1,
     p2,

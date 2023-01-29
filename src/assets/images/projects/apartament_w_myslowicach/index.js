@@ -19,7 +19,7 @@ import p17 from './p17.jpg';
 const config = {
   name: 'Apartament w\xa0Mysłowicach',
   enName: 'Apartment\xa0in\xa0Mysłowice',
-  exhibit: p6,
+  exhibit: p4,
   images: [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17],
 };
 

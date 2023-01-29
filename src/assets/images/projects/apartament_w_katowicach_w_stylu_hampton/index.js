@@ -31,9 +31,9 @@ import p30 from './p30.jpg';
 import p31 from './p31.jpg';
 
 const config = {
-  name: 'Apartament w\xa0Katowicach w\xa0stylu\xa0Hampton',
-  enName: 'Apartment\xa0in\xa0Katowice in\xa0Hampton\xa0style',
-  exhibit: p6,
+  name: 'Apartament w\xa0Katowicach w\xa0stylu\xa0Hamptons',
+  enName: 'Apartment\xa0in\xa0Katowice in\xa0Hamptons\xa0style',
+  exhibit: p1,
   images: [
     p1,
     p2,

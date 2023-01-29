@@ -26,7 +26,7 @@ import p24 from './p24.jpg';
 const config = {
   name: 'Dom w\xa0Rzeszowie',
   enName: 'House\xa0in\xa0Rzeszów',
-  exhibit: p6,
+  exhibit: p17,
   images: [
     p2,
     p1,

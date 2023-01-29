@@ -37,7 +37,6 @@ import p36 from './p36.jpeg';
 import p37 from './p37.jpeg';
 import p38 from './p38.jpeg';
 import p39 from './p39.jpeg';
-import p40 from './p40.jpeg';
 import p41 from './p41.jpeg';
 import p42 from './p42.jpeg';
 import p43 from './p43.jpeg';
@@ -98,7 +97,6 @@ const config = {
     p37,
     p38,
     p39,
-    p40,
     p41,
     p42,
     p43,

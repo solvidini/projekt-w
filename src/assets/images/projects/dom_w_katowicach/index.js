@@ -50,7 +50,7 @@ import p48 from './p48.jpg';
 const config = {
   name: 'Dom w\xa0Katowicach',
   enName: 'House in\xa0Katowice',
-  exhibit: p6,
+  exhibit: p1,
   images: [
     p1,
     p2,

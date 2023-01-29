@@ -30,8 +30,8 @@ import p29 from './p29.jpg';
 import p30 from './p30.jpg';
 
 const config = {
-  name: 'Apartament w\xa0Katowicach',
-  enName: 'Apartment in\xa0Katowice',
+  name: 'Apartament w\xa0Katowicach, Park\xa0Bażantów',
+  enName: 'Apartment in\xa0Katowice, Park\xa0Bażantów',
   exhibit: p10,
   images: [
     p1,

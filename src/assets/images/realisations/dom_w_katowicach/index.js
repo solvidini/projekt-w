@@ -35,7 +35,7 @@ import p36 from './p36.jpeg';
 const config = {
   name: 'Dom w Katowicach',
   enName: 'House in Katowice',
-  exhibit: p11,
+  exhibit: p10,
   images: [
     p1,
     p2,

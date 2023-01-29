@@ -27,7 +27,7 @@ import p25 from './p25.jpg';
 const config = {
   name: 'Apartament w\xa0Katowicach, pierwsza dzielnica',
   enName: 'Apartment in\xa0Katowice, the first district',
-  exhibit: p6,
+  exhibit: p14,
   images: [
     p1,
     p2,

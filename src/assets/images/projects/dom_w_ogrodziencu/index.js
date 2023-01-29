@@ -65,7 +65,7 @@ import p63 from './p63.jpg';
 const config = {
   name: 'Dom w\xa0Ogrodzieńcu',
   enName: 'House in\xa0Ogrodzieniec',
-  exhibit: p6,
+  exhibit: p1,
   images: [
     p1,
     p2,

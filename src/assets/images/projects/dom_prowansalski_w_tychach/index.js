@@ -27,7 +27,7 @@ import p25 from './p25.jpg';
 const config = {
   name: 'Dom prowansalski w\xa0Tychach',
   enName: 'Provencal\xa0house in\xa0Tychy',
-  exhibit: p6,
+  exhibit: p4,
   images: [
     p1,
     p2,

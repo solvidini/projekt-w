@@ -1,7 +1,7 @@
 import React from 'react';
 import './Partner.scss';
 
-const Partner = ({ link, src, alt }) => {
+const Partner = ({ link = '', src, alt }) => {
   let partner = null;
 
   if (link === '') {

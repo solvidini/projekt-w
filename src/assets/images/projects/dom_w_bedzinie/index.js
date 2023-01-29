@@ -39,7 +39,7 @@ import p37 from './p37.jpg';
 const config = {
   name: 'Dom w\xa0Będzinie',
   enName: 'House in\xa0Będzin',
-  exhibit: p2,
+  exhibit: p1,
   images: [
     p1,
     p2,

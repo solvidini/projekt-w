@@ -58,7 +58,7 @@ import p56 from './p56.jpg';
 const config = {
   name: 'Dom w\xa0Iserlohn, Niemcy',
   enName: 'House in\xa0Iserlohn, Germany',
-  exhibit: p6,
+  exhibit: p1,
   images: [
     p1,
     p2,
