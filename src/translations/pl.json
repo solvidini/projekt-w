@@ -19,7 +19,8 @@
    },
    "contact": {
       "write": "Napisz do nas",
-      "location": "Lokalizacja pracowni"
+      "location": "Lokalizacja pracowni",
+      "locationInfo": "Żniwna 1, 43-100 Tychy (wejście od ul. Głównej przy nr. 82)"
    },
    "gallery": {
       "back": "Powrót",
@@ -35,6 +36,12 @@
       "allRights": "Wszystkie\u00A0prawa\u00A0zastrzeżone.",
       "siteMadeBy": "Strona\u00A0stworzona\u00A0przez"
    },
+   "studio": {
+		"team": "Zespół",
+		"architect": "Architekt Wnętrz",
+		"assistant": "Asystent Architekta",
+		"logistics": "Logistyk"
+	},
    "soon": "Wkrótce",
    "noProjects": "Brak projektów",
    "discover": "Odkryj więcej"

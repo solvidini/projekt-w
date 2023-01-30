@@ -5,7 +5,7 @@
     min-height: 100%;
 
     &__content {
-        padding: 3rem 0;
+        padding: 2rem 0;
         max-width: 120rem;
         margin: 0 auto;
 
@@ -16,7 +16,7 @@
 }
 
 .contact-details {
-    margin-left: 2rem;
+    text-align: center;
     letter-spacing: 2px;
     font-weight: 300;
     color: #ccc;
@@ -39,7 +39,24 @@
     }
 
     &__row {
-        line-height: 2;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    &__info {
+        margin-left: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+    }
+
+    &__name {
+        margin-bottom: 1rem;
     }
 }
 
@@ -62,10 +79,17 @@
         font-size: 1.8rem;
         text-transform: uppercase;
         text-align: center;
-        padding: 1rem 0;
+        margin-bottom: 4px;
 
         @include respond(phone) {
             font-size: 1.6rem;
         }
+    }
+
+    &__info {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        color: #bbb;
     }
 }

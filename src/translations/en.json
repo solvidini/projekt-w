@@ -19,7 +19,8 @@
 	},
 	"contact": {
 		"write": "Write to us",
-		"location": "Studio location"
+		"location": "Studio location",
+      "locationInfo": "Żniwna 1, 43-100 Tychy (entrance from Główna Street at no. 82)"
 	},
 	"gallery": {
 		"back": "Back",
@@ -34,6 +35,12 @@
 		"followUs": "Follow\u00A0us",
 		"allRights": "All\u00A0rights\u00A0reserved.",
 		"siteMadeBy": "Website\u00A0made\u00A0by"
+	},
+	"studio": {
+		"team": "Team",
+		"architect": "Interior Designer",
+		"assistant": "Architect's Assistant",
+		"logistics": "Logistics"
 	},
 	"soon": "Soon",
 	"noProjects": "No projects",

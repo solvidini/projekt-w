@@ -14,7 +14,6 @@ const ScrollToTop = ({ children }) => {
     } else {
       window.scrollTo(0, 0);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return children;
