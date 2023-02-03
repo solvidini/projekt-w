@@ -32,6 +32,15 @@ import r33 from './mieszkanie_w_katowicach_os_franciszkowskie';
 import r34 from './poradnia_stomatologiczna_artdent';
 import r35 from './prywatna_szkola_podstawowa_radzionkow';
 import r36 from './stomatologia_estetyczna_estima_tychy';
+import r37 from './dom_w_czancu';
+import r38 from './dom_w_kalinie';
+import r39 from './dom_w_starym_saczu_2';
+import r40 from './gabinety_medyczne_eve_med';
+import r41 from './mieszkanie_w_krakowie';
+import r42 from './mieszkanie_w_katowicach_nowy_brynow';
+import r43 from './mieszkanie_w_katowicach_nowy_brynow_2';
+import r44 from './mieszkanie_w_katowicach_nowy_brynow_3';
+import r45 from './mieszkanie_w_katowicach_nowy_brynow_4';
 
 export const projectsArray = [
   r18,
@@ -73,4 +82,13 @@ export const projectsArray = [
   r8,
   r23,
   r12,
+  r37,
+  r38,
+  r39,
+  r40,
+  r41,
+  r42,
+  r43,
+  r44,
+  r45,
 ];

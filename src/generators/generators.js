@@ -1,4 +1,4 @@
-const NUMBER_OF_ITEMS = 85;
+const NUMBER_OF_ITEMS = 74;
 
 function generateImports(howMany) {
   let sentence = '';
