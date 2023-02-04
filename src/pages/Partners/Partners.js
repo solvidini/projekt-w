@@ -21,6 +21,7 @@ import muffin from '../../assets/images/partners/muffin.png';
 import button from '../../assets/images/partners/button.png';
 import wonderwall from '../../assets/images/partners/wonderwall.png';
 import gibon from '../../assets/images/partners/gibon.png';
+import styloweMetry from '../../assets/images/partners/stylowe-metry.png';
 
 const Partners = () => {
   const context = useContext(LanguageContext);
@@ -36,6 +37,7 @@ const Partners = () => {
 
         <Partner link='https://www.hoder.eu/' src={hoder} alt='hoder' />
         <Partner link='https://www.boconcept.com/pl-pl/' src={boconcept} alt='BoConcept' />
+        <Partner src={styloweMetry} alt='Stylowe Metry' />
         <Partner link='https://mera.eu/' src={mera} alt='mera' />
         <Partner link='https://pracownia-button.pl/' src={button} alt='Button' />
         <Partner src={kudoWnetrza} alt='Kudo Wnetrza' />
